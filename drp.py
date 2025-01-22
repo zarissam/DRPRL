@@ -1,56 +1,53 @@
 import numpy as np
+from utils.parser import parse_instance, parsing_static_files
 from sklearn.cluster import KMeans
 from sklearn.manifold import MDS
 from itertools import permutations
 
 class DRP:
-    def __init__(self, distance_matrix):
+    def __init__(self, excel_path, battery_capacity=1800):
         """
-        Initializes the Drone Routing Problem instance.
+        Initialize DRP instance
         Args:
-            distance_matrix (np.ndarray): Distance matrix representing nodes.
+            excel_path (str): Path to Excel file containing distance matrices
+            battery_capacity (int): Drone battery capacity in seconds (default 1 hour)
         """
-        self.distance_matrix = distance_matrix
-        self.num_nodes = self.distance_matrix.shape[0]
-        self.nodes_positions = None
-        self.groups = None
-        self.recharging_stations = None
+        self.excel_path = excel_path
+        self.battery_capacity = battery_capacity
+        self.num_nodes = 20  # Fixed number of customer nodes
+        self.num_stations = 5  # Fixed number of charging stations
+        self.distance_matrices = {}
+        
+        # Load all instances (D1-D20)
+        for i in range(1, 21):
+            sheet_name = f'D{i}'
+            self.distance_matrices[sheet_name] = parse_instance(excel_path, sheet_name)
 
-        self.nodes_positions = self.extract_nodes_position()
-        self.groups, self.recharging_stations = self.cluster_nodes()
+    def get_travel_time(self, instance, from_node, to_node):
+        """Get travel time between two nodes for a specific instance"""
+        matrix = self.distance_matrices[f'D{instance}']
+        return matrix[from_node, to_node]
 
-    def extract_nodes_position(self, num_components=2):
-        """
-        Generates 2D coordinates for the nodes based on the distance matrix
-        using multidimensional scaling (MDS).
-        Args:
-            n_components (int): Number of dimensions for the positions (x,y) --> 2.
-        """
-        mds = MDS(n_components=num_components, dissimilarity='precomputed',random_state=42)
-        self.nodes_positions = mds.fit_transform(self.distance_matrix)
-        return self.nodes_positions
-    
-    def cluster_nodes(self, num_clusters=5) :
-        """
-        Clusters nodes into groups and selects recharging stations as cluster centers.
-        Args:
-            num_clusters (int): Number of clusters (default is 5).
-        """
-        if self.nodes_positions is None:
-            raise ValueError("Nodes positions not extracted. Call extract_nodes_position() first.")
-        kmeans = KMeans(n_clusters=num_clusters,init="k-means++", random_state=42)
-        self.groups = kmeans.fit_predict(self.nodes_positions)
-        self.recharging_stations = kmeans.cluster_centers_
-        return self.groups, self.recharging_stations
+    def calculate_route_cost(self, instance, route):
+        """Calculate total travel time for a route"""
+        total_time = 0
+        for i in range(len(route)-1):
+            total_time += self.get_travel_time(instance, route[i], route[i+1])
+        return total_time
+
+    def is_route_feasible(self, instance, route):
+        """Check if route is feasible considering battery constraints"""
+        current_battery = self.battery_capacity
+        for i in range(len(route)-1):
+            travel_time = self.get_travel_time(instance, route[i], route[i+1])
+            if travel_time > current_battery:
+                return False
+            current_battery -= travel_time
+            if route[i+1] >= self.num_nodes:  # Charging stations are last 5 nodes
+                current_battery = self.battery_capacity
+        return True
+
     
     def __repr__(self):
-        """
-        String representation of the Drone Routing Problem instance.
-        """
-        return (
-            f"Drone Routing Problem with {self.num_nodes} nodes.\n"
-            f"Nodes positions: {self.nodes_positions}\n"
-            f"Recharging stations: {self.recharging_stations}\n"
-        )
-        
-
+        pass
+    
