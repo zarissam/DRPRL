@@ -1,9 +1,9 @@
 from typing import Optional, List
 import numpy as np
-from ..environment.state import State
-from ..environment.action import Action
-from ..environment.cost import Cost
-from .value_network import ValueNetwork
+from environment.state import State
+from environment.action import Action
+from environment.cost import Cost
+from learning.value_network import ValueNetwork
 
 class Policy:
     def __init__(self, value_network: ValueNetwork, cost_function: Cost):

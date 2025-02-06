@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 import numpy as np
 from typing import List, Set
-from ..drp import DRP
+from drp import DRP  # Change from relative import
 
 @dataclass
 class State:

@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 from typing import List
-from ..environment.state import State
+from environment.state import State
 
 class ValueNetwork(nn.Module):
     def __init__(self, num_nodes: int = 20, num_stations: int = 5, 
