@@ -16,6 +16,9 @@ class Cost:
         Returns:
             Total cost (just travel time since battery swap is instant)
         """
+        if action is None:
+            raise ValueError("Cannot calculate cost for None action")
+            
         return state.drp.get_travel_time(
             state.instance,
             state._to_matrix_index(state.current_node),

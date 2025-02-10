@@ -11,127 +11,78 @@ class MILPSolver:
         self.time_limit = time_limit
 
     def solve_subproblem(self, state: State, value_network) -> Action:
-        """Solve MILP subproblem to find next best action"""
+        """Solve MILP subproblem to find next immediate action"""
         # Create model
         model = gp.Model("DRP_Subproblem")
         model.setParam('TimeLimit', self.time_limit)
-        model.setParam('LazyConstraints', 1)
 
-        # Setup nodes
+        # Get valid next nodes (exclude current node)
         unvisited = {i for i in range(state.drp.num_stations, 
                                     state.drp.num_nodes + state.drp.num_stations) 
                     if state.encoding[i] == 1}
         stations = set(range(state.drp.num_stations))
-
-        # Variables
+        valid_nodes = (unvisited | stations) - {state.current_node}  # Exclude current node
+        
+        # Variables - only for valid moves
         x = {}
-        for i in {state.current_node} | unvisited | stations:
-            for j in unvisited | stations:
-                if i != j:
-                    x[i, j] = model.addVar(vtype=GRB.BINARY, name=f'x_{i}_{j}')
+        for j in valid_nodes:  # Only create variables for other nodes
+            x[j] = model.addVar(vtype=GRB.BINARY, name=f'x_{j}')
 
-        # Objective with future cost estimation
-        obj = 0
-        
-        # First term: ∑∑ T_ij x_ij
-        immediate_cost = gp.quicksum(
-            state.drp.get_travel_time(
-                state.instance,
-                state._to_matrix_index(i),
-                state._to_matrix_index(j)
-            ) * x[i,j] 
-            for i,j in x
-        )
-        
-        # Second term: V̂(s')
-        future_costs = 0
-        for j in unvisited | stations:
-            if (state.current_node, j) in x:
-                next_state = state.__class__(state.drp, state.instance, j)
-                action = Action(
-                    ActionType.RECHARGE if j < state.drp.num_stations else ActionType.MOVE, 
-                    j
-                )
-                action.execute(next_state)
-                future_costs += value_network.predict(next_state) * x[state.current_node, j]
+        # Must move to a different node
+        model.addConstr(gp.quicksum(x[j] for j in x) == 1)
 
-        # Complete objective
-        obj = immediate_cost + future_costs
-        model.setObjective(obj, GRB.MINIMIZE)
-
-        # Constraints
-        # 1. Flow conservation
-        for h in unvisited:
-            model.addConstr(
-                gp.quicksum(x[i, h] for i in {state.current_node} | unvisited | stations if (i, h) in x) ==
-                gp.quicksum(x[h, j] for j in unvisited | stations if (h, j) in x)
-            )
-
-        # 2. Visit each unvisited node exactly once
-        for j in unvisited:
-            model.addConstr(
-                gp.quicksum(x[i, j] for i in {state.current_node} | unvisited | stations if (i, j) in x) == 1
-            )
-
-        # 3. Battery constraints
-        for i, j in x:
+        # Battery feasibility constraint
+        for j in x:
             travel_time = state.drp.get_travel_time(
                 state.instance,
-                state._to_matrix_index(i),
+                state._to_matrix_index(state.current_node),
                 state._to_matrix_index(j)
             )
-            if travel_time > state.drp.battery_capacity:
-                model.addConstr(x[i, j] == 0)
+            if travel_time > state.battery_level:
+                model.addConstr(x[j] == 0)
 
-        # 4. No direct routes between charging stations
-        for i in stations:
+        # No station-to-station moves
+        if state.current_node < state.drp.num_stations:  # If at station
             for j in stations:
-                if (i, j) in x:
-                    model.addConstr(x[i, j] == 0)
+                if j in x:
+                    model.addConstr(x[j] == 0)
 
-        # Lazy constraints callback for subtour elimination
-        def subtour_callback(model, where):
-            if where == GRB.Callback.MIPSOL:
-                # Get solution values
-                vals = model.cbGetSolution(model._x)
-                selected = [(i, j) for (i, j) in model._x.keys() if vals[i, j] > 0.5]
+        # Visit each customer exactly once (maintained by state.encoding)
+        for j in unvisited:
+            if j in x:
+                model.addConstr(x[j] <= 1)  # Can't visit more than once
 
-                # Find subtours
-                subtours = self._find_subtours(selected)
+        # Objective: immediate cost + future value
+        obj = gp.quicksum(
+            state.drp.get_travel_time(
+                state.instance,
+                state._to_matrix_index(state.current_node),
+                state._to_matrix_index(j)
+            ) * x[j] for j in x
+        )
 
-                # Add lazy constraints
-                for tour in subtours:
-                    if len(tour) < len(unvisited) + len(stations):
-                        model.cbLazy(
-                            gp.quicksum(x[i, j] for i in tour for j in tour if (i, j) in x)
-                            <= len(tour) - 1
-                        )
+        # Add future value estimation
+        for j in x:
+            next_state = state.__class__(state.drp, state.instance, j)
+            action = Action(
+                ActionType.RECHARGE if j < state.drp.num_stations else ActionType.MOVE,
+                j
+            )
+            action.execute(next_state)
+            obj += value_network.predict(next_state) * x[j]
 
-        # Set callback data
-        model._x = x
+        model.setObjective(obj, GRB.MINIMIZE)
+        model.optimize()
 
-        # Single optimization
-        model.optimize(subtour_callback)
-
-        # Extract solution
+        # Return selected action
         if model.status == GRB.OPTIMAL:
-            best_action = None
-            for i, j in x:
-                if i == state.current_node and x[i, j].X > 0.5 :
-                    best_action = Action(
-                        ActionType.RECHARGE, j
-                    ) if j < state.drp.num_stations else Action(
-                        ActionType.MOVE, j
+            for j in x:
+                if x[j].X > 0.5:
+                    return Action(
+                        ActionType.RECHARGE if j < state.drp.num_stations else ActionType.MOVE,
+                        j
                     )
-                    break
-            if best_action is None:
-                print("No valid action found")
-                return None                  
-
-            return best_action
-        else:
-            print("No optimal solution found")
-            return None
+        return None
 
     def _find_subtours(self, arcs: List[Tuple[int, int]]) -> List[Set[int]]:
         """Find subtours in current solution"""

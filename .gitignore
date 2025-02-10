@@ -7,3 +7,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 .env
+.drp_run_20250210_121835.log
+
+.data/
