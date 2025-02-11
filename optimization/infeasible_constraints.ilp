@@ -1,0 +1,14 @@
+\ Model Pure_DRP_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ battery_decrease_21_0: 1800 x[21,0] + battery[0] - battery[21]
+   <= -642.186486632062
+ start_battery: battery[0] = 1800
+Bounds
+ battery[0] free
+ -infinity <= battery[21] <= 1800
+Binaries
+ x[21,0]
+End

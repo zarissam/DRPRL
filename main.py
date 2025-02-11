@@ -3,14 +3,13 @@ from drp import DRP
 from environment.state import State
 from environment.action import Action, ActionType
 from environment.cost import Cost
-from learning.policy import Policy
 from learning.value_network import ValueNetwork
 from optimization.milp_solver import MILPSolver
 from visualization import visualize_solution
 import logging
 from rich.console import Console
 from rich.table import Table
-from rich.progress import track
+from rich.panel import Panel
 from datetime import datetime
 
 console = Console()
@@ -27,26 +26,24 @@ def solve_instance(instance_num: int, excel_path: str):
     value_network = ValueNetwork(num_nodes=drp.num_nodes, num_stations=drp.num_stations)
     milp_solver = MILPSolver(time_limit=300)
     
-    # Create results table
-    table = Table(title=f"Instance D{instance_num} Progress")
-    table.add_column("Step")
-    table.add_column("Current Node")
-    table.add_column("Action")
-    table.add_column("Battery Level")
-    table.add_column("Cost")
+    # Progress tracking
+    table = Table(title=f"Instance D{instance_num} Solution Progress")
+    table.add_column("Step", justify="center")
+    table.add_column("From", justify="center")
+    table.add_column("To", justify="center")
+    table.add_column("Action", justify="left")
+    table.add_column("Battery", justify="right")
+    table.add_column("Step Cost", justify="right")
     
     total_cost = 0
     route = [state.current_node]
     step = 0
     
+    # Solve instance
     while not state.is_terminal():
         try:
             step += 1
-            
-            # Log state
-            console.print(f"\n[bold cyan]Step {step}[/bold cyan]")
-            console.print(f"Current position: [green]Node {state.current_node}[/green]")
-            console.print(f"Battery level: [yellow]{state.battery_level:.2f}[/yellow]")
+            from_node = state.current_node
             
             action = milp_solver.solve_subproblem(state, value_network)
             if action is None:
@@ -54,64 +51,55 @@ def solve_instance(instance_num: int, excel_path: str):
             
             cost = cost_function(state, action)
             action.execute(state)
-            total_cost += cost
-            route.append(state.current_node)
+            to_node = state.current_node
             
-            # Update table
+            # Update tracking
             table.add_row(
                 str(step),
-                str(state.current_node),
-                str(action),
-                f"{state.battery_level:.2f}",
-                f"{cost:.2f}"
+                str(from_node),
+                str(to_node),
+                str(action.action_type.value),
+                f"{state.battery_level:.1f}",
+                f"{cost:.1f}"
             )
             
-            # Log to file
-            logging.info(f"Step {step}: Node {state.current_node} -> {action} (Cost: {cost:.2f})")
+            total_cost += cost
+            route.append(to_node)
+            logging.info(f"Step {step}: {from_node}->{to_node} ({action.action_type.value}, cost={cost:.1f})")
             
         except ValueError as e:
-            console.print(f"[red]Error: {e}[/red]")
+            console.print(Panel(f"[red]Error: {e}[/red]"))
             logging.error(str(e))
             break
     
-    # Display final table
-    console.print(table)
-    console.print(f"\n[bold green]Total Cost: {total_cost:.2f}[/bold green]")
+    # Calculate matrix-based cost
+    matrix_cost = sum(state.drp.get_travel_time(instance_num, 
+                                               state._to_matrix_index(route[i]),
+                                               state._to_matrix_index(route[i+1]))
+                     for i in range(len(route)-1))
     
-    return total_cost, route
+    # Display results
+    console.print("\n")
+    console.print(table)
+    console.print(Panel.fit(
+        f"[bold]Solution Summary[/bold]\n"
+        f"Total Steps: {len(route)-1}\n"
+        f"Route: {' → '.join(map(str, route))}\n"
+        f"Total Time: {matrix_cost:.1f} seconds ({matrix_cost/60:.1f} minutes)"
+    ))
+    
+    return matrix_cost, route
 
 def main():
-    # 1. Configuration
     excel_path = r"C:\Users\issam\Desktop\Files\PhD\DRPRL\data\StaticProblemInstances\GroupA\distancematrix_with_20_nodes(seconds).xlsx"
-    instance_num = 1  # Start with D1
+    instance_num = 1
     
-    print(f"\nSolving Instance D{instance_num}:")
-    print("-" * 50)
-    
-    # 2. Initialize and solve
     try:
-        total_cost, route = solve_instance(instance_num, excel_path)
-        
-        # 3. Print detailed results
-        print("\nResults:")
-        print("-" * 50)
-        print("Route:")
-        for i in range(len(route)-1):
-            from_node = route[i]
-            to_node = route[i+1]
-            print(f"Step {i+1}: {from_node} -> {to_node}")
-        
-        print("\nSummary:")
-        print(f"Total nodes visited: {len(route)-1}")
-        print(f"Total cost (seconds): {total_cost:.2f}")
-        #print(f"Total cost (minutes): {total_cost/60:.2f}")
-        print("-" * 50)
-        
-        # 4. Visualize
-        #visualize_solution(route, State(DRP(excel_path), instance_num), total_cost)
-        
+        cost, route = solve_instance(instance_num, excel_path)
+        # Add visualization
+        visualize_solution(route, State(DRP(excel_path), instance_num), cost)
     except Exception as e:
-        print(f"Error solving instance: {str(e)}")
+        console.print(Panel(f"[red]Error solving instance: {str(e)}[/red]"))
 
 if __name__ == "__main__":
     main()

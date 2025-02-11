@@ -1,0 +1,897 @@
+INFO:gurobipy:Restricted license - for non-production use only - expires 2026-11-23
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 27 rows, 24 columns and 50 nonzeros
+INFO:gurobipy:Model fingerprint: 0xf0b451e5
+INFO:gurobipy:Variable types: 0 continuous, 24 integer (24 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 343.3664099
+INFO:gurobipy:Presolve removed 27 rows and 24 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 184.615 343.366 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.846147644889e+02, best bound 1.846147644889e+02, gap 0.0000%
+INFO:root:Step 1: Node 0 -> 22 (Action: move, Cost: 185.57)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 22 rows, 24 columns and 45 nonzeros
+INFO:gurobipy:Model fingerprint: 0xe6c50c57
+INFO:gurobipy:Variable types: 0 continuous, 24 integer (24 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 174.6953349
+INFO:gurobipy:Presolve removed 22 rows and 24 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 174.695 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.746953349482e+02, best bound 1.746953349482e+02, gap 0.0000%
+INFO:root:Step 2: Node 22 -> 0 (Action: recharge, Cost: 185.57)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 26 rows, 23 columns and 48 nonzeros
+INFO:gurobipy:Model fingerprint: 0x84cea03a
+INFO:gurobipy:Variable types: 0 continuous, 23 integer (23 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1002.9441197
+INFO:gurobipy:Presolve removed 26 rows and 23 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 243.741 1002.94 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.437413823354e+02, best bound 2.437413823354e+02, gap 0.0000%
+INFO:root:Step 3: Node 0 -> 16 (Action: move, Cost: 244.75)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 22 rows, 23 columns and 44 nonzeros
+INFO:gurobipy:Model fingerprint: 0x83bc2135
+INFO:gurobipy:Variable types: 0 continuous, 23 integer (23 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 233.8801834
+INFO:gurobipy:Presolve removed 22 rows and 23 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 116.679 233.88 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.166788592310e+02, best bound 1.166788592310e+02, gap 0.0000%
+INFO:root:Step 4: Node 16 -> 15 (Action: move, Cost: 117.68)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 25 rows, 22 columns and 46 nonzeros
+INFO:gurobipy:Model fingerprint: 0x9a72ee52
+INFO:gurobipy:Variable types: 0 continuous, 22 integer (22 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [3e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 351.3208501
+INFO:gurobipy:Presolve removed 25 rows and 22 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 313.408 351.321 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 3.134079305160e+02, best bound 3.134079305160e+02, gap 0.0000%
+INFO:root:Step 5: Node 15 -> 23 (Action: move, Cost: 314.40)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 30 rows, 21 columns and 50 nonzeros
+INFO:gurobipy:Model fingerprint: 0xca2cb811
+INFO:gurobipy:Variable types: 0 continuous, 21 integer (21 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 300.2187942
+INFO:gurobipy:Presolve removed 30 rows and 21 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 139.887 300.219 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.398867720456e+02, best bound 1.398867720456e+02, gap 0.0000%
+INFO:root:Step 6: Node 23 -> 21 (Action: move, Cost: 140.88)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 29 rows, 20 columns and 48 nonzeros
+INFO:gurobipy:Model fingerprint: 0xddb22dc8
+INFO:gurobipy:Variable types: 0 continuous, 20 integer (20 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [3e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 277.8294274
+INFO:gurobipy:Presolve removed 29 rows and 20 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 277.829 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.778294274461e+02, best bound 2.778294274461e+02, gap 0.0000%
+INFO:root:Step 7: Node 21 -> 0 (Action: recharge, Cost: 288.70)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 22 rows, 19 columns and 40 nonzeros
+INFO:gurobipy:Model fingerprint: 0x153500a1
+INFO:gurobipy:Variable types: 0 continuous, 19 integer (19 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [3e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 701.5020992
+INFO:gurobipy:Presolve removed 22 rows and 19 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 281.855 701.502 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.818549001137e+02, best bound 2.818549001137e+02, gap 0.0000%
+INFO:root:Step 8: Node 0 -> 24 (Action: move, Cost: 282.87)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 17 rows, 19 columns and 35 nonzeros
+INFO:gurobipy:Model fingerprint: 0x2d8b9044
+INFO:gurobipy:Variable types: 0 continuous, 19 integer (19 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 271.9961867
+INFO:gurobipy:Presolve removed 17 rows and 19 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 103.61 271.996 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.036099431803e+02, best bound 1.036099431803e+02, gap 0.0000%
+INFO:root:Step 9: Node 24 -> 13 (Action: move, Cost: 104.59)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 16 rows, 18 columns and 33 nonzeros
+INFO:gurobipy:Model fingerprint: 0x531552de
+INFO:gurobipy:Variable types: 0 continuous, 18 integer (18 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 363.8367623
+INFO:gurobipy:Presolve removed 16 rows and 18 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 226.022 363.837 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.260220194605e+02, best bound 2.260220194605e+02, gap 0.0000%
+INFO:root:Step 10: Node 13 -> 5 (Action: move, Cost: 227.00)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 21 rows, 17 columns and 37 nonzeros
+INFO:gurobipy:Model fingerprint: 0x36c86f72
+INFO:gurobipy:Variable types: 0 continuous, 17 integer (17 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [3e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 333.4730017
+INFO:gurobipy:Presolve removed 21 rows and 17 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 268.849 333.473 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.688493418320e+02, best bound 2.688493418320e+02, gap 0.0000%
+INFO:root:Step 11: Node 5 -> 12 (Action: move, Cost: 269.88)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 21 rows, 16 columns and 36 nonzeros
+INFO:gurobipy:Model fingerprint: 0x8229735f
+INFO:gurobipy:Variable types: 0 continuous, 16 integer (16 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 1e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 538.5171666
+INFO:gurobipy:Presolve removed 21 rows and 16 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 219.356 538.517 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.193557875277e+02, best bound 2.193557875277e+02, gap 0.0000%
+INFO:root:Step 12: Node 12 -> 19 (Action: move, Cost: 220.35)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 22 rows, 15 columns and 36 nonzeros
+INFO:gurobipy:Model fingerprint: 0x0cf76132
+INFO:gurobipy:Variable types: 0 continuous, 15 integer (15 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 114.8749050
+INFO:gurobipy:Presolve removed 22 rows and 15 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 114.875 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.148749050004e+02, best bound 1.148749050004e+02, gap 0.0000%
+INFO:root:Step 13: Node 19 -> 4 (Action: recharge, Cost: 125.75)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 18 rows, 14 columns and 31 nonzeros
+INFO:gurobipy:Model fingerprint: 0xd3423a44
+INFO:gurobipy:Variable types: 0 continuous, 14 integer (14 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [7e+01, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 690.0135834
+INFO:gurobipy:Presolve removed 18 rows and 14 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 65.4733 690.014 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 6.547332162060e+01, best bound 6.547332162060e+01, gap 0.0000%
+INFO:root:Step 14: Node 4 -> 20 (Action: move, Cost: 66.46)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 14 rows, 14 columns and 27 nonzeros
+INFO:gurobipy:Model fingerprint: 0xac1009fa
+INFO:gurobipy:Variable types: 0 continuous, 14 integer (14 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [6e+01, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 813.8446410
+INFO:gurobipy:Presolve removed 14 rows and 14 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 55.5927 813.845 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 5.559272605576e+01, best bound 5.559272605576e+01, gap 0.0000%
+INFO:root:Step 15: Node 20 -> 4 (Action: recharge, Cost: 66.46)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 15 rows, 13 columns and 27 nonzeros
+INFO:gurobipy:Model fingerprint: 0x4e5c953c
+INFO:gurobipy:Variable types: 0 continuous, 13 integer (13 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 690.0135834
+INFO:gurobipy:Presolve removed 15 rows and 13 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 231.086 690.014 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.310859409378e+02, best bound 2.310859409378e+02, gap 0.0000%
+INFO:root:Step 16: Node 4 -> 14 (Action: move, Cost: 232.09)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 15 rows, 13 columns and 27 nonzeros
+INFO:gurobipy:Model fingerprint: 0xeea20fd4
+INFO:gurobipy:Variable types: 0 continuous, 13 integer (13 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 993.0765668
+INFO:gurobipy:Presolve removed 15 rows and 13 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 186.812 993.077 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.868121604808e+02, best bound 1.868121604808e+02, gap 0.0000%
+INFO:root:Step 17: Node 14 -> 8 (Action: move, Cost: 187.78)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 15 rows, 12 columns and 26 nonzeros
+INFO:gurobipy:Model fingerprint: 0xd3e5e39e
+INFO:gurobipy:Variable types: 0 continuous, 12 integer (12 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1042.3531230
+INFO:gurobipy:Presolve removed 15 rows and 12 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 221.743 1042.35 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.217425747819e+02, best bound 2.217425747819e+02, gap 0.0000%
+INFO:root:Step 18: Node 8 -> 4 (Action: recharge, Cost: 232.61)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 16 rows, 11 columns and 26 nonzeros
+INFO:gurobipy:Model fingerprint: 0x98131c3b
+INFO:gurobipy:Variable types: 0 continuous, 11 integer (11 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [5e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1160.7037555
+INFO:gurobipy:Presolve removed 16 rows and 11 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 532.291 1160.7 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 5.322912366193e+02, best bound 5.322912366193e+02, gap 0.0000%
+INFO:root:Step 19: Node 4 -> 17 (Action: move, Cost: 533.30)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 16 rows, 11 columns and 26 nonzeros
+INFO:gurobipy:Model fingerprint: 0x79b2665d
+INFO:gurobipy:Variable types: 0 continuous, 11 integer (11 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [5e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 458.5026433
+INFO:gurobipy:Presolve removed 16 rows and 11 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 458.503 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 4.585026433151e+02, best bound 4.585026433151e+02, gap 0.0000%
+INFO:root:Step 20: Node 17 -> 0 (Action: recharge, Cost: 469.37)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 14 rows, 10 columns and 23 nonzeros
+INFO:gurobipy:Model fingerprint: 0x62ec56bf
+INFO:gurobipy:Variable types: 0 continuous, 10 integer (10 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [8e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 836.1700685
+INFO:gurobipy:Presolve removed 14 rows and 10 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 836.17 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 8.361700685046e+02, best bound 8.361700685046e+02, gap 0.0000%
+INFO:root:Step 21: Node 0 -> 18 (Action: move, Cost: 837.18)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 13 rows, 10 columns and 22 nonzeros
+INFO:gurobipy:Model fingerprint: 0x869ce573
+INFO:gurobipy:Variable types: 0 continuous, 10 integer (10 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [4e+02, 1e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Presolve removed 13 rows and 10 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 360.924 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 3.609238976088e+02, best bound 3.609238976088e+02, gap 0.0000%
+INFO:root:Step 22: Node 18 -> 2 (Action: recharge, Cost: 371.79)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 11 rows, 9 columns and 19 nonzeros
+INFO:gurobipy:Model fingerprint: 0x564122e9
+INFO:gurobipy:Variable types: 0 continuous, 9 integer (9 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 1e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1128.3234081
+INFO:gurobipy:Presolve removed 11 rows and 9 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 134.601 1128.32 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.346014827535e+02, best bound 1.346014827535e+02, gap 0.0000%
+INFO:root:Step 23: Node 2 -> 6 (Action: move, Cost: 135.60)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 8 rows, 9 columns and 16 nonzeros
+INFO:gurobipy:Model fingerprint: 0x40187e50
+INFO:gurobipy:Variable types: 0 continuous, 9 integer (9 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1247.6046101
+INFO:gurobipy:Presolve removed 8 rows and 9 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 115.614 1247.6 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.156136992177e+02, best bound 1.156136992177e+02, gap 0.0000%
+INFO:root:Step 24: Node 6 -> 9 (Action: move, Cost: 116.62)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 10 rows, 8 columns and 17 nonzeros
+INFO:gurobipy:Model fingerprint: 0x005a42fe
+INFO:gurobipy:Variable types: 0 continuous, 8 integer (8 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Presolve removed 10 rows and 8 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 238.437 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.384368194570e+02, best bound 2.384368194570e+02, gap 0.0000%
+INFO:root:Step 25: Node 9 -> 2 (Action: recharge, Cost: 249.31)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 8 rows, 7 columns and 14 nonzeros
+INFO:gurobipy:Model fingerprint: 0x87c80ff4
+INFO:gurobipy:Variable types: 0 continuous, 7 integer (7 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 1e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1128.3234081
+INFO:gurobipy:Presolve removed 8 rows and 7 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 233.547 1128.32 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.335473376732e+02, best bound 2.335473376732e+02, gap 0.0000%
+INFO:root:Step 26: Node 2 -> 7 (Action: move, Cost: 234.58)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 6 rows, 7 columns and 12 nonzeros
+INFO:gurobipy:Model fingerprint: 0xd19e7357
+INFO:gurobipy:Variable types: 0 continuous, 7 integer (7 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [2e+02, 2e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1065.1052529
+INFO:gurobipy:Presolve removed 6 rows and 7 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 2: 223.714 1065.11 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 2.237144421558e+02, best bound 2.237144421558e+02, gap 0.0000%
+INFO:root:Step 27: Node 7 -> 2 (Action: recharge, Cost: 234.58)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 7 rows, 6 columns and 12 nonzeros
+INFO:gurobipy:Model fingerprint: 0xa32a95bc
+INFO:gurobipy:Variable types: 0 continuous, 6 integer (6 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+03, 1e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Found heuristic solution: objective 1128.3234081
+INFO:gurobipy:Presolve removed 7 rows and 6 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: 1128.32 
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective 1.128323408117e+03, best bound 1.128323408117e+03, gap 0.0000%
+INFO:root:Step 28: Node 2 -> 11 (Action: move, Cost: 1129.30)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 7 rows, 6 columns and 12 nonzeros
+INFO:gurobipy:Model fingerprint: 0x9d815131
+INFO:gurobipy:Variable types: 0 continuous, 6 integer (6 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [1e+01, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Presolve removed 7 rows and 6 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:Presolve: All rows and columns removed
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 1: -10.8602 
+INFO:gurobipy:No other solutions better than -10.8602
+INFO:gurobipy:
+INFO:gurobipy:Optimal solution found (tolerance 1.00e-04)
+INFO:gurobipy:Best objective -1.086024974823e+01, best bound -1.086024974823e+01, gap 0.0000%
+INFO:root:Step 29: Node 11 -> 3 (Action: recharge, Cost: 0.01)
+INFO:gurobipy:Set parameter TimeLimit to value 300
+INFO:gurobipy:Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+INFO:gurobipy:
+INFO:gurobipy:CPU model: 13th Gen Intel(R) Core(TM) i7-13620H, instruction set [SSE2|AVX|AVX2]
+INFO:gurobipy:Thread count: 10 physical cores, 16 logical processors, using up to 16 threads
+INFO:gurobipy:
+INFO:gurobipy:Non-default parameters:
+INFO:gurobipy:TimeLimit  300
+INFO:gurobipy:
+INFO:gurobipy:Optimize a model with 8 rows, 5 columns and 12 nonzeros
+INFO:gurobipy:Model fingerprint: 0xfdeeb8a7
+INFO:gurobipy:Variable types: 0 continuous, 5 integer (5 binary)
+INFO:gurobipy:Coefficient statistics:
+INFO:gurobipy:  Matrix range     [1e+00, 1e+00]
+INFO:gurobipy:  Objective range  [9e+02, 3e+03]
+INFO:gurobipy:  Bounds range     [1e+00, 1e+00]
+INFO:gurobipy:  RHS range        [1e+00, 1e+00]
+INFO:gurobipy:Presolve removed 6 rows and 5 columns
+INFO:gurobipy:Presolve time: 0.00s
+INFO:gurobipy:
+INFO:gurobipy:Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+INFO:gurobipy:Thread count was 1 (of 16 available processors)
+INFO:gurobipy:
+INFO:gurobipy:Solution count 0
+INFO:gurobipy:
+INFO:gurobipy:Model is infeasible
+INFO:gurobipy:Best objective -, best bound -, gap -
+ERROR:root:No valid action found
