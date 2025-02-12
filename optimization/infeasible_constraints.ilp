@@ -3,12 +3,87 @@
 Minimize
  
 Subject To
- battery_decrease_21_0: 1800 x[21,0] + battery[0] - battery[21]
-   <= -642.186486632062
- start_battery: battery[0] = 1800
+ visit_5_out: x[5,1] + x[5,2] + x[5,3] + x[5,4] + x[5,7] + x[5,9] + x[5,12]
+   + x[5,13] + x[5,14] + x[5,15] + x[5,16] + x[5,18] + x[5,21] + x[5,22]
+   + x[5,24] = 1
+ station_full_charge_21: battery[21] = 1800
+ battery_decrease_1_18: 1800 x[1,18] - battery[1] + battery[18]
+   <= 247.840157931802
+ battery_decrease_2_3: 1800 x[2,3] - battery[2] + battery[3]
+   <= 53.07034187723889
+ battery_decrease_3_4: 1800 x[3,4] - battery[3] + battery[4]
+   <= 181.5197772814399
+ battery_decrease_4_18: 1800 x[4,18] - battery[4] + battery[18]
+   <= 134.5513908260691
+ battery_decrease_5_1: 1800 x[5,1] + battery[1] - battery[5]
+   <= 416.9087902963729
+ battery_decrease_5_2: 1800 x[5,2] + battery[2] - battery[5]
+   <= 265.867822523051
+ battery_decrease_5_3: 1800 x[5,3] + battery[3] - battery[5]
+   <= 1266.412107586624
+ battery_decrease_5_4: 1800 x[5,4] + battery[4] - battery[5]
+   <= 344.919696271864
+ battery_decrease_5_7: 1800 x[5,7] - battery[5] + battery[7]
+   <= 939.1917972418038
+ battery_decrease_5_9: 1800 x[5,9] - battery[5] + battery[9]
+   <= 1080.733048308414
+ battery_decrease_5_12: 1800 x[5,12] - battery[5] + battery[12]
+   <= 582.44895130534
+ battery_decrease_5_13: 1800 x[5,13] - battery[5] + battery[13]
+   <= 735.5310364498171
+ battery_decrease_5_14: 1800 x[5,14] - battery[5] + battery[14]
+   <= 994.9153540142823
+ battery_decrease_5_15: 1800 x[5,15] - battery[5] + battery[15]
+   <= 1154.575431512151
+ battery_decrease_5_16: 1800 x[5,16] - battery[5] + battery[16]
+   <= 267.766627327924
+ battery_decrease_5_18: 1800 x[5,18] - battery[5] + battery[18]
+   <= 152.75197136168
+ battery_decrease_5_21: 1800 x[5,21] - battery[5] + battery[21] <= 1799.99
+ battery_decrease_5_22: 1800 x[5,22] - battery[5] + battery[22]
+   <= 454.3539164674239
+ battery_decrease_5_24: 1800 x[5,24] - battery[5] + battery[24]
+   <= 1108.995569754708
+ battery_decrease_7_4: 1800 x[7,4] + battery[4] - battery[7]
+   <= 487.232547264663
+ battery_decrease_9_2: 1800 x[9,2] + battery[2] - battery[9]
+   <= 152.94664595784
+ battery_decrease_12_21: 1800 x[12,21] - battery[12] + battery[21]
+   <= 582.44895130534
+ battery_decrease_13_3: 1800 x[13,3] + battery[3] - battery[13]
+   <= 421.200344857333
+ battery_decrease_14_4: 1800 x[14,4] + battery[4] - battery[14]
+   <= 144.457383559253
+ battery_decrease_15_1: 1800 x[15,1] + battery[1] - battery[15]
+   <= 186.10904900378
+ battery_decrease_16_5: 1800 x[16,5] + battery[5] - battery[16]
+   <= 267.766627327924
+ battery_decrease_18_21: 1800 x[18,21] - battery[18] + battery[21]
+   <= 152.75197136168
+ battery_decrease_22_18: 1800 x[22,18] + battery[18] - battery[22]
+   <= 383.200157286898
+ battery_decrease_24_4: 1800 x[24,4] + battery[4] - battery[24]
+   <= 51.22749525645008
 Bounds
- battery[0] free
- -infinity <= battery[21] <= 1800
+ battery[1] free
+ battery[2] free
+ battery[3] free
+ battery[4] free
+ -infinity <= battery[5] <= 1800
+ battery[7] free
+ battery[9] free
+ battery[12] free
+ battery[13] free
+ battery[14] free
+ battery[15] free
+ battery[16] free
+ battery[18] free
+ battery[21] free
+ battery[22] free
+ battery[24] free
 Binaries
- x[21,0]
+ x[1,18] x[2,3] x[3,4] x[4,18] x[5,1] x[5,2] x[5,3] x[5,4] x[5,7] x[5,9]
+ x[5,12] x[5,13] x[5,14] x[5,15] x[5,16] x[5,18] x[5,21] x[5,22] x[5,24]
+ x[7,4] x[9,2] x[12,21] x[13,3] x[14,4] x[15,1] x[16,5] x[18,21] x[22,18]
+ x[24,4]
 End

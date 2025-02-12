@@ -274,8 +274,14 @@ Minimize
    + 879.4358569290853 x[24,16] + 971.8572767916061 x[24,17]
    + 1008.355272472096 x[24,18] + 734.7803187067641 x[24,19]
    + 821.2574021363325 x[24,20] + 691.0044302452916 x[24,21]
-   + 1507.486834549024 x[24,22] + 1682.511528478293 x[24,23]
+   + 1507.486834549024 x[24,22] + 1682.511528478293 x[24,23] + 0 order[0]
+   + 0 order[1] + 0 order[2] + 0 order[3] + 0 order[4] + 0 order[5]
+   + 0 order[6] + 0 order[7] + 0 order[8] + 0 order[9] + 0 order[10]
+   + 0 order[11] + 0 order[12] + 0 order[13] + 0 order[14] + 0 order[15]
+   + 0 order[16] + 0 order[17] + 0 order[18] + 0 order[19] + 0 order[20]
+   + 0 order[21] + 0 order[22] + 0 order[23] + 0 order[24]
 Subject To
+ initial_battery: battery[0] = 1800
  visit_0_in: x[1,0] + x[2,0] + x[3,0] + x[4,0] + x[6,0] + x[7,0] + x[8,0]
    + x[9,0] + x[10,0] + x[11,0] + x[12,0] + x[13,0] + x[14,0] + x[15,0]
    + x[16,0] + x[17,0] + x[18,0] + x[19,0] + x[20,0] + x[22,0] + x[23,0]
@@ -613,827 +619,2841 @@ Subject To
    - x[24,8] - x[24,9] - x[24,10] - x[24,11] - x[24,12] - x[24,13]
    - x[24,14] - x[24,15] - x[24,16] - x[24,17] - x[24,18] - x[24,19]
    - x[24,20] - x[24,21] - x[24,22] - x[24,23] = 0
- battery_decrease_0_1: 1800 x[0,1] - battery[0] + battery[1]
-   <= 740.9047230715639
- battery_decrease_0_2: 1800 x[0,2] - battery[0] + battery[2]
-   <= 843.4603887508749
- battery_decrease_0_3: 1800 x[0,3] - battery[0] + battery[3]
-   <= 1009.609953126364
- battery_decrease_0_4: 1800 x[0,4] - battery[0] + battery[4]
-   <= 624.5294524577339
- battery_decrease_0_6: 1800 x[0,6] - battery[0] + battery[6]
-   <= 688.5966555241801
- battery_decrease_0_7: 1800 x[0,7] - battery[0] + battery[7]
-   <= 1530.121528066753
- battery_decrease_0_8: 1800 x[0,8] - battery[0] + battery[8]
-   <= 1573.001138970568
- battery_decrease_0_9: 1800 x[0,9] - battery[0] + battery[9]
-   <= 1007.59371536969
- battery_decrease_0_10: 1800 x[0,10] - battery[0] + battery[10]
-   <= 1115.308557299813
- battery_decrease_0_11: 1800 x[0,11] - battery[0] + battery[11]
-   <= 1226.867918424028
- battery_decrease_0_12: 1800 x[0,12] - battery[0] + battery[12]
-   <= 1308.566423366802
- battery_decrease_0_13: 1800 x[0,13] - battery[0] + battery[13]
-   <= 1211.590391730969
- battery_decrease_0_14: 1800 x[0,14] - battery[0] + battery[14]
-   <= 1319.927931101519
- battery_decrease_0_15: 1800 x[0,15] - battery[0] + battery[15]
-   <= 1245.204325932215
- battery_decrease_0_16: 1800 x[0,16] - battery[0] + battery[16]
-   <= 1233.665296141849
- battery_decrease_0_17: 1800 x[0,17] - battery[0] + battery[17]
-   <= 1366.607558290075
- battery_decrease_0_18: 1800 x[0,18] - battery[0] + battery[18]
-   <= 1161.926638002833
- battery_decrease_0_19: 1800 x[0,19] - battery[0] + battery[19]
-   <= 1638.518549449592
- battery_decrease_1_0: 1800 x[1,0] + battery[0] - battery[1]
-   <= 740.9047230715639
- battery_decrease_1_2: 1800 x[1,2] - battery[1] + battery[2]
-   <= 1481.496561196234
- battery_decrease_1_3: 1800 x[1,3] - battery[1] + battery[3]
-   <= 280.2978437226509
- battery_decrease_1_4: 1800 x[1,4] - battery[1] + battery[4]
-   <= 1683.376636246753
- battery_decrease_1_5: 1800 x[1,5] - battery[1] + battery[5]
-   <= 416.9087902963729
- battery_decrease_1_6: 1800 x[1,6] - battery[1] + battery[6]
-   <= 563.6034380459921
- battery_decrease_1_7: 1800 x[1,7] - battery[1] + battery[7]
-   <= 599.907637751764
- battery_decrease_1_8: 1800 x[1,8] - battery[1] + battery[8]
-   <= 905.6948809910025
- battery_decrease_1_10: 1800 x[1,10] - battery[1] + battery[10]
-   <= 411.640211878386
- battery_decrease_1_11: 1800 x[1,11] - battery[1] + battery[11]
-   <= 457.4760194991959
- battery_decrease_1_12: 1800 x[1,12] - battery[1] + battery[12]
-   <= 250.172580195828
- battery_decrease_1_13: 1800 x[1,13] - battery[1] + battery[13]
-   <= 1318.018806229725
- battery_decrease_1_14: 1800 x[1,14] - battery[1] + battery[14]
-   <= 260.832654173083
- battery_decrease_1_15: 1800 x[1,15] - battery[1] + battery[15]
-   <= 186.10904900378
- battery_decrease_1_16: 1800 x[1,16] - battery[1] + battery[16]
-   <= 253.8549872503961
- battery_decrease_1_17: 1800 x[1,17] - battery[1] + battery[17]
-   <= 629.602023205709
- battery_decrease_1_18: 1800 x[1,18] - battery[1] + battery[18]
-   <= 247.840157931802
- battery_decrease_1_19: 1800 x[1,19] - battery[1] + battery[19]
-   <= 802.0835013603873
- battery_decrease_2_0: 1800 x[2,0] + battery[0] - battery[2]
-   <= 843.4603887508749
- battery_decrease_2_1: 1800 x[2,1] + battery[1] - battery[2]
-   <= 1481.496561196234
- battery_decrease_2_3: 1800 x[2,3] - battery[2] + battery[3]
-   <= 53.07034187723889
- battery_decrease_2_4: 1800 x[2,4] - battery[2] + battery[4]
-   <= 1408.289004610737
- battery_decrease_2_5: 1800 x[2,5] - battery[2] + battery[5]
-   <= 265.867822523051
- battery_decrease_2_6: 1800 x[2,6] - battery[2] + battery[6]
-   <= 880.1131375058824
- battery_decrease_2_7: 1800 x[2,7] - battery[2] + battery[7]
-   <= 643.3490714922279
- battery_decrease_2_8: 1800 x[2,8] - battery[2] + battery[8]
-   <= 1049.446377931929
- battery_decrease_2_9: 1800 x[2,9] - battery[2] + battery[9]
-   <= 152.94664595784
- battery_decrease_2_10: 1800 x[2,10] - battery[2] + battery[10]
-   <= 661.072299284556
- battery_decrease_2_11: 1800 x[2,11] - battery[2] + battery[11]
-   <= 688.0352215698231
- battery_decrease_2_12: 1800 x[2,12] - battery[2] + battery[12]
-   <= 361.059146594552
- battery_decrease_2_13: 1800 x[2,13] - battery[2] + battery[13]
-   <= 1311.082691299741
- battery_decrease_2_14: 1800 x[2,14] - battery[2] + battery[14]
-   <= 428.4716145344089
- battery_decrease_2_15: 1800 x[2,15] - battery[2] + battery[15]
-   <= 288.6647146830901
- battery_decrease_2_16: 1800 x[2,16] - battery[2] + battery[16]
-   <= 437.280656559165
- battery_decrease_2_17: 1800 x[2,17] - battery[2] + battery[17]
-   <= 846.181279476394
- battery_decrease_2_18: 1800 x[2,18] - battery[2] + battery[18]
-   <= 455.6770987297739
- battery_decrease_2_19: 1800 x[2,19] - battery[2] + battery[19]
-   <= 946.7676770387759
- battery_decrease_3_0: 1800 x[3,0] + battery[0] - battery[3]
-   <= 1009.609953126364
- battery_decrease_3_1: 1800 x[3,1] + battery[1] - battery[3]
-   <= 280.2978437226509
- battery_decrease_3_2: 1800 x[3,2] + battery[2] - battery[3]
-   <= 53.07034187723889
- battery_decrease_3_4: 1800 x[3,4] - battery[3] + battery[4]
-   <= 181.5197772814399
- battery_decrease_3_5: 1800 x[3,5] - battery[3] + battery[5]
-   <= 1266.412107586624
- battery_decrease_3_7: 1800 x[3,7] - battery[3] + battery[7]
-   <= 1277.393412455689
- battery_decrease_3_8: 1800 x[3,8] - battery[3] + battery[8]
-   <= 808.6098028635554
- battery_decrease_3_9: 1800 x[3,9] - battery[3] + battery[9]
-   <= 1612.217159282411
- battery_decrease_3_10: 1800 x[3,10] - battery[3] + battery[10]
-   <= 385.6812839768011
- battery_decrease_3_11: 1800 x[3,11] - battery[3] + battery[11]
-   <= 503.3473181359179
- battery_decrease_3_12: 1800 x[3,12] - battery[3] + battery[12]
-   <= 1052.858243647178
- battery_decrease_3_13: 1800 x[3,13] - battery[3] + battery[13]
-   <= 421.200344857333
- battery_decrease_3_14: 1800 x[3,14] - battery[3] + battery[14]
-   <= 1443.690407176218
- battery_decrease_3_15: 1800 x[3,15] - battery[3] + battery[15]
-   <= 1564.29391075584
- battery_decrease_3_16: 1800 x[3,16] - battery[3] + battery[16]
-   <= 693.6756918067319
- battery_decrease_3_17: 1800 x[3,17] - battery[3] + battery[17]
-   <= 599.501778857574
- battery_decrease_3_18: 1800 x[3,18] - battery[3] + battery[18]
-   <= 562.4193239554741
- battery_decrease_3_19: 1800 x[3,19] - battery[3] + battery[19]
-   <= 849.0488371208688
- battery_decrease_4_0: 1800 x[4,0] + battery[0] - battery[4]
-   <= 624.5294524577339
- battery_decrease_4_1: 1800 x[4,1] + battery[1] - battery[4]
-   <= 1683.376636246753
- battery_decrease_4_2: 1800 x[4,2] + battery[2] - battery[4]
-   <= 1408.289004610737
- battery_decrease_4_3: 1800 x[4,3] + battery[3] - battery[4]
-   <= 181.5197772814399
- battery_decrease_4_5: 1800 x[4,5] - battery[4] + battery[5]
-   <= 344.919696271864
- battery_decrease_4_6: 1800 x[4,6] - battery[4] + battery[6]
-   <= 490.647006853121
- battery_decrease_4_7: 1800 x[4,7] - battery[4] + battery[7]
-   <= 487.232547264663
- battery_decrease_4_8: 1800 x[4,8] - battery[4] + battery[8]
-   <= 789.506508430923
- battery_decrease_4_10: 1800 x[4,10] - battery[4] + battery[10]
-   <= 304.912365602127
- battery_decrease_4_11: 1800 x[4,11] - battery[4] + battery[11]
-   <= 347.4514234350111
- battery_decrease_4_12: 1800 x[4,12] - battery[4] + battery[12]
-   <= 133.9806944363961
- battery_decrease_4_13: 1800 x[4,13] - battery[4] + battery[13]
-   <= 1203.862671338741
- battery_decrease_4_14: 1800 x[4,14] - battery[4] + battery[14]
-   <= 144.457383559253
- battery_decrease_4_15: 1800 x[4,15] - battery[4] + battery[15]
-   <= 69.73377838994907
- battery_decrease_4_16: 1800 x[4,16] - battery[4] + battery[16]
-   <= 138.575884175222
- battery_decrease_4_17: 1800 x[4,17] - battery[4] + battery[17]
-   <= 518.035164302524
- battery_decrease_4_18: 1800 x[4,18] - battery[4] + battery[18]
-   <= 134.5513908260691
- battery_decrease_4_19: 1800 x[4,19] - battery[4] + battery[19]
-   <= 685.76765243919
- battery_decrease_5_1: 1800 x[5,1] + battery[1] - battery[5]
-   <= 416.9087902963729
- battery_decrease_5_2: 1800 x[5,2] + battery[2] - battery[5]
-   <= 265.867822523051
- battery_decrease_5_3: 1800 x[5,3] + battery[3] - battery[5]
-   <= 1266.412107586624
- battery_decrease_5_4: 1800 x[5,4] + battery[4] - battery[5]
-   <= 344.919696271864
- battery_decrease_5_7: 1800 x[5,7] - battery[5] + battery[7]
-   <= 939.1917972418038
- battery_decrease_5_9: 1800 x[5,9] - battery[5] + battery[9]
-   <= 1080.733048308414
- battery_decrease_5_12: 1800 x[5,12] - battery[5] + battery[12]
-   <= 582.44895130534
- battery_decrease_5_13: 1800 x[5,13] - battery[5] + battery[13]
-   <= 735.5310364498171
- battery_decrease_5_14: 1800 x[5,14] - battery[5] + battery[14]
-   <= 994.9153540142823
- battery_decrease_5_15: 1800 x[5,15] - battery[5] + battery[15]
-   <= 1154.575431512151
- battery_decrease_5_16: 1800 x[5,16] - battery[5] + battery[16]
-   <= 267.766627327924
- battery_decrease_5_18: 1800 x[5,18] - battery[5] + battery[18]
-   <= 152.75197136168
- battery_decrease_6_0: 1800 x[6,0] + battery[0] - battery[6]
-   <= 688.5966555241801
- battery_decrease_6_1: 1800 x[6,1] + battery[1] - battery[6]
-   <= 563.6034380459921
- battery_decrease_6_2: 1800 x[6,2] + battery[2] - battery[6]
-   <= 880.1131375058824
- battery_decrease_6_4: 1800 x[6,4] + battery[4] - battery[6]
-   <= 490.647006853121
- battery_decrease_6_7: 1800 x[6,7] - battery[6] + battery[7]
-   <= 419.498323057893
- battery_decrease_6_8: 1800 x[6,8] - battery[6] + battery[8]
-   <= 877.3155426586769
- battery_decrease_6_10: 1800 x[6,10] - battery[6] + battery[10]
-   <= 1134.5490457834
- battery_decrease_6_11: 1800 x[6,11] - battery[6] + battery[11]
-   <= 1056.69621924562
- battery_decrease_6_12: 1800 x[6,12] - battery[6] + battery[12]
-   <= 412.0918281846459
- battery_decrease_6_13: 1800 x[6,13] - battery[6] + battery[13]
-   <= 666.065492057018
- battery_decrease_6_14: 1800 x[6,14] - battery[6] + battery[14]
-   <= 220.603988103145
- battery_decrease_6_15: 1800 x[6,15] - battery[6] + battery[15]
-   <= 133.8066263202411
- battery_decrease_6_16: 1800 x[6,16] - battery[6] + battery[16]
-   <= 711.832664059895
- battery_decrease_6_17: 1800 x[6,17] - battery[6] + battery[17]
-   <= 1061.418212671945
- battery_decrease_6_18: 1800 x[6,18] - battery[6] + battery[18]
-   <= 820.1886689251705
- battery_decrease_6_19: 1800 x[6,19] - battery[6] + battery[19]
-   <= 849.1210492615539
- battery_decrease_7_0: 1800 x[7,0] + battery[0] - battery[7]
-   <= 1530.121528066753
- battery_decrease_7_1: 1800 x[7,1] + battery[1] - battery[7]
-   <= 599.907637751764
- battery_decrease_7_2: 1800 x[7,2] + battery[2] - battery[7]
-   <= 643.3490714922279
- battery_decrease_7_3: 1800 x[7,3] + battery[3] - battery[7]
-   <= 1277.393412455689
- battery_decrease_7_4: 1800 x[7,4] + battery[4] - battery[7]
-   <= 487.232547264663
- battery_decrease_7_5: 1800 x[7,5] + battery[5] - battery[7]
-   <= 939.1917972418038
- battery_decrease_7_6: 1800 x[7,6] + battery[6] - battery[7]
-   <= 419.498323057893
- battery_decrease_7_8: 1800 x[7,8] - battery[7] + battery[8]
-   <= 1315.280507868798
- battery_decrease_7_9: 1800 x[7,9] - battery[7] + battery[9]
-   <= 1273.675449564176
- battery_decrease_7_10: 1800 x[7,10] - battery[7] + battery[10]
-   <= 889.3560097824075
- battery_decrease_7_11: 1800 x[7,11] - battery[7] + battery[11]
-   <= 1006.246131367663
- battery_decrease_7_12: 1800 x[7,12] - battery[7] + battery[12]
-   <= 1369.771885343508
- battery_decrease_7_13: 1800 x[7,13] - battery[7] + battery[13]
-   <= 1081.120138169938
- battery_decrease_7_14: 1800 x[7,14] - battery[7] + battery[14]
-   <= 1579.651449251036
- battery_decrease_7_15: 1800 x[7,15] - battery[7] + battery[15]
-   <= 1512.949566177546
- battery_decrease_7_16: 1800 x[7,16] - battery[7] + battery[16]
-   <= 1122.645452161103
- battery_decrease_7_17: 1800 x[7,17] - battery[7] + battery[17]
-   <= 1118.225167721061
- battery_decrease_7_18: 1800 x[7,18] - battery[7] + battery[18]
-   <= 1012.918870784777
- battery_decrease_7_19: 1800 x[7,19] - battery[7] + battery[19]
-   <= 1368.652916177108
- battery_decrease_8_0: 1800 x[8,0] + battery[0] - battery[8]
-   <= 1573.001138970568
- battery_decrease_8_1: 1800 x[8,1] + battery[1] - battery[8]
-   <= 905.6948809910025
- battery_decrease_8_2: 1800 x[8,2] + battery[2] - battery[8]
-   <= 1049.446377931929
- battery_decrease_8_3: 1800 x[8,3] + battery[3] - battery[8]
-   <= 808.6098028635554
- battery_decrease_8_4: 1800 x[8,4] + battery[4] - battery[8]
-   <= 789.506508430923
- battery_decrease_8_6: 1800 x[8,6] + battery[6] - battery[8]
-   <= 877.3155426586769
- battery_decrease_8_7: 1800 x[8,7] + battery[7] - battery[8]
-   <= 1315.280507868798
- battery_decrease_8_9: 1800 x[8,9] - battery[8] + battery[9]
-   <= 788.957450011355
- battery_decrease_8_10: 1800 x[8,10] - battery[8] + battery[10]
-   <= 1178.725577698533
- battery_decrease_8_11: 1800 x[8,11] - battery[8] + battery[11]
-   <= 1269.175012628719
- battery_decrease_8_12: 1800 x[8,12] - battery[8] + battery[12]
-   <= 1110.776048780285
- battery_decrease_8_13: 1800 x[8,13] - battery[8] + battery[13]
-   <= 1337.245334924283
- battery_decrease_8_14: 1800 x[8,14] - battery[8] + battery[14]
-   <= 1098.171051903202
- battery_decrease_8_15: 1800 x[8,15] - battery[8] + battery[15]
-   <= 1041.076389565726
- battery_decrease_8_16: 1800 x[8,16] - battery[8] + battery[16]
-   <= 1143.594771486849
- battery_decrease_8_17: 1800 x[8,17] - battery[8] + battery[17]
-   <= 1445.431439293109
- battery_decrease_8_18: 1800 x[8,18] - battery[8] + battery[18]
-   <= 1116.806596106911
- battery_decrease_8_19: 1800 x[8,19] - battery[8] + battery[19]
-   <= 1695.412337512745
- battery_decrease_9_0: 1800 x[9,0] + battery[0] - battery[9]
-   <= 1007.59371536969
- battery_decrease_9_2: 1800 x[9,2] + battery[2] - battery[9]
-   <= 152.94664595784
- battery_decrease_9_3: 1800 x[9,3] + battery[3] - battery[9]
-   <= 1612.217159282411
- battery_decrease_9_5: 1800 x[9,5] + battery[5] - battery[9]
-   <= 1080.733048308414
- battery_decrease_9_7: 1800 x[9,7] + battery[7] - battery[9]
-   <= 1273.675449564176
- battery_decrease_9_8: 1800 x[9,8] + battery[8] - battery[9]
-   <= 788.957450011355
- battery_decrease_9_10: 1800 x[9,10] - battery[9] + battery[10]
-   <= 443.300125642241
- battery_decrease_9_11: 1800 x[9,11] - battery[9] + battery[11]
-   <= 559.6503611357509
- battery_decrease_9_12: 1800 x[9,12] - battery[9] + battery[12]
-   <= 1166.856698047541
- battery_decrease_9_13: 1800 x[9,13] - battery[9] + battery[13]
-   <= 419.184107100659
- battery_decrease_9_14: 1800 x[9,14] - battery[9] + battery[14]
-   <= 1486.301152393374
- battery_decrease_9_15: 1800 x[9,15] - battery[9] + battery[15]
-   <= 1518.950038728799
- battery_decrease_9_16: 1800 x[9,16] - battery[9] + battery[16]
-   <= 790.526300297841
- battery_decrease_9_17: 1800 x[9,17] - battery[9] + battery[17]
-   <= 632.1253996369769
- battery_decrease_9_18: 1800 x[9,18] - battery[9] + battery[18]
-   <= 653.251976525499
- battery_decrease_9_19: 1800 x[9,19] - battery[9] + battery[19]
-   <= 847.0874848472855
- battery_decrease_10_0: 1800 x[10,0] + battery[0] - battery[10]
-   <= 1115.308557299813
- battery_decrease_10_1: 1800 x[10,1] + battery[1] - battery[10]
-   <= 411.640211878386
- battery_decrease_10_2: 1800 x[10,2] + battery[2] - battery[10]
-   <= 661.072299284556
- battery_decrease_10_3: 1800 x[10,3] + battery[3] - battery[10]
-   <= 385.6812839768011
- battery_decrease_10_4: 1800 x[10,4] + battery[4] - battery[10]
-   <= 304.912365602127
- battery_decrease_10_6: 1800 x[10,6] + battery[6] - battery[10]
-   <= 1134.5490457834
- battery_decrease_10_7: 1800 x[10,7] + battery[7] - battery[10]
-   <= 889.3560097824075
- battery_decrease_10_8: 1800 x[10,8] + battery[8] - battery[10]
-   <= 1178.725577698533
- battery_decrease_10_9: 1800 x[10,9] + battery[9] - battery[10]
-   <= 443.300125642241
- battery_decrease_10_11: 1800 x[10,11] - battery[10] + battery[11]
-   <= 1682.320080163909
- battery_decrease_10_12: 1800 x[10,12] - battery[10] + battery[12]
-   <= 1027.650444761407
- battery_decrease_10_13: 1800 x[10,13] - battery[10] + battery[13]
-   <= 749.555687442049
- battery_decrease_10_14: 1800 x[10,14] - battery[10] + battery[14]
-   <= 738.495549340613
- battery_decrease_10_15: 1800 x[10,15] - battery[10] + battery[15]
-   <= 613.1937662142991
- battery_decrease_10_16: 1800 x[10,16] - battery[10] + battery[16]
-   <= 1369.894718951321
- battery_decrease_10_17: 1800 x[10,17] - battery[10] + battery[17]
-   <= 1532.444887897325
- battery_decrease_10_18: 1800 x[10,18] - battery[10] + battery[18]
-   <= 1485.600990093938
- battery_decrease_10_19: 1800 x[10,19] - battery[10] + battery[19]
-   <= 1229.905769247629
- battery_decrease_11_0: 1800 x[11,0] + battery[0] - battery[11]
-   <= 1226.867918424028
- battery_decrease_11_1: 1800 x[11,1] + battery[1] - battery[11]
-   <= 457.4760194991959
- battery_decrease_11_2: 1800 x[11,2] + battery[2] - battery[11]
-   <= 688.0352215698231
- battery_decrease_11_3: 1800 x[11,3] + battery[3] - battery[11]
-   <= 503.3473181359179
- battery_decrease_11_4: 1800 x[11,4] + battery[4] - battery[11]
-   <= 347.4514234350111
- battery_decrease_11_6: 1800 x[11,6] + battery[6] - battery[11]
-   <= 1056.69621924562
- battery_decrease_11_7: 1800 x[11,7] + battery[7] - battery[11]
-   <= 1006.246131367663
- battery_decrease_11_8: 1800 x[11,8] + battery[8] - battery[11]
-   <= 1269.175012628719
- battery_decrease_11_9: 1800 x[11,9] + battery[9] - battery[11]
-   <= 559.6503611357509
- battery_decrease_11_10: 1800 x[11,10] + battery[10] - battery[11]
-   <= 1682.320080163909
- battery_decrease_11_12: 1800 x[11,12] - battery[11] + battery[12]
-   <= 1135.373697469557
- battery_decrease_11_13: 1800 x[11,13] - battery[11] + battery[13]
-   <= 823.6137374677404
- battery_decrease_11_14: 1800 x[11,14] - battery[11] + battery[14]
-   <= 855.9728458966856
- battery_decrease_11_15: 1800 x[11,15] - battery[11] + battery[15]
-   <= 730.8032225589791
- battery_decrease_11_16: 1800 x[11,16] - battery[11] + battery[16]
-   <= 1453.919889955905
- battery_decrease_11_17: 1800 x[11,17] - battery[11] + battery[17]
-   <= 1619.858420941431
- battery_decrease_11_18: 1800 x[11,18] - battery[11] + battery[18]
-   <= 1542.481602254699
- battery_decrease_11_19: 1800 x[11,19] - battery[11] + battery[19]
-   <= 1331.278139346839
- battery_decrease_12_0: 1800 x[12,0] + battery[0] - battery[12]
-   <= 1308.566423366802
- battery_decrease_12_1: 1800 x[12,1] + battery[1] - battery[12]
-   <= 250.172580195828
- battery_decrease_12_2: 1800 x[12,2] + battery[2] - battery[12]
-   <= 361.059146594552
- battery_decrease_12_3: 1800 x[12,3] + battery[3] - battery[12]
-   <= 1052.858243647178
- battery_decrease_12_4: 1800 x[12,4] + battery[4] - battery[12]
-   <= 133.9806944363961
- battery_decrease_12_5: 1800 x[12,5] + battery[5] - battery[12]
-   <= 582.44895130534
- battery_decrease_12_6: 1800 x[12,6] + battery[6] - battery[12]
-   <= 412.0918281846459
- battery_decrease_12_7: 1800 x[12,7] + battery[7] - battery[12]
-   <= 1369.771885343508
- battery_decrease_12_8: 1800 x[12,8] + battery[8] - battery[12]
-   <= 1110.776048780285
- battery_decrease_12_9: 1800 x[12,9] + battery[9] - battery[12]
-   <= 1166.856698047541
- battery_decrease_12_10: 1800 x[12,10] + battery[10] - battery[12]
-   <= 1027.650444761407
- battery_decrease_12_11: 1800 x[12,11] + battery[11] - battery[12]
-   <= 1135.373697469557
- battery_decrease_12_13: 1800 x[12,13] - battery[12] + battery[13]
-   <= 725.30415502146
- battery_decrease_12_14: 1800 x[12,14] - battery[12] + battery[14]
-   <= 1386.99247520752
- battery_decrease_12_15: 1800 x[12,15] - battery[12] + battery[15]
-   <= 1227.603581713935
- battery_decrease_12_16: 1800 x[12,16] - battery[12] + battery[16]
-   <= 1418.896701303943
- battery_decrease_12_17: 1800 x[12,17] - battery[12] + battery[17]
-   <= 1145.121455030042
- battery_decrease_12_18: 1800 x[12,18] - battery[12] + battery[18]
-   <= 1278.719788142551
- battery_decrease_12_19: 1800 x[12,19] - battery[12] + battery[19]
-   <= 1210.834018701059
- battery_decrease_13_0: 1800 x[13,0] + battery[0] - battery[13]
-   <= 1211.590391730969
- battery_decrease_13_1: 1800 x[13,1] + battery[1] - battery[13]
-   <= 1318.018806229725
- battery_decrease_13_2: 1800 x[13,2] + battery[2] - battery[13]
-   <= 1311.082691299741
- battery_decrease_13_3: 1800 x[13,3] + battery[3] - battery[13]
-   <= 421.200344857333
- battery_decrease_13_4: 1800 x[13,4] + battery[4] - battery[13]
-   <= 1203.862671338741
- battery_decrease_13_5: 1800 x[13,5] + battery[5] - battery[13]
-   <= 735.5310364498171
- battery_decrease_13_6: 1800 x[13,6] + battery[6] - battery[13]
-   <= 666.065492057018
- battery_decrease_13_7: 1800 x[13,7] + battery[7] - battery[13]
-   <= 1081.120138169938
- battery_decrease_13_8: 1800 x[13,8] + battery[8] - battery[13]
-   <= 1337.245334924283
- battery_decrease_13_9: 1800 x[13,9] + battery[9] - battery[13]
-   <= 419.184107100659
- battery_decrease_13_10: 1800 x[13,10] + battery[10] - battery[13]
-   <= 749.555687442049
- battery_decrease_13_11: 1800 x[13,11] + battery[11] - battery[13]
-   <= 823.6137374677404
- battery_decrease_13_12: 1800 x[13,12] + battery[12] - battery[13]
-   <= 725.30415502146
- battery_decrease_13_14: 1800 x[13,14] - battery[13] + battery[14]
-   <= 731.5183228324879
- battery_decrease_13_15: 1800 x[13,15] - battery[13] + battery[15]
-   <= 656.7947176631851
- battery_decrease_13_16: 1800 x[13,16] - battery[13] + battery[16]
-   <= 685.2274106823379
- battery_decrease_13_17: 1800 x[13,17] - battery[13] + battery[17]
-   <= 1003.753249708423
- battery_decrease_13_18: 1800 x[13,18] - battery[13] + battery[18]
-   <= 654.152698776207
- battery_decrease_13_19: 1800 x[13,19] - battery[13] + battery[19]
-   <= 1242.369601612139
- battery_decrease_14_0: 1800 x[14,0] + battery[0] - battery[14]
-   <= 1319.927931101519
- battery_decrease_14_1: 1800 x[14,1] + battery[1] - battery[14]
-   <= 260.832654173083
- battery_decrease_14_2: 1800 x[14,2] + battery[2] - battery[14]
-   <= 428.4716145344089
- battery_decrease_14_3: 1800 x[14,3] + battery[3] - battery[14]
-   <= 1443.690407176218
- battery_decrease_14_4: 1800 x[14,4] + battery[4] - battery[14]
-   <= 144.457383559253
- battery_decrease_14_5: 1800 x[14,5] + battery[5] - battery[14]
-   <= 994.9153540142823
- battery_decrease_14_6: 1800 x[14,6] + battery[6] - battery[14]
-   <= 220.603988103145
- battery_decrease_14_7: 1800 x[14,7] + battery[7] - battery[14]
-   <= 1579.651449251036
- battery_decrease_14_8: 1800 x[14,8] + battery[8] - battery[14]
-   <= 1098.171051903202
- battery_decrease_14_9: 1800 x[14,9] + battery[9] - battery[14]
-   <= 1486.301152393374
- battery_decrease_14_10: 1800 x[14,10] + battery[10] - battery[14]
-   <= 738.495549340613
- battery_decrease_14_11: 1800 x[14,11] + battery[11] - battery[14]
-   <= 855.9728458966856
- battery_decrease_14_12: 1800 x[14,12] + battery[12] - battery[14]
-   <= 1386.99247520752
- battery_decrease_14_13: 1800 x[14,13] + battery[13] - battery[14]
-   <= 731.5183228324879
- battery_decrease_14_15: 1800 x[14,15] - battery[14] + battery[15]
-   <= 1640.336167693323
- battery_decrease_14_16: 1800 x[14,16] - battery[14] + battery[16]
-   <= 1046.261165423762
- battery_decrease_14_17: 1800 x[14,17] - battery[14] + battery[17]
-   <= 940.8338536837721
- battery_decrease_14_18: 1800 x[14,18] - battery[14] + battery[18]
-   <= 917.3033752325133
- battery_decrease_14_19: 1800 x[14,19] - battery[14] + battery[19]
-   <= 1160.150319207867
- battery_decrease_15_0: 1800 x[15,0] + battery[0] - battery[15]
-   <= 1245.204325932215
- battery_decrease_15_1: 1800 x[15,1] + battery[1] - battery[15]
-   <= 186.10904900378
- battery_decrease_15_2: 1800 x[15,2] + battery[2] - battery[15]
-   <= 288.6647146830901
- battery_decrease_15_3: 1800 x[15,3] + battery[3] - battery[15]
-   <= 1564.29391075584
- battery_decrease_15_4: 1800 x[15,4] + battery[4] - battery[15]
-   <= 69.73377838994907
- battery_decrease_15_5: 1800 x[15,5] + battery[5] - battery[15]
-   <= 1154.575431512151
- battery_decrease_15_6: 1800 x[15,6] + battery[6] - battery[15]
-   <= 133.8066263202411
- battery_decrease_15_7: 1800 x[15,7] + battery[7] - battery[15]
-   <= 1512.949566177546
- battery_decrease_15_8: 1800 x[15,8] + battery[8] - battery[15]
-   <= 1041.076389565726
- battery_decrease_15_9: 1800 x[15,9] + battery[9] - battery[15]
-   <= 1518.950038728799
- battery_decrease_15_10: 1800 x[15,10] + battery[10] - battery[15]
-   <= 613.1937662142991
- battery_decrease_15_11: 1800 x[15,11] + battery[11] - battery[15]
-   <= 730.8032225589791
- battery_decrease_15_12: 1800 x[15,12] + battery[12] - battery[15]
-   <= 1227.603581713935
- battery_decrease_15_13: 1800 x[15,13] + battery[13] - battery[15]
-   <= 656.7947176631851
- battery_decrease_15_14: 1800 x[15,14] + battery[14] - battery[15]
-   <= 1640.336167693323
- battery_decrease_15_16: 1800 x[15,16] - battery[15] + battery[16]
-   <= 895.8620740588634
- battery_decrease_15_17: 1800 x[15,17] - battery[15] + battery[17]
-   <= 833.1635719532835
- battery_decrease_15_18: 1800 x[15,18] - battery[15] + battery[18]
-   <= 770.9397104224299
- battery_decrease_15_19: 1800 x[15,19] - battery[15] + battery[19]
-   <= 1084.428491536909
- battery_decrease_16_0: 1800 x[16,0] + battery[0] - battery[16]
-   <= 1233.665296141849
- battery_decrease_16_1: 1800 x[16,1] + battery[1] - battery[16]
-   <= 253.8549872503961
- battery_decrease_16_2: 1800 x[16,2] + battery[2] - battery[16]
-   <= 437.280656559165
- battery_decrease_16_3: 1800 x[16,3] + battery[3] - battery[16]
-   <= 693.6756918067319
- battery_decrease_16_4: 1800 x[16,4] + battery[4] - battery[16]
-   <= 138.575884175222
- battery_decrease_16_5: 1800 x[16,5] + battery[5] - battery[16]
-   <= 267.766627327924
- battery_decrease_16_6: 1800 x[16,6] + battery[6] - battery[16]
-   <= 711.832664059895
- battery_decrease_16_7: 1800 x[16,7] + battery[7] - battery[16]
-   <= 1122.645452161103
- battery_decrease_16_8: 1800 x[16,8] + battery[8] - battery[16]
-   <= 1143.594771486849
- battery_decrease_16_9: 1800 x[16,9] + battery[9] - battery[16]
-   <= 790.526300297841
- battery_decrease_16_10: 1800 x[16,10] + battery[10] - battery[16]
-   <= 1369.894718951321
- battery_decrease_16_11: 1800 x[16,11] + battery[11] - battery[16]
-   <= 1453.919889955905
- battery_decrease_16_12: 1800 x[16,12] + battery[12] - battery[16]
-   <= 1418.896701303943
- battery_decrease_16_13: 1800 x[16,13] + battery[13] - battery[16]
-   <= 685.2274106823379
- battery_decrease_16_14: 1800 x[16,14] + battery[14] - battery[16]
-   <= 1046.261165423762
- battery_decrease_16_15: 1800 x[16,15] + battery[15] - battery[16]
-   <= 895.8620740588634
- battery_decrease_16_17: 1800 x[16,17] - battery[16] + battery[17]
-   <= 1372.22207831633
- battery_decrease_16_18: 1800 x[16,18] - battery[16] + battery[18]
-   <= 1659.124312630156
- battery_decrease_16_19: 1800 x[16,19] - battery[16] + battery[19]
-   <= 1242.659272785211
- battery_decrease_17_0: 1800 x[17,0] + battery[0] - battery[17]
-   <= 1366.607558290075
- battery_decrease_17_1: 1800 x[17,1] + battery[1] - battery[17]
-   <= 629.602023205709
- battery_decrease_17_2: 1800 x[17,2] + battery[2] - battery[17]
-   <= 846.181279476394
- battery_decrease_17_3: 1800 x[17,3] + battery[3] - battery[17]
-   <= 599.501778857574
- battery_decrease_17_4: 1800 x[17,4] + battery[4] - battery[17]
-   <= 518.035164302524
- battery_decrease_17_6: 1800 x[17,6] + battery[6] - battery[17]
-   <= 1061.418212671945
- battery_decrease_17_7: 1800 x[17,7] + battery[7] - battery[17]
-   <= 1118.225167721061
- battery_decrease_17_8: 1800 x[17,8] + battery[8] - battery[17]
-   <= 1445.431439293109
- battery_decrease_17_9: 1800 x[17,9] + battery[9] - battery[17]
-   <= 632.1253996369769
- battery_decrease_17_10: 1800 x[17,10] + battery[10] - battery[17]
-   <= 1532.444887897325
- battery_decrease_17_11: 1800 x[17,11] + battery[11] - battery[17]
-   <= 1619.858420941431
- battery_decrease_17_12: 1800 x[17,12] + battery[12] - battery[17]
-   <= 1145.121455030042
- battery_decrease_17_13: 1800 x[17,13] + battery[13] - battery[17]
-   <= 1003.753249708423
- battery_decrease_17_14: 1800 x[17,14] + battery[14] - battery[17]
-   <= 940.8338536837721
- battery_decrease_17_15: 1800 x[17,15] + battery[15] - battery[17]
-   <= 833.1635719532835
- battery_decrease_17_16: 1800 x[17,16] + battery[16] - battery[17]
-   <= 1372.22207831633
- battery_decrease_17_18: 1800 x[17,18] - battery[17] + battery[18]
-   <= 1409.414195380201
- battery_decrease_17_19: 1800 x[17,19] - battery[17] + battery[19]
-   <= 1495.278568640465
- battery_decrease_18_0: 1800 x[18,0] + battery[0] - battery[18]
-   <= 1161.926638002833
- battery_decrease_18_1: 1800 x[18,1] + battery[1] - battery[18]
-   <= 247.840157931802
- battery_decrease_18_2: 1800 x[18,2] + battery[2] - battery[18]
-   <= 455.6770987297739
- battery_decrease_18_3: 1800 x[18,3] + battery[3] - battery[18]
-   <= 562.4193239554741
- battery_decrease_18_4: 1800 x[18,4] + battery[4] - battery[18]
-   <= 134.5513908260691
- battery_decrease_18_5: 1800 x[18,5] + battery[5] - battery[18]
-   <= 152.75197136168
- battery_decrease_18_6: 1800 x[18,6] + battery[6] - battery[18]
-   <= 820.1886689251705
- battery_decrease_18_7: 1800 x[18,7] + battery[7] - battery[18]
-   <= 1012.918870784777
- battery_decrease_18_8: 1800 x[18,8] + battery[8] - battery[18]
-   <= 1116.806596106911
- battery_decrease_18_9: 1800 x[18,9] + battery[9] - battery[18]
-   <= 653.251976525499
- battery_decrease_18_10: 1800 x[18,10] + battery[10] - battery[18]
-   <= 1485.600990093938
- battery_decrease_18_11: 1800 x[18,11] + battery[11] - battery[18]
-   <= 1542.481602254699
- battery_decrease_18_12: 1800 x[18,12] + battery[12] - battery[18]
-   <= 1278.719788142551
- battery_decrease_18_13: 1800 x[18,13] + battery[13] - battery[18]
-   <= 654.152698776207
- battery_decrease_18_14: 1800 x[18,14] + battery[14] - battery[18]
-   <= 917.3033752325133
- battery_decrease_18_15: 1800 x[18,15] + battery[15] - battery[18]
-   <= 770.9397104224299
- battery_decrease_18_16: 1800 x[18,16] + battery[16] - battery[18]
-   <= 1659.124312630156
- battery_decrease_18_17: 1800 x[18,17] + battery[17] - battery[18]
-   <= 1409.414195380201
- battery_decrease_18_19: 1800 x[18,19] - battery[18] + battery[19]
-   <= 1206.077826143017
- battery_decrease_19_0: 1800 x[19,0] + battery[0] - battery[19]
-   <= 1638.518549449592
- battery_decrease_19_1: 1800 x[19,1] + battery[1] - battery[19]
-   <= 802.0835013603873
- battery_decrease_19_2: 1800 x[19,2] + battery[2] - battery[19]
-   <= 946.7676770387759
- battery_decrease_19_3: 1800 x[19,3] + battery[3] - battery[19]
-   <= 849.0488371208688
- battery_decrease_19_4: 1800 x[19,4] + battery[4] - battery[19]
-   <= 685.76765243919
- battery_decrease_19_6: 1800 x[19,6] + battery[6] - battery[19]
-   <= 849.1210492615539
- battery_decrease_19_7: 1800 x[19,7] + battery[7] - battery[19]
-   <= 1368.652916177108
- battery_decrease_19_8: 1800 x[19,8] + battery[8] - battery[19]
-   <= 1695.412337512745
- battery_decrease_19_9: 1800 x[19,9] + battery[9] - battery[19]
-   <= 847.0874848472855
- battery_decrease_19_10: 1800 x[19,10] + battery[10] - battery[19]
-   <= 1229.905769247629
- battery_decrease_19_11: 1800 x[19,11] + battery[11] - battery[19]
-   <= 1331.278139346839
- battery_decrease_19_12: 1800 x[19,12] + battery[12] - battery[19]
-   <= 1210.834018701059
- battery_decrease_19_13: 1800 x[19,13] + battery[13] - battery[19]
-   <= 1242.369601612139
- battery_decrease_19_14: 1800 x[19,14] + battery[14] - battery[19]
-   <= 1160.150319207867
- battery_decrease_19_15: 1800 x[19,15] + battery[15] - battery[19]
-   <= 1084.428491536909
- battery_decrease_19_16: 1800 x[19,16] + battery[16] - battery[19]
-   <= 1242.659272785211
- battery_decrease_19_17: 1800 x[19,17] + battery[17] - battery[19]
-   <= 1495.278568640465
- battery_decrease_19_18: 1800 x[19,18] + battery[18] - battery[19]
-   <= 1206.077826143017
- battery_recharge_20_0: - 1800 x[20,0] + battery[0] >= 0
- battery_recharge_20_1: - 1800 x[20,1] + battery[1] >= 0
- battery_recharge_20_2: - 1800 x[20,2] + battery[2] >= 0
- battery_recharge_20_3: - 1800 x[20,3] + battery[3] >= 0
- battery_recharge_20_4: - 1800 x[20,4] + battery[4] >= 0
- battery_recharge_20_6: - 1800 x[20,6] + battery[6] >= 0
- battery_recharge_20_7: - 1800 x[20,7] + battery[7] >= 0
- battery_recharge_20_8: - 1800 x[20,8] + battery[8] >= 0
- battery_recharge_20_9: - 1800 x[20,9] + battery[9] >= 0
- battery_recharge_20_10: - 1800 x[20,10] + battery[10] >= 0
- battery_recharge_20_11: - 1800 x[20,11] + battery[11] >= 0
- battery_recharge_20_12: - 1800 x[20,12] + battery[12] >= 0
- battery_recharge_20_13: - 1800 x[20,13] + battery[13] >= 0
- battery_recharge_20_14: - 1800 x[20,14] + battery[14] >= 0
- battery_recharge_20_15: - 1800 x[20,15] + battery[15] >= 0
- battery_recharge_20_16: - 1800 x[20,16] + battery[16] >= 0
- battery_recharge_20_17: - 1800 x[20,17] + battery[17] >= 0
- battery_recharge_20_18: - 1800 x[20,18] + battery[18] >= 0
- battery_recharge_20_19: - 1800 x[20,19] + battery[19] >= 0
- battery_recharge_21_1: - 1800 x[21,1] + battery[1] >= 0
- battery_recharge_21_2: - 1800 x[21,2] + battery[2] >= 0
- battery_recharge_21_3: - 1800 x[21,3] + battery[3] >= 0
- battery_recharge_21_4: - 1800 x[21,4] + battery[4] >= 0
- battery_recharge_21_5: - 1800 x[21,5] + battery[5] >= 0
- battery_recharge_21_7: - 1800 x[21,7] + battery[7] >= 0
- battery_recharge_21_9: - 1800 x[21,9] + battery[9] >= 0
- battery_recharge_21_12: - 1800 x[21,12] + battery[12] >= 0
- battery_recharge_21_13: - 1800 x[21,13] + battery[13] >= 0
- battery_recharge_21_14: - 1800 x[21,14] + battery[14] >= 0
- battery_recharge_21_15: - 1800 x[21,15] + battery[15] >= 0
- battery_recharge_21_16: - 1800 x[21,16] + battery[16] >= 0
- battery_recharge_21_18: - 1800 x[21,18] + battery[18] >= 0
- battery_recharge_22_0: - 1800 x[22,0] + battery[0] >= 0
- battery_recharge_22_1: - 1800 x[22,1] + battery[1] >= 0
- battery_recharge_22_2: - 1800 x[22,2] + battery[2] >= 0
- battery_recharge_22_3: - 1800 x[22,3] + battery[3] >= 0
- battery_recharge_22_4: - 1800 x[22,4] + battery[4] >= 0
- battery_recharge_22_5: - 1800 x[22,5] + battery[5] >= 0
- battery_recharge_22_6: - 1800 x[22,6] + battery[6] >= 0
- battery_recharge_22_7: - 1800 x[22,7] + battery[7] >= 0
- battery_recharge_22_8: - 1800 x[22,8] + battery[8] >= 0
- battery_recharge_22_9: - 1800 x[22,9] + battery[9] >= 0
- battery_recharge_22_10: - 1800 x[22,10] + battery[10] >= 0
- battery_recharge_22_11: - 1800 x[22,11] + battery[11] >= 0
- battery_recharge_22_12: - 1800 x[22,12] + battery[12] >= 0
- battery_recharge_22_13: - 1800 x[22,13] + battery[13] >= 0
- battery_recharge_22_14: - 1800 x[22,14] + battery[14] >= 0
- battery_recharge_22_15: - 1800 x[22,15] + battery[15] >= 0
- battery_recharge_22_16: - 1800 x[22,16] + battery[16] >= 0
- battery_recharge_22_17: - 1800 x[22,17] + battery[17] >= 0
- battery_recharge_22_18: - 1800 x[22,18] + battery[18] >= 0
- battery_recharge_22_19: - 1800 x[22,19] + battery[19] >= 0
- battery_recharge_23_0: - 1800 x[23,0] + battery[0] >= 0
- battery_recharge_23_1: - 1800 x[23,1] + battery[1] >= 0
- battery_recharge_23_2: - 1800 x[23,2] + battery[2] >= 0
- battery_recharge_23_4: - 1800 x[23,4] + battery[4] >= 0
- battery_recharge_23_6: - 1800 x[23,6] + battery[6] >= 0
- battery_recharge_23_7: - 1800 x[23,7] + battery[7] >= 0
- battery_recharge_23_8: - 1800 x[23,8] + battery[8] >= 0
- battery_recharge_23_10: - 1800 x[23,10] + battery[10] >= 0
- battery_recharge_23_11: - 1800 x[23,11] + battery[11] >= 0
- battery_recharge_23_12: - 1800 x[23,12] + battery[12] >= 0
- battery_recharge_23_13: - 1800 x[23,13] + battery[13] >= 0
- battery_recharge_23_14: - 1800 x[23,14] + battery[14] >= 0
- battery_recharge_23_15: - 1800 x[23,15] + battery[15] >= 0
- battery_recharge_23_16: - 1800 x[23,16] + battery[16] >= 0
- battery_recharge_23_17: - 1800 x[23,17] + battery[17] >= 0
- battery_recharge_23_18: - 1800 x[23,18] + battery[18] >= 0
- battery_recharge_23_19: - 1800 x[23,19] + battery[19] >= 0
- battery_recharge_24_0: - 1800 x[24,0] + battery[0] >= 0
- battery_recharge_24_1: - 1800 x[24,1] + battery[1] >= 0
- battery_recharge_24_2: - 1800 x[24,2] + battery[2] >= 0
- battery_recharge_24_3: - 1800 x[24,3] + battery[3] >= 0
- battery_recharge_24_4: - 1800 x[24,4] + battery[4] >= 0
- battery_recharge_24_5: - 1800 x[24,5] + battery[5] >= 0
- battery_recharge_24_6: - 1800 x[24,6] + battery[6] >= 0
- battery_recharge_24_7: - 1800 x[24,7] + battery[7] >= 0
- battery_recharge_24_8: - 1800 x[24,8] + battery[8] >= 0
- battery_recharge_24_9: - 1800 x[24,9] + battery[9] >= 0
- battery_recharge_24_10: - 1800 x[24,10] + battery[10] >= 0
- battery_recharge_24_11: - 1800 x[24,11] + battery[11] >= 0
- battery_recharge_24_12: - 1800 x[24,12] + battery[12] >= 0
- battery_recharge_24_13: - 1800 x[24,13] + battery[13] >= 0
- battery_recharge_24_14: - 1800 x[24,14] + battery[14] >= 0
- battery_recharge_24_15: - 1800 x[24,15] + battery[15] >= 0
- battery_recharge_24_16: - 1800 x[24,16] + battery[16] >= 0
- battery_recharge_24_17: - 1800 x[24,17] + battery[17] >= 0
- battery_recharge_24_18: - 1800 x[24,18] + battery[18] >= 0
- battery_recharge_24_19: - 1800 x[24,19] + battery[19] >= 0
- station_no_move_20_22: x[20,22] = 0
- station_no_move_20_23: x[20,23] = 0
- station_no_move_20_24: x[20,24] = 0
- station_no_move_21_22: x[21,22] = 0
- station_no_move_21_24: x[21,24] = 0
- station_no_move_22_20: x[22,20] = 0
- station_no_move_22_21: x[22,21] = 0
- station_no_move_22_23: x[22,23] = 0
- station_no_move_22_24: x[22,24] = 0
- station_no_move_23_20: x[23,20] = 0
- station_no_move_23_22: x[23,22] = 0
- station_no_move_23_24: x[23,24] = 0
- station_no_move_24_20: x[24,20] = 0
- station_no_move_24_21: x[24,21] = 0
- station_no_move_24_22: x[24,22] = 0
- station_no_move_24_23: x[24,23] = 0
+ station_full_charge_20: battery[20] = 1800
+ leave_station_battery_20_0: 1800 x[20,0] + battery[0]
+   <= 3255.656748520127
+ leave_station_battery_20_1: 1800 x[20,1] + battery[1]
+   <= 2341.525140119165
+ leave_station_battery_20_2: 1800 x[20,2] + battery[2]
+   <= 2524.024497401523
+ leave_station_battery_20_3: 1800 x[20,3] + battery[3]
+   <= 2546.776627301495
+ leave_station_battery_20_4: 1800 x[20,4] + battery[4]
+   <= 2226.533826974679
+ leave_station_battery_20_6: 1800 x[20,6] + battery[6]
+   <= 2678.826521007352
+ leave_station_battery_20_7: 1800 x[20,7] + battery[7] <= 3050.61258361187
+ leave_station_battery_20_8: 1800 x[20,8] + battery[8]
+   <= 3225.292987985371
+ leave_station_battery_20_9: 1800 x[20,9] + battery[9]
+   <= 2596.053183455386
+ leave_station_battery_20_10: 1800 x[20,10] + battery[10]
+   <= 3237.808900200095
+ leave_station_battery_20_11: 1800 x[20,11] + battery[11]
+   <= 3355.249566818477
+ leave_station_battery_20_12: 1800 x[20,12] + battery[12]
+   <= 3130.627106936718
+ leave_station_battery_20_13: 1800 x[20,13] + battery[13]
+   <= 2762.822121498786
+ leave_station_battery_20_14: 1800 x[20,14] + battery[14]
+   <= 2897.505137614462
+ leave_station_battery_20_15: 1800 x[20,15] + battery[15]
+   <= 2775.285109274341
+ leave_station_battery_20_16: 1800 x[20,16] + battery[16]
+   <= 3311.300322805634
+ leave_station_battery_20_17: 1800 x[20,17] + battery[17]
+   <= 3414.434415303545
+ leave_station_battery_20_18: 1800 x[20,18] + battery[18]
+   <= 3288.910956077682
+ leave_station_battery_20_19: 1800 x[20,19] + battery[19]
+   <= 3317.13356352647
+ leave_station_battery_20_22: 1800 x[20,22] + battery[22]
+   <= 2475.838510782567
+ leave_station_battery_20_23: 1800 x[20,23] + battery[23]
+   <= 2678.826521007352
+ leave_station_battery_20_24: 1800 x[20,24] + battery[24]
+   <= 2778.742597863667
+ station_full_charge_21: battery[21] = 1800
+ leave_station_battery_21_1: 1800 x[21,1] + battery[1]
+   <= 2216.908790296373
+ leave_station_battery_21_2: 1800 x[21,2] + battery[2]
+   <= 2065.867822523051
+ leave_station_battery_21_3: 1800 x[21,3] + battery[3]
+   <= 3066.412107586624
+ leave_station_battery_21_4: 1800 x[21,4] + battery[4]
+   <= 2144.919696271864
+ leave_station_battery_21_5: 1800 x[21,5] + battery[5] <= 3599.99
+ leave_station_battery_21_7: 1800 x[21,7] + battery[7]
+   <= 2739.191797241804
+ leave_station_battery_21_9: 1800 x[21,9] + battery[9]
+   <= 2880.733048308414
+ leave_station_battery_21_12: 1800 x[21,12] + battery[12]
+   <= 2382.44895130534
+ leave_station_battery_21_13: 1800 x[21,13] + battery[13]
+   <= 2535.531036449817
+ leave_station_battery_21_14: 1800 x[21,14] + battery[14]
+   <= 2794.915354014282
+ leave_station_battery_21_15: 1800 x[21,15] + battery[15]
+   <= 2954.575431512151
+ leave_station_battery_21_16: 1800 x[21,16] + battery[16]
+   <= 2067.766627327924
+ leave_station_battery_21_18: 1800 x[21,18] + battery[18]
+   <= 1952.75197136168
+ leave_station_battery_21_22: 1800 x[21,22] + battery[22]
+   <= 2254.353916467424
+ leave_station_battery_21_24: 1800 x[21,24] + battery[24]
+   <= 2908.995569754708
+ station_full_charge_22: battery[22] = 1800
+ leave_station_battery_22_0: 1800 x[22,0] + battery[0] <= 2665.81512265226
+ leave_station_battery_22_1: 1800 x[22,1] + battery[1]
+   <= 3464.400265331527
+ leave_station_battery_22_2: 1800 x[22,2] + battery[2]
+   <= 3365.415308095961
+ leave_station_battery_22_3: 1800 x[22,3] + battery[3]
+   <= 2162.239023158377
+ leave_station_battery_22_4: 1800 x[22,4] + battery[4]
+   <= 3350.692930794759
+ leave_station_battery_22_5: 1800 x[22,5] + battery[5]
+   <= 2254.353916467424
+ leave_station_battery_22_6: 1800 x[22,6] + battery[6]
+   <= 2470.699457774302
+ leave_station_battery_22_7: 1800 x[22,7] + battery[7]
+   <= 2510.916954432773
+ leave_station_battery_22_8: 1800 x[22,8] + battery[8]
+   <= 2837.676382112643
+ leave_station_battery_22_9: 1800 x[22,9] + battery[9]
+   <= 1873.408838021949
+ leave_station_battery_22_10: 1800 x[22,10] + battery[10]
+   <= 2346.044525455319
+ leave_station_battery_22_11: 1800 x[22,11] + battery[11]
+   <= 2392.91035552976
+ leave_station_battery_22_12: 1800 x[22,12] + battery[12]
+   <= 2174.403183924509
+ leave_station_battery_22_13: 1800 x[22,13] + battery[13]
+   <= 3228.205852642965
+ leave_station_battery_22_14: 1800 x[22,14] + battery[14]
+   <= 2185.743053753778
+ leave_station_battery_22_15: 1800 x[22,15] + battery[15]
+   <= 2111.019448584475
+ leave_station_battery_22_16: 1800 x[22,16] + battery[16]
+   <= 2187.837273939905
+ leave_station_battery_22_17: 1800 x[22,17] + battery[17]
+   <= 2565.20024466836
+ leave_station_battery_22_18: 1800 x[22,18] + battery[18]
+   <= 2183.200157286898
+ leave_station_battery_22_19: 1800 x[22,19] + battery[19]
+   <= 2733.612968662748
+ leave_station_battery_22_20: 1800 x[22,20] + battery[20]
+   <= 2475.838510782567
+ leave_station_battery_22_21: 1800 x[22,21] + battery[21]
+   <= 2254.353916467424
+ leave_station_battery_22_23: 1800 x[22,23] + battery[23]
+   <= 2470.699457774302
+ leave_station_battery_22_24: 1800 x[22,24] + battery[24]
+   <= 2092.513165450976
+ station_full_charge_23: battery[23] = 1800
+ leave_station_battery_23_0: 1800 x[23,0] + battery[0] <= 2488.59665552418
+ leave_station_battery_23_1: 1800 x[23,1] + battery[1]
+   <= 2363.603438045992
+ leave_station_battery_23_2: 1800 x[23,2] + battery[2]
+   <= 2680.113137505882
+ leave_station_battery_23_4: 1800 x[23,4] + battery[4]
+   <= 2290.647006853121
+ leave_station_battery_23_6: 1800 x[23,6] + battery[6] <= 3599.99
+ leave_station_battery_23_7: 1800 x[23,7] + battery[7]
+   <= 2219.498323057893
+ leave_station_battery_23_8: 1800 x[23,8] + battery[8]
+   <= 2677.315542658677
+ leave_station_battery_23_10: 1800 x[23,10] + battery[10]
+   <= 2934.5490457834
+ leave_station_battery_23_11: 1800 x[23,11] + battery[11]
+   <= 2856.69621924562
+ leave_station_battery_23_12: 1800 x[23,12] + battery[12]
+   <= 2212.091828184646
+ leave_station_battery_23_13: 1800 x[23,13] + battery[13]
+   <= 2466.065492057018
+ leave_station_battery_23_14: 1800 x[23,14] + battery[14]
+   <= 2020.603988103145
+ leave_station_battery_23_15: 1800 x[23,15] + battery[15]
+   <= 1933.806626320241
+ leave_station_battery_23_16: 1800 x[23,16] + battery[16]
+   <= 2511.832664059895
+ leave_station_battery_23_17: 1800 x[23,17] + battery[17]
+   <= 2861.418212671945
+ leave_station_battery_23_18: 1800 x[23,18] + battery[18]
+   <= 2620.188668925171
+ leave_station_battery_23_19: 1800 x[23,19] + battery[19]
+   <= 2649.121049261554
+ leave_station_battery_23_20: 1800 x[23,20] + battery[20]
+   <= 2678.826521007352
+ leave_station_battery_23_22: 1800 x[23,22] + battery[22]
+   <= 2470.699457774302
+ leave_station_battery_23_24: 1800 x[23,24] + battery[24]
+   <= 1917.488471521707
+ station_full_charge_24: battery[24] = 1800
+ leave_station_battery_24_0: 1800 x[24,0] + battery[0]
+   <= 3026.698042798716
+ leave_station_battery_24_1: 1800 x[24,1] + battery[1] <= 1967.60276587028
+ leave_station_battery_24_2: 1800 x[24,2] + battery[2]
+   <= 2183.832305379227
+ leave_station_battery_24_3: 1800 x[24,3] + battery[3]
+   <= 3367.387175469848
+ leave_station_battery_24_4: 1800 x[24,4] + battery[4] <= 1851.22749525645
+ leave_station_battery_24_5: 1800 x[24,5] + battery[5]
+   <= 2908.995569754708
+ leave_station_battery_24_6: 1800 x[24,6] + battery[6]
+   <= 1917.488471521707
+ leave_station_battery_24_7: 1800 x[24,7] + battery[7]
+   <= 3296.442322866713
+ leave_station_battery_24_8: 1800 x[24,8] + battery[8]
+   <= 2814.100112049794
+ leave_station_battery_24_9: 1800 x[24,9] + battery[9]
+   <= 3367.911362190441
+ leave_station_battery_24_10: 1800 x[24,10] + battery[10]
+   <= 2418.039349602589
+ leave_station_battery_24_11: 1800 x[24,11] + battery[11]
+   <= 2535.684320496852
+ leave_station_battery_24_12: 1800 x[24,12] + battery[12]
+   <= 3066.698949118263
+ leave_station_battery_24_13: 1800 x[24,13] + battery[13]
+   <= 2438.288434529685
+ leave_station_battery_24_14: 1800 x[24,14] + battery[14]
+   <= 3474.254845251379
+ leave_station_battery_24_15: 1800 x[24,15] + battery[15]
+   <= 3533.537024196011
+ leave_station_battery_24_16: 1800 x[24,16] + battery[16]
+   <= 2720.564143070915
+ leave_station_battery_24_17: 1800 x[24,17] + battery[17]
+   <= 2628.142723208394
+ leave_station_battery_24_18: 1800 x[24,18] + battery[18]
+   <= 2591.644727527904
+ leave_station_battery_24_19: 1800 x[24,19] + battery[19]
+   <= 2865.219681293236
+ leave_station_battery_24_20: 1800 x[24,20] + battery[20]
+   <= 2778.742597863667
+ leave_station_battery_24_21: 1800 x[24,21] + battery[21]
+   <= 2908.995569754708
+ leave_station_battery_24_22: 1800 x[24,22] + battery[22]
+   <= 2092.513165450976
+ leave_station_battery_24_23: 1800 x[24,23] + battery[23]
+   <= 1917.488471521707
+ battery_update_0_1: 2859.095276928436 x[0,1] - battery[0] + battery[1]
+   >= 1800
+ battery_feasible_0_1: - 1059.095276928436 x[0,1] + battery[0] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_0_2: 2756.539611249125 x[0,2] - battery[0] + battery[2]
+   >= 1800
+ battery_feasible_0_2: - 956.5396112491251 x[0,2] + battery[0] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_0_3: 2590.390046873636 x[0,3] - battery[0] + battery[3]
+   >= 1800
+ battery_feasible_0_3: - 790.3900468736362 x[0,3] + battery[0] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_0_4: 2975.470547542266 x[0,4] - battery[0] + battery[4]
+   >= 1800
+ battery_feasible_0_4: - 1175.470547542266 x[0,4] + battery[0] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_0_6: 2911.40334447582 x[0,6] - battery[0] + battery[6]
+   >= 1800
+ battery_feasible_0_6: - 1111.40334447582 x[0,6] + battery[0] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_0_7: 2069.878471933247 x[0,7] - battery[0] + battery[7]
+   >= 1800
+ battery_feasible_0_7: - 269.8784719332465 x[0,7] + battery[0] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_0_8: 2026.998861029432 x[0,8] - battery[0] + battery[8]
+   >= 1800
+ battery_feasible_0_8: - 226.9988610294322 x[0,8] + battery[0] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_0_9: 2592.40628463031 x[0,9] - battery[0] + battery[9]
+   >= 1800
+ battery_feasible_0_9: - 792.4062846303104 x[0,9] + battery[0] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_0_10: 2484.691442700187 x[0,10] - battery[0] + battery[10]
+   >= 1800
+ battery_feasible_0_10: - 684.6914427001865 x[0,10] + battery[0] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_0_11: 2373.132081575972 x[0,11] - battery[0] + battery[11]
+   >= 1800
+ battery_feasible_0_11: - 573.1320815759721 x[0,11] + battery[0] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_0_12: 2291.433576633198 x[0,12] - battery[0] + battery[12]
+   >= 1800
+ battery_feasible_0_12: - 491.4335766331976 x[0,12] + battery[0] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_0_13: 2388.409608269031 x[0,13] - battery[0] + battery[13]
+   >= 1800
+ battery_feasible_0_13: - 588.4096082690307 x[0,13] + battery[0] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_0_14: 2280.072068898481 x[0,14] - battery[0] + battery[14]
+   >= 1800
+ battery_feasible_0_14: - 480.0720688984812 x[0,14] + battery[0] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_0_15: 2354.795674067785 x[0,15] - battery[0] + battery[15]
+   >= 1800
+ battery_feasible_0_15: - 554.7956740677846 x[0,15] + battery[0] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_0_16: 2366.334703858151 x[0,16] - battery[0] + battery[16]
+   >= 1800
+ battery_feasible_0_16: - 566.3347038581509 x[0,16] + battery[0] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_0_17: 2233.392441709925 x[0,17] - battery[0] + battery[17]
+   >= 1800
+ battery_feasible_0_17: - 433.392441709925 x[0,17] + battery[0] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_0_18: 2438.073361997167 x[0,18] - battery[0] + battery[18]
+   >= 1800
+ battery_feasible_0_18: - 638.0733619971676 x[0,18] + battery[0] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_0_19: 1961.481450550408 x[0,19] - battery[0] + battery[19]
+   >= 1800
+ battery_feasible_0_19: - 161.4814505504085 x[0,19] + battery[0] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_0_20: 2144.343251479873 x[0,20] - battery[0] + battery[20]
+   >= 1800
+ battery_feasible_0_20: - 344.3432514798729 x[0,20] + battery[0] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_0_22: 2734.18487734774 x[0,22] - battery[0] + battery[22]
+   >= 1800
+ battery_feasible_0_22: - 934.1848773477404 x[0,22] + battery[0] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_0_23: 2911.40334447582 x[0,23] - battery[0] + battery[23]
+   >= 1800
+ battery_feasible_0_23: - 1111.40334447582 x[0,23] + battery[0] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_0_24: 2373.301957201284 x[0,24] - battery[0] + battery[24]
+   >= 1800
+ battery_feasible_0_24: - 573.3019572012843 x[0,24] + battery[0] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_1_0: 2859.095276928436 x[1,0] + battery[0] - battery[1]
+   >= 1800
+ battery_feasible_1_0: - 1059.095276928436 x[1,0] + battery[1] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_1_2: 2118.503438803766 x[1,2] - battery[1] + battery[2]
+   >= 1800
+ battery_feasible_1_2: - 318.5034388037662 x[1,2] + battery[1] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_1_3: 3319.702156277349 x[1,3] - battery[1] + battery[3]
+   >= 1800
+ battery_feasible_1_3: - 1519.702156277349 x[1,3] + battery[1] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_1_4: 1916.623363753247 x[1,4] - battery[1] + battery[4]
+   >= 1800
+ battery_feasible_1_4: - 116.6233637532469 x[1,4] + battery[1] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_1_5: 3183.091209703627 x[1,5] - battery[1] + battery[5]
+   >= 1800
+ battery_feasible_1_5: - 1383.091209703627 x[1,5] + battery[1] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_1_6: 3036.396561954008 x[1,6] - battery[1] + battery[6]
+   >= 1800
+ battery_feasible_1_6: - 1236.396561954008 x[1,6] + battery[1] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_1_7: 3000.092362248236 x[1,7] - battery[1] + battery[7]
+   >= 1800
+ battery_feasible_1_7: - 1200.092362248236 x[1,7] + battery[1] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_1_8: 2694.305119008997 x[1,8] - battery[1] + battery[8]
+   >= 1800
+ battery_feasible_1_8: - 894.3051190089975 x[1,8] + battery[1] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_1_10: 3188.359788121614 x[1,10] - battery[1] + battery[10]
+   >= 1800
+ battery_feasible_1_10: - 1388.359788121614 x[1,10] + battery[1] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_1_11: 3142.523980500804 x[1,11] - battery[1] + battery[11]
+   >= 1800
+ battery_feasible_1_11: - 1342.523980500804 x[1,11] + battery[1] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_1_12: 3349.827419804172 x[1,12] - battery[1] + battery[12]
+   >= 1800
+ battery_feasible_1_12: - 1549.827419804172 x[1,12] + battery[1] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_1_13: 2281.981193770275 x[1,13] - battery[1] + battery[13]
+   >= 1800
+ battery_feasible_1_13: - 481.981193770275 x[1,13] + battery[1] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_1_14: 3339.167345826917 x[1,14] - battery[1] + battery[14]
+   >= 1800
+ battery_feasible_1_14: - 1539.167345826917 x[1,14] + battery[1] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_1_15: 3413.89095099622 x[1,15] - battery[1] + battery[15]
+   >= 1800
+ battery_feasible_1_15: - 1613.89095099622 x[1,15] + battery[1] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_1_16: 3346.145012749604 x[1,16] - battery[1] + battery[16]
+   >= 1800
+ battery_feasible_1_16: - 1546.145012749604 x[1,16] + battery[1] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_1_17: 2970.397976794291 x[1,17] - battery[1] + battery[17]
+   >= 1800
+ battery_feasible_1_17: - 1170.397976794291 x[1,17] + battery[1] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_1_18: 3352.159842068198 x[1,18] - battery[1] + battery[18]
+   >= 1800
+ battery_feasible_1_18: - 1552.159842068198 x[1,18] + battery[1] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_1_19: 2797.916498639613 x[1,19] - battery[1] + battery[19]
+   >= 1800
+ battery_feasible_1_19: - 997.9164986396127 x[1,19] + battery[1] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_1_20: 3058.474859880835 x[1,20] - battery[1] + battery[20]
+   >= 1800
+ battery_feasible_1_20: - 1258.474859880835 x[1,20] + battery[1] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_1_21: 3183.091209703627 x[1,21] - battery[1] + battery[21]
+   >= 1800
+ battery_feasible_1_21: - 1383.091209703627 x[1,21] + battery[1] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_1_22: 1935.599734668473 x[1,22] - battery[1] + battery[22]
+   >= 1800
+ battery_feasible_1_22: - 135.599734668473 x[1,22] + battery[1] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_1_23: 3036.396561954008 x[1,23] - battery[1] + battery[23]
+   >= 1800
+ battery_feasible_1_23: - 1236.396561954008 x[1,23] + battery[1] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_1_24: 3432.39723412972 x[1,24] - battery[1] + battery[24]
+   >= 1800
+ battery_feasible_1_24: - 1632.39723412972 x[1,24] + battery[1] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_2_0: 2756.539611249125 x[2,0] + battery[0] - battery[2]
+   >= 1800
+ battery_feasible_2_0: - 956.5396112491251 x[2,0] + battery[2] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_2_1: 2118.503438803766 x[2,1] + battery[1] - battery[2]
+   >= 1800
+ battery_feasible_2_1: - 318.5034388037662 x[2,1] + battery[2] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_2_3: 3546.929658122761 x[2,3] - battery[2] + battery[3]
+   >= 1800
+ battery_feasible_2_3: - 1746.929658122761 x[2,3] + battery[2] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_2_4: 2191.710995389263 x[2,4] - battery[2] + battery[4]
+   >= 1800
+ battery_feasible_2_4: - 391.7109953892633 x[2,4] + battery[2] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_2_5: 3334.132177476949 x[2,5] - battery[2] + battery[5]
+   >= 1800
+ battery_feasible_2_5: - 1534.132177476949 x[2,5] + battery[2] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_2_6: 2719.886862494118 x[2,6] - battery[2] + battery[6]
+   >= 1800
+ battery_feasible_2_6: - 919.8868624941176 x[2,6] + battery[2] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_2_7: 2956.650928507772 x[2,7] - battery[2] + battery[7]
+   >= 1800
+ battery_feasible_2_7: - 1156.650928507772 x[2,7] + battery[2] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_2_8: 2550.553622068071 x[2,8] - battery[2] + battery[8]
+   >= 1800
+ battery_feasible_2_8: - 750.5536220680705 x[2,8] + battery[2] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_2_9: 3447.05335404216 x[2,9] - battery[2] + battery[9]
+   >= 1800
+ battery_feasible_2_9: - 1647.05335404216 x[2,9] + battery[2] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_2_10: 2938.927700715444 x[2,10] - battery[2] + battery[10]
+   >= 1800
+ battery_feasible_2_10: - 1138.927700715444 x[2,10] + battery[2] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_2_11: 2911.964778430177 x[2,11] - battery[2] + battery[11]
+   >= 1800
+ battery_feasible_2_11: - 1111.964778430177 x[2,11] + battery[2] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_2_12: 3238.940853405448 x[2,12] - battery[2] + battery[12]
+   >= 1800
+ battery_feasible_2_12: - 1438.940853405448 x[2,12] + battery[2] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_2_13: 2288.917308700259 x[2,13] - battery[2] + battery[13]
+   >= 1800
+ battery_feasible_2_13: - 488.9173087002588 x[2,13] + battery[2] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_2_14: 3171.528385465591 x[2,14] - battery[2] + battery[14]
+   >= 1800
+ battery_feasible_2_14: - 1371.528385465591 x[2,14] + battery[2] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_2_15: 3311.33528531691 x[2,15] - battery[2] + battery[15]
+   >= 1800
+ battery_feasible_2_15: - 1511.33528531691 x[2,15] + battery[2] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_2_16: 3162.719343440835 x[2,16] - battery[2] + battery[16]
+   >= 1800
+ battery_feasible_2_16: - 1362.719343440835 x[2,16] + battery[2] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_2_17: 2753.818720523606 x[2,17] - battery[2] + battery[17]
+   >= 1800
+ battery_feasible_2_17: - 953.818720523606 x[2,17] + battery[2] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_2_18: 3144.322901270226 x[2,18] - battery[2] + battery[18]
+   >= 1800
+ battery_feasible_2_18: - 1344.322901270226 x[2,18] + battery[2] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_2_19: 2653.232322961224 x[2,19] - battery[2] + battery[19]
+   >= 1800
+ battery_feasible_2_19: - 853.2323229612241 x[2,19] + battery[2] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_2_20: 2875.975502598477 x[2,20] - battery[2] + battery[20]
+   >= 1800
+ battery_feasible_2_20: - 1075.975502598477 x[2,20] + battery[2] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_2_21: 3334.132177476949 x[2,21] - battery[2] + battery[21]
+   >= 1800
+ battery_feasible_2_21: - 1534.132177476949 x[2,21] + battery[2] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_2_22: 2034.584691904039 x[2,22] - battery[2] + battery[22]
+   >= 1800
+ battery_feasible_2_22: - 234.5846919040386 x[2,22] + battery[2] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_2_23: 2719.886862494118 x[2,23] - battery[2] + battery[23]
+   >= 1800
+ battery_feasible_2_23: - 919.8868624941176 x[2,23] + battery[2] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_2_24: 3216.167694620773 x[2,24] - battery[2] + battery[24]
+   >= 1800
+ battery_feasible_2_24: - 1416.167694620773 x[2,24] + battery[2] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_3_0: 2590.390046873636 x[3,0] + battery[0] - battery[3]
+   >= 1800
+ battery_feasible_3_0: - 790.3900468736362 x[3,0] + battery[3] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_3_1: 3319.702156277349 x[3,1] + battery[1] - battery[3]
+   >= 1800
+ battery_feasible_3_1: - 1519.702156277349 x[3,1] + battery[3] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_3_2: 3546.929658122761 x[3,2] + battery[2] - battery[3]
+   >= 1800
+ battery_feasible_3_2: - 1746.929658122761 x[3,2] + battery[3] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_3_4: 3418.48022271856 x[3,4] - battery[3] + battery[4]
+   >= 1800
+ battery_feasible_3_4: - 1618.48022271856 x[3,4] + battery[3] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_3_5: 2333.587892413376 x[3,5] - battery[3] + battery[5]
+   >= 1800
+ battery_feasible_3_5: - 533.5878924133764 x[3,5] + battery[3] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_3_7: 2322.606587544311 x[3,7] - battery[3] + battery[7]
+   >= 1800
+ battery_feasible_3_7: - 522.6065875443105 x[3,7] + battery[3] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_3_8: 2791.390197136445 x[3,8] - battery[3] + battery[8]
+   >= 1800
+ battery_feasible_3_8: - 991.3901971364446 x[3,8] + battery[3] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_3_9: 1987.782840717589 x[3,9] - battery[3] + battery[9]
+   >= 1800
+ battery_feasible_3_9: - 187.7828407175887 x[3,9] + battery[3] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_3_10: 3214.318716023199 x[3,10] - battery[3] + battery[10]
+   >= 1800
+ battery_feasible_3_10: - 1414.318716023199 x[3,10] + battery[3] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_3_11: 3096.652681864082 x[3,11] - battery[3] + battery[11]
+   >= 1800
+ battery_feasible_3_11: - 1296.652681864082 x[3,11] + battery[3] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_3_12: 2547.141756352822 x[3,12] - battery[3] + battery[12]
+   >= 1800
+ battery_feasible_3_12: - 747.1417563528219 x[3,12] + battery[3] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_3_13: 3178.799655142667 x[3,13] - battery[3] + battery[13]
+   >= 1800
+ battery_feasible_3_13: - 1378.799655142667 x[3,13] + battery[3] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_3_14: 2156.309592823782 x[3,14] - battery[3] + battery[14]
+   >= 1800
+ battery_feasible_3_14: - 356.3095928237822 x[3,14] + battery[3] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_3_15: 2035.70608924416 x[3,15] - battery[3] + battery[15]
+   >= 1800
+ battery_feasible_3_15: - 235.7060892441596 x[3,15] + battery[3] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_3_16: 2906.324308193268 x[3,16] - battery[3] + battery[16]
+   >= 1800
+ battery_feasible_3_16: - 1106.324308193268 x[3,16] + battery[3] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_3_17: 3000.498221142426 x[3,17] - battery[3] + battery[17]
+   >= 1800
+ battery_feasible_3_17: - 1200.498221142426 x[3,17] + battery[3] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_3_18: 3037.580676044526 x[3,18] - battery[3] + battery[18]
+   >= 1800
+ battery_feasible_3_18: - 1237.580676044526 x[3,18] + battery[3] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_3_19: 2750.951162879131 x[3,19] - battery[3] + battery[19]
+   >= 1800
+ battery_feasible_3_19: - 950.9511628791312 x[3,19] + battery[3] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_3_20: 2853.223372698505 x[3,20] - battery[3] + battery[20]
+   >= 1800
+ battery_feasible_3_20: - 1053.223372698505 x[3,20] + battery[3] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_3_21: 2333.587892413376 x[3,21] - battery[3] + battery[21]
+   >= 1800
+ battery_feasible_3_21: - 533.5878924133764 x[3,21] + battery[3] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_3_22: 3237.760976841623 x[3,22] - battery[3] + battery[22]
+   >= 1800
+ battery_feasible_3_22: - 1437.760976841623 x[3,22] + battery[3] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_3_24: 2032.612824530152 x[3,24] - battery[3] + battery[24]
+   >= 1800
+ battery_feasible_3_24: - 232.6128245301521 x[3,24] + battery[3] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_4_0: 2975.470547542266 x[4,0] + battery[0] - battery[4]
+   >= 1800
+ battery_feasible_4_0: - 1175.470547542266 x[4,0] + battery[4] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_4_1: 1916.623363753247 x[4,1] + battery[1] - battery[4]
+   >= 1800
+ battery_feasible_4_1: - 116.6233637532469 x[4,1] + battery[4] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_4_2: 2191.710995389263 x[4,2] + battery[2] - battery[4]
+   >= 1800
+ battery_feasible_4_2: - 391.7109953892633 x[4,2] + battery[4] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_4_3: 3418.48022271856 x[4,3] + battery[3] - battery[4]
+   >= 1800
+ battery_feasible_4_3: - 1618.48022271856 x[4,3] + battery[4] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_4_5: 3255.080303728136 x[4,5] - battery[4] + battery[5]
+   >= 1800
+ battery_feasible_4_5: - 1455.080303728136 x[4,5] + battery[4] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_4_6: 3109.352993146879 x[4,6] - battery[4] + battery[6]
+   >= 1800
+ battery_feasible_4_6: - 1309.352993146879 x[4,6] + battery[4] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_4_7: 3112.767452735337 x[4,7] - battery[4] + battery[7]
+   >= 1800
+ battery_feasible_4_7: - 1312.767452735337 x[4,7] + battery[4] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_4_8: 2810.493491569077 x[4,8] - battery[4] + battery[8]
+   >= 1800
+ battery_feasible_4_8: - 1010.493491569077 x[4,8] + battery[4] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_4_10: 3295.087634397873 x[4,10] - battery[4] + battery[10]
+   >= 1800
+ battery_feasible_4_10: - 1495.087634397873 x[4,10] + battery[4] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_4_11: 3252.548576564989 x[4,11] - battery[4] + battery[11]
+   >= 1800
+ battery_feasible_4_11: - 1452.548576564989 x[4,11] + battery[4] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_4_12: 3466.019305563604 x[4,12] - battery[4] + battery[12]
+   >= 1800
+ battery_feasible_4_12: - 1666.019305563604 x[4,12] + battery[4] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_4_13: 2396.137328661259 x[4,13] - battery[4] + battery[13]
+   >= 1800
+ battery_feasible_4_13: - 596.1373286612591 x[4,13] + battery[4] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_4_14: 3455.542616440747 x[4,14] - battery[4] + battery[14]
+   >= 1800
+ battery_feasible_4_14: - 1655.542616440747 x[4,14] + battery[4] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_4_15: 3530.266221610051 x[4,15] - battery[4] + battery[15]
+   >= 1800
+ battery_feasible_4_15: - 1730.266221610051 x[4,15] + battery[4] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_4_16: 3461.424115824778 x[4,16] - battery[4] + battery[16]
+   >= 1800
+ battery_feasible_4_16: - 1661.424115824778 x[4,16] + battery[4] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_4_17: 3081.964835697476 x[4,17] - battery[4] + battery[17]
+   >= 1800
+ battery_feasible_4_17: - 1281.964835697476 x[4,17] + battery[4] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_4_18: 3465.448609173931 x[4,18] - battery[4] + battery[18]
+   >= 1800
+ battery_feasible_4_18: - 1665.448609173931 x[4,18] + battery[4] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_4_19: 2914.23234756081 x[4,19] - battery[4] + battery[19]
+   >= 1800
+ battery_feasible_4_19: - 1114.23234756081 x[4,19] + battery[4] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_4_20: 3173.466173025321 x[4,20] - battery[4] + battery[20]
+   >= 1800
+ battery_feasible_4_20: - 1373.466173025321 x[4,20] + battery[4] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_4_21: 3255.080303728136 x[4,21] - battery[4] + battery[21]
+   >= 1800
+ battery_feasible_4_21: - 1455.080303728136 x[4,21] + battery[4] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_4_22: 2049.307069205241 x[4,22] - battery[4] + battery[22]
+   >= 1800
+ battery_feasible_4_22: - 249.3070692052408 x[4,22] + battery[4] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_4_23: 3109.352993146879 x[4,23] - battery[4] + battery[23]
+   >= 1800
+ battery_feasible_4_23: - 1309.352993146879 x[4,23] + battery[4] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_4_24: 3548.77250474355 x[4,24] - battery[4] + battery[24]
+   >= 1800
+ battery_feasible_4_24: - 1748.77250474355 x[4,24] + battery[4] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_5_1: 3183.091209703627 x[5,1] + battery[1] - battery[5]
+   >= 1800
+ battery_feasible_5_1: - 1383.091209703627 x[5,1] + battery[5] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_5_2: 3334.132177476949 x[5,2] + battery[2] - battery[5]
+   >= 1800
+ battery_feasible_5_2: - 1534.132177476949 x[5,2] + battery[5] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_5_3: 2333.587892413376 x[5,3] + battery[3] - battery[5]
+   >= 1800
+ battery_feasible_5_3: - 533.5878924133764 x[5,3] + battery[5] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_5_4: 3255.080303728136 x[5,4] + battery[4] - battery[5]
+   >= 1800
+ battery_feasible_5_4: - 1455.080303728136 x[5,4] + battery[5] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_5_7: 2660.808202758196 x[5,7] - battery[5] + battery[7]
+   >= 1800
+ battery_feasible_5_7: - 860.8082027581962 x[5,7] + battery[5] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_5_9: 2519.266951691586 x[5,9] - battery[5] + battery[9]
+   >= 1800
+ battery_feasible_5_9: - 719.2669516915863 x[5,9] + battery[5] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_5_12: 3017.55104869466 x[5,12] - battery[5] + battery[12]
+   >= 1800
+ battery_feasible_5_12: - 1217.55104869466 x[5,12] + battery[5] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_5_13: 2864.468963550183 x[5,13] - battery[5] + battery[13]
+   >= 1800
+ battery_feasible_5_13: - 1064.468963550183 x[5,13] + battery[5] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_5_14: 2605.084645985718 x[5,14] - battery[5] + battery[14]
+   >= 1800
+ battery_feasible_5_14: - 805.0846459857177 x[5,14] + battery[5] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_5_15: 2445.424568487849 x[5,15] - battery[5] + battery[15]
+   >= 1800
+ battery_feasible_5_15: - 645.4245684878487 x[5,15] + battery[5] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_5_16: 3332.233372672076 x[5,16] - battery[5] + battery[16]
+   >= 1800
+ battery_feasible_5_16: - 1532.233372672076 x[5,16] + battery[5] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_5_18: 3447.24802863832 x[5,18] - battery[5] + battery[18]
+   >= 1800
+ battery_feasible_5_18: - 1647.24802863832 x[5,18] + battery[5] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_5_21: 1800.01 x[5,21] - battery[5] + battery[21] >= 1800
+ battery_feasible_5_21: - 0.01 x[5,21] + battery[5] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_5_22: 3145.646083532576 x[5,22] - battery[5] + battery[22]
+   >= 1800
+ battery_feasible_5_22: - 1345.646083532576 x[5,22] + battery[5] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_5_24: 2491.004430245292 x[5,24] - battery[5] + battery[24]
+   >= 1800
+ battery_feasible_5_24: - 691.0044302452916 x[5,24] + battery[5] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_6_0: 2911.40334447582 x[6,0] + battery[0] - battery[6]
+   >= 1800
+ battery_feasible_6_0: - 1111.40334447582 x[6,0] + battery[6] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_6_1: 3036.396561954008 x[6,1] + battery[1] - battery[6]
+   >= 1800
+ battery_feasible_6_1: - 1236.396561954008 x[6,1] + battery[6] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_6_2: 2719.886862494118 x[6,2] + battery[2] - battery[6]
+   >= 1800
+ battery_feasible_6_2: - 919.8868624941176 x[6,2] + battery[6] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_6_4: 3109.352993146879 x[6,4] + battery[4] - battery[6]
+   >= 1800
+ battery_feasible_6_4: - 1309.352993146879 x[6,4] + battery[6] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_6_7: 3180.501676942107 x[6,7] - battery[6] + battery[7]
+   >= 1800
+ battery_feasible_6_7: - 1380.501676942107 x[6,7] + battery[6] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_6_8: 2722.684457341323 x[6,8] - battery[6] + battery[8]
+   >= 1800
+ battery_feasible_6_8: - 922.6844573413231 x[6,8] + battery[6] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_6_10: 2465.4509542166 x[6,10] - battery[6] + battery[10]
+   >= 1800
+ battery_feasible_6_10: - 665.4509542165996 x[6,10] + battery[6] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_6_11: 2543.30378075438 x[6,11] - battery[6] + battery[11]
+   >= 1800
+ battery_feasible_6_11: - 743.3037807543799 x[6,11] + battery[6] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_6_12: 3187.908171815354 x[6,12] - battery[6] + battery[12]
+   >= 1800
+ battery_feasible_6_12: - 1387.908171815354 x[6,12] + battery[6] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_6_13: 2933.934507942982 x[6,13] - battery[6] + battery[13]
+   >= 1800
+ battery_feasible_6_13: - 1133.934507942982 x[6,13] + battery[6] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_6_14: 3379.396011896855 x[6,14] - battery[6] + battery[14]
+   >= 1800
+ battery_feasible_6_14: - 1579.396011896855 x[6,14] + battery[6] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_6_15: 3466.193373679759 x[6,15] - battery[6] + battery[15]
+   >= 1800
+ battery_feasible_6_15: - 1666.193373679759 x[6,15] + battery[6] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_6_16: 2888.167335940105 x[6,16] - battery[6] + battery[16]
+   >= 1800
+ battery_feasible_6_16: - 1088.167335940105 x[6,16] + battery[6] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_6_17: 2538.581787328055 x[6,17] - battery[6] + battery[17]
+   >= 1800
+ battery_feasible_6_17: - 738.5817873280554 x[6,17] + battery[6] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_6_18: 2779.811331074829 x[6,18] - battery[6] + battery[18]
+   >= 1800
+ battery_feasible_6_18: - 979.8113310748295 x[6,18] + battery[6] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_6_19: 2750.878950738446 x[6,19] - battery[6] + battery[19]
+   >= 1800
+ battery_feasible_6_19: - 950.8789507384461 x[6,19] + battery[6] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_6_20: 2721.173478992648 x[6,20] - battery[6] + battery[20]
+   >= 1800
+ battery_feasible_6_20: - 921.173478992648 x[6,20] + battery[6] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_6_22: 2929.300542225698 x[6,22] - battery[6] + battery[22]
+   >= 1800
+ battery_feasible_6_22: - 1129.300542225698 x[6,22] + battery[6] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_6_23: 1800.01 x[6,23] - battery[6] + battery[23] >= 1800
+ battery_feasible_6_23: - 0.01 x[6,23] + battery[6] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_6_24: 3482.511528478293 x[6,24] - battery[6] + battery[24]
+   >= 1800
+ battery_feasible_6_24: - 1682.511528478293 x[6,24] + battery[6] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_7_0: 2069.878471933247 x[7,0] + battery[0] - battery[7]
+   >= 1800
+ battery_feasible_7_0: - 269.8784719332465 x[7,0] + battery[7] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_7_1: 3000.092362248236 x[7,1] + battery[1] - battery[7]
+   >= 1800
+ battery_feasible_7_1: - 1200.092362248236 x[7,1] + battery[7] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_7_2: 2956.650928507772 x[7,2] + battery[2] - battery[7]
+   >= 1800
+ battery_feasible_7_2: - 1156.650928507772 x[7,2] + battery[7] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_7_3: 2322.606587544311 x[7,3] + battery[3] - battery[7]
+   >= 1800
+ battery_feasible_7_3: - 522.6065875443105 x[7,3] + battery[7] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_7_4: 3112.767452735337 x[7,4] + battery[4] - battery[7]
+   >= 1800
+ battery_feasible_7_4: - 1312.767452735337 x[7,4] + battery[7] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_7_5: 2660.808202758196 x[7,5] + battery[5] - battery[7]
+   >= 1800
+ battery_feasible_7_5: - 860.8082027581962 x[7,5] + battery[7] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_7_6: 3180.501676942107 x[7,6] + battery[6] - battery[7]
+   >= 1800
+ battery_feasible_7_6: - 1380.501676942107 x[7,6] + battery[7] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_7_8: 2284.719492131202 x[7,8] - battery[7] + battery[8]
+   >= 1800
+ battery_feasible_7_8: - 484.7194921312022 x[7,8] + battery[7] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_7_9: 2326.324550435824 x[7,9] - battery[7] + battery[9]
+   >= 1800
+ battery_feasible_7_9: - 526.3245504358242 x[7,9] + battery[7] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_7_10: 2710.643990217593 x[7,10] - battery[7] + battery[10]
+   >= 1800
+ battery_feasible_7_10: - 910.6439902175925 x[7,10] + battery[7] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_7_11: 2593.753868632337 x[7,11] - battery[7] + battery[11]
+   >= 1800
+ battery_feasible_7_11: - 793.7538686323368 x[7,11] + battery[7] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_7_12: 2230.228114656492 x[7,12] - battery[7] + battery[12]
+   >= 1800
+ battery_feasible_7_12: - 430.2281146564923 x[7,12] + battery[7] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_7_13: 2518.879861830062 x[7,13] - battery[7] + battery[13]
+   >= 1800
+ battery_feasible_7_13: - 718.8798618300618 x[7,13] + battery[7] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_7_14: 2020.348550748964 x[7,14] - battery[7] + battery[14]
+   >= 1800
+ battery_feasible_7_14: - 220.3485507489639 x[7,14] + battery[7] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_7_15: 2087.050433822454 x[7,15] - battery[7] + battery[15]
+   >= 1800
+ battery_feasible_7_15: - 287.0504338224542 x[7,15] + battery[7] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_7_16: 2477.354547838897 x[7,16] - battery[7] + battery[16]
+   >= 1800
+ battery_feasible_7_16: - 677.3545478388968 x[7,16] + battery[7] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_7_17: 2481.774832278938 x[7,17] - battery[7] + battery[17]
+   >= 1800
+ battery_feasible_7_17: - 681.7748322789387 x[7,17] + battery[7] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_7_18: 2587.081129215223 x[7,18] - battery[7] + battery[18]
+   >= 1800
+ battery_feasible_7_18: - 787.0811292152229 x[7,18] + battery[7] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_7_19: 2231.347083822891 x[7,19] - battery[7] + battery[19]
+   >= 1800
+ battery_feasible_7_19: - 431.3470838228916 x[7,19] + battery[7] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_7_20: 2349.38741638813 x[7,20] - battery[7] + battery[20]
+   >= 1800
+ battery_feasible_7_20: - 549.3874163881299 x[7,20] + battery[7] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_7_21: 2660.808202758196 x[7,21] - battery[7] + battery[21]
+   >= 1800
+ battery_feasible_7_21: - 860.8082027581962 x[7,21] + battery[7] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_7_22: 2889.083045567227 x[7,22] - battery[7] + battery[22]
+   >= 1800
+ battery_feasible_7_22: - 1089.083045567227 x[7,22] + battery[7] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_7_23: 3180.501676942107 x[7,23] - battery[7] + battery[23]
+   >= 1800
+ battery_feasible_7_23: - 1380.501676942107 x[7,23] + battery[7] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_7_24: 2103.557677133287 x[7,24] - battery[7] + battery[24]
+   >= 1800
+ battery_feasible_7_24: - 303.5576771332869 x[7,24] + battery[7] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_8_0: 2026.998861029432 x[8,0] + battery[0] - battery[8]
+   >= 1800
+ battery_feasible_8_0: - 226.9988610294322 x[8,0] + battery[8] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_8_1: 2694.305119008997 x[8,1] + battery[1] - battery[8]
+   >= 1800
+ battery_feasible_8_1: - 894.3051190089975 x[8,1] + battery[8] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_8_2: 2550.553622068071 x[8,2] + battery[2] - battery[8]
+   >= 1800
+ battery_feasible_8_2: - 750.5536220680705 x[8,2] + battery[8] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_8_3: 2791.390197136445 x[8,3] + battery[3] - battery[8]
+   >= 1800
+ battery_feasible_8_3: - 991.3901971364446 x[8,3] + battery[8] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_8_4: 2810.493491569077 x[8,4] + battery[4] - battery[8]
+   >= 1800
+ battery_feasible_8_4: - 1010.493491569077 x[8,4] + battery[8] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_8_6: 2722.684457341323 x[8,6] + battery[6] - battery[8]
+   >= 1800
+ battery_feasible_8_6: - 922.6844573413231 x[8,6] + battery[8] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_8_7: 2284.719492131202 x[8,7] + battery[7] - battery[8]
+   >= 1800
+ battery_feasible_8_7: - 484.7194921312022 x[8,7] + battery[8] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_8_9: 2811.042549988645 x[8,9] - battery[8] + battery[9]
+   >= 1800
+ battery_feasible_8_9: - 1011.042549988645 x[8,9] + battery[8] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_8_10: 2421.274422301467 x[8,10] - battery[8] + battery[10]
+   >= 1800
+ battery_feasible_8_10: - 621.2744223014672 x[8,10] + battery[8] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_8_11: 2330.824987371281 x[8,11] - battery[8] + battery[11]
+   >= 1800
+ battery_feasible_8_11: - 530.8249873712812 x[8,11] + battery[8] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_8_12: 2489.223951219715 x[8,12] - battery[8] + battery[12]
+   >= 1800
+ battery_feasible_8_12: - 689.2239512197146 x[8,12] + battery[8] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_8_13: 2262.754665075717 x[8,13] - battery[8] + battery[13]
+   >= 1800
+ battery_feasible_8_13: - 462.754665075717 x[8,13] + battery[8] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_8_14: 2501.828948096798 x[8,14] - battery[8] + battery[14]
+   >= 1800
+ battery_feasible_8_14: - 701.8289480967976 x[8,14] + battery[8] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_8_15: 2558.923610434274 x[8,15] - battery[8] + battery[15]
+   >= 1800
+ battery_feasible_8_15: - 758.9236104342743 x[8,15] + battery[8] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_8_16: 2456.405228513151 x[8,16] - battery[8] + battery[16]
+   >= 1800
+ battery_feasible_8_16: - 656.4052285131509 x[8,16] + battery[8] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_8_17: 2154.568560706891 x[8,17] - battery[8] + battery[17]
+   >= 1800
+ battery_feasible_8_17: - 354.5685607068914 x[8,17] + battery[8] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_8_18: 2483.193403893089 x[8,18] - battery[8] + battery[18]
+   >= 1800
+ battery_feasible_8_18: - 683.1934038930893 x[8,18] + battery[8] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_8_19: 1904.587662487255 x[8,19] - battery[8] + battery[19]
+   >= 1800
+ battery_feasible_8_19: - 104.5876624872554 x[8,19] + battery[8] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_8_20: 2174.707012014629 x[8,20] - battery[8] + battery[20]
+   >= 1800
+ battery_feasible_8_20: - 374.7070120146287 x[8,20] + battery[8] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_8_22: 2562.323617887357 x[8,22] - battery[8] + battery[22]
+   >= 1800
+ battery_feasible_8_22: - 762.3236178873569 x[8,22] + battery[8] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_8_23: 2722.684457341323 x[8,23] - battery[8] + battery[23]
+   >= 1800
+ battery_feasible_8_23: - 922.6844573413231 x[8,23] + battery[8] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_8_24: 2585.899887950206 x[8,24] - battery[8] + battery[24]
+   >= 1800
+ battery_feasible_8_24: - 785.8998879502066 x[8,24] + battery[8] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_9_0: 2592.40628463031 x[9,0] + battery[0] - battery[9]
+   >= 1800
+ battery_feasible_9_0: - 792.4062846303104 x[9,0] + battery[9] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_9_2: 3447.05335404216 x[9,2] + battery[2] - battery[9]
+   >= 1800
+ battery_feasible_9_2: - 1647.05335404216 x[9,2] + battery[9] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_9_3: 1987.782840717589 x[9,3] + battery[3] - battery[9]
+   >= 1800
+ battery_feasible_9_3: - 187.7828407175887 x[9,3] + battery[9] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_9_5: 2519.266951691586 x[9,5] + battery[5] - battery[9]
+   >= 1800
+ battery_feasible_9_5: - 719.2669516915863 x[9,5] + battery[9] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_9_7: 2326.324550435824 x[9,7] + battery[7] - battery[9]
+   >= 1800
+ battery_feasible_9_7: - 526.3245504358242 x[9,7] + battery[9] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_9_8: 2811.042549988645 x[9,8] + battery[8] - battery[9]
+   >= 1800
+ battery_feasible_9_8: - 1011.042549988645 x[9,8] + battery[9] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_9_10: 3156.699874357759 x[9,10] - battery[9] + battery[10]
+   >= 1800
+ battery_feasible_9_10: - 1356.699874357759 x[9,10] + battery[9] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_9_11: 3040.349638864249 x[9,11] - battery[9] + battery[11]
+   >= 1800
+ battery_feasible_9_11: - 1240.349638864249 x[9,11] + battery[9] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_9_12: 2433.143301952459 x[9,12] - battery[9] + battery[12]
+   >= 1800
+ battery_feasible_9_12: - 633.143301952459 x[9,12] + battery[9] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_9_13: 3180.815892899341 x[9,13] - battery[9] + battery[13]
+   >= 1800
+ battery_feasible_9_13: - 1380.815892899341 x[9,13] + battery[9] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_9_14: 2113.698847606626 x[9,14] - battery[9] + battery[14]
+   >= 1800
+ battery_feasible_9_14: - 313.6988476066257 x[9,14] + battery[9] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_9_15: 2081.049961271201 x[9,15] - battery[9] + battery[15]
+   >= 1800
+ battery_feasible_9_15: - 281.0499612712015 x[9,15] + battery[9] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_9_16: 2809.473699702159 x[9,16] - battery[9] + battery[16]
+   >= 1800
+ battery_feasible_9_16: - 1009.473699702159 x[9,16] + battery[9] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_9_17: 2967.874600363023 x[9,17] - battery[9] + battery[17]
+   >= 1800
+ battery_feasible_9_17: - 1167.874600363023 x[9,17] + battery[9] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_9_18: 2946.748023474501 x[9,18] - battery[9] + battery[18]
+   >= 1800
+ battery_feasible_9_18: - 1146.748023474501 x[9,18] + battery[9] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_9_19: 2752.912515152715 x[9,19] - battery[9] + battery[19]
+   >= 1800
+ battery_feasible_9_19: - 952.9125151527145 x[9,19] + battery[9] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_9_20: 2803.946816544614 x[9,20] - battery[9] + battery[20]
+   >= 1800
+ battery_feasible_9_20: - 1003.946816544614 x[9,20] + battery[9] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_9_21: 2519.266951691586 x[9,21] - battery[9] + battery[21]
+   >= 1800
+ battery_feasible_9_21: - 719.2669516915863 x[9,21] + battery[9] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_9_22: 3526.591161978051 x[9,22] - battery[9] + battery[22]
+   >= 1800
+ battery_feasible_9_22: - 1726.591161978051 x[9,22] + battery[9] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_9_24: 2032.088637809559 x[9,24] - battery[9] + battery[24]
+   >= 1800
+ battery_feasible_9_24: - 232.0886378095591 x[9,24] + battery[9] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_10_0: 2484.691442700187 x[10,0] + battery[0] - battery[10]
+   >= 1800
+ battery_feasible_10_0: - 684.6914427001865 x[10,0] + battery[10] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_10_1: 3188.359788121614 x[10,1] + battery[1] - battery[10]
+   >= 1800
+ battery_feasible_10_1: - 1388.359788121614 x[10,1] + battery[10] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_10_2: 2938.927700715444 x[10,2] + battery[2] - battery[10]
+   >= 1800
+ battery_feasible_10_2: - 1138.927700715444 x[10,2] + battery[10] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_10_3: 3214.318716023199 x[10,3] + battery[3] - battery[10]
+   >= 1800
+ battery_feasible_10_3: - 1414.318716023199 x[10,3] + battery[10] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_10_4: 3295.087634397873 x[10,4] + battery[4] - battery[10]
+   >= 1800
+ battery_feasible_10_4: - 1495.087634397873 x[10,4] + battery[10] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_10_6: 2465.4509542166 x[10,6] + battery[6] - battery[10]
+   >= 1800
+ battery_feasible_10_6: - 665.4509542165996 x[10,6] + battery[10] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_10_7: 2710.643990217593 x[10,7] + battery[7] - battery[10]
+   >= 1800
+ battery_feasible_10_7: - 910.6439902175925 x[10,7] + battery[10] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_10_8: 2421.274422301467 x[10,8] + battery[8] - battery[10]
+   >= 1800
+ battery_feasible_10_8: - 621.2744223014672 x[10,8] + battery[10] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_10_9: 3156.699874357759 x[10,9] + battery[9] - battery[10]
+   >= 1800
+ battery_feasible_10_9: - 1356.699874357759 x[10,9] + battery[10] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_10_11: 1917.679919836091 x[10,11] - battery[10]
+   + battery[11] >= 1800
+ battery_feasible_10_11: - 117.679919836091 x[10,11] + battery[10] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_10_12: 2572.349555238593 x[10,12] - battery[10]
+   + battery[12] >= 1800
+ battery_feasible_10_12: - 772.3495552385928 x[10,12] + battery[10] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_10_13: 2850.444312557951 x[10,13] - battery[10]
+   + battery[13] >= 1800
+ battery_feasible_10_13: - 1050.444312557951 x[10,13] + battery[10] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_10_14: 2861.504450659387 x[10,14] - battery[10]
+   + battery[14] >= 1800
+ battery_feasible_10_14: - 1061.504450659387 x[10,14] + battery[10] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_10_15: 2986.806233785701 x[10,15] - battery[10]
+   + battery[15] >= 1800
+ battery_feasible_10_15: - 1186.806233785701 x[10,15] + battery[10] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_10_16: 2230.105281048679 x[10,16] - battery[10]
+   + battery[16] >= 1800
+ battery_feasible_10_16: - 430.1052810486793 x[10,16] + battery[10] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_10_17: 2067.555112102675 x[10,17] - battery[10]
+   + battery[17] >= 1800
+ battery_feasible_10_17: - 267.5551121026746 x[10,17] + battery[10] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_10_18: 2114.399009906062 x[10,18] - battery[10]
+   + battery[18] >= 1800
+ battery_feasible_10_18: - 314.3990099060621 x[10,18] + battery[10] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_10_19: 2370.094230752371 x[10,19] - battery[10]
+   + battery[19] >= 1800
+ battery_feasible_10_19: - 570.0942307523716 x[10,19] + battery[10] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_10_20: 2162.191099799905 x[10,20] - battery[10]
+   + battery[20] >= 1800
+ battery_feasible_10_20: - 362.1910997999053 x[10,20] + battery[10] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_10_22: 3053.955474544681 x[10,22] - battery[10]
+   + battery[22] >= 1800
+ battery_feasible_10_22: - 1253.955474544681 x[10,22] + battery[10] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_10_23: 2465.4509542166 x[10,23] - battery[10] + battery[23]
+   >= 1800
+ battery_feasible_10_23: - 665.4509542165996 x[10,23] + battery[10] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_10_24: 2981.960650397411 x[10,24] - battery[10]
+   + battery[24] >= 1800
+ battery_feasible_10_24: - 1181.960650397411 x[10,24] + battery[10] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_11_0: 2373.132081575972 x[11,0] + battery[0] - battery[11]
+   >= 1800
+ battery_feasible_11_0: - 573.1320815759721 x[11,0] + battery[11] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_11_1: 3142.523980500804 x[11,1] + battery[1] - battery[11]
+   >= 1800
+ battery_feasible_11_1: - 1342.523980500804 x[11,1] + battery[11] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_11_2: 2911.964778430177 x[11,2] + battery[2] - battery[11]
+   >= 1800
+ battery_feasible_11_2: - 1111.964778430177 x[11,2] + battery[11] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_11_3: 3096.652681864082 x[11,3] + battery[3] - battery[11]
+   >= 1800
+ battery_feasible_11_3: - 1296.652681864082 x[11,3] + battery[11] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_11_4: 3252.548576564989 x[11,4] + battery[4] - battery[11]
+   >= 1800
+ battery_feasible_11_4: - 1452.548576564989 x[11,4] + battery[11] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_11_6: 2543.30378075438 x[11,6] + battery[6] - battery[11]
+   >= 1800
+ battery_feasible_11_6: - 743.3037807543799 x[11,6] + battery[11] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_11_7: 2593.753868632337 x[11,7] + battery[7] - battery[11]
+   >= 1800
+ battery_feasible_11_7: - 793.7538686323368 x[11,7] + battery[11] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_11_8: 2330.824987371281 x[11,8] + battery[8] - battery[11]
+   >= 1800
+ battery_feasible_11_8: - 530.8249873712812 x[11,8] + battery[11] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_11_9: 3040.349638864249 x[11,9] + battery[9] - battery[11]
+   >= 1800
+ battery_feasible_11_9: - 1240.349638864249 x[11,9] + battery[11] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_11_10: 1917.679919836091 x[11,10] + battery[10]
+   - battery[11] >= 1800
+ battery_feasible_11_10: - 117.679919836091 x[11,10] + battery[11] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_11_12: 2464.626302530442 x[11,12] - battery[11]
+   + battery[12] >= 1800
+ battery_feasible_11_12: - 664.6263025304427 x[11,12] + battery[11] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_11_13: 2776.386262532259 x[11,13] - battery[11]
+   + battery[13] >= 1800
+ battery_feasible_11_13: - 976.3862625322596 x[11,13] + battery[11] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_11_14: 2744.027154103314 x[11,14] - battery[11]
+   + battery[14] >= 1800
+ battery_feasible_11_14: - 944.0271541033144 x[11,14] + battery[11] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_11_15: 2869.196777441021 x[11,15] - battery[11]
+   + battery[15] >= 1800
+ battery_feasible_11_15: - 1069.196777441021 x[11,15] + battery[11] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_11_16: 2146.080110044095 x[11,16] - battery[11]
+   + battery[16] >= 1800
+ battery_feasible_11_16: - 346.0801100440955 x[11,16] + battery[11] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_11_17: 1980.141579058569 x[11,17] - battery[11]
+   + battery[17] >= 1800
+ battery_feasible_11_17: - 180.1415790585688 x[11,17] + battery[11] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_11_18: 2057.518397745301 x[11,18] - battery[11]
+   + battery[18] >= 1800
+ battery_feasible_11_18: - 257.5183977453013 x[11,18] + battery[11] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_11_19: 2268.721860653161 x[11,19] - battery[11]
+   + battery[19] >= 1800
+ battery_feasible_11_19: - 468.7218606531608 x[11,19] + battery[11] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_11_20: 2044.750433181523 x[11,20] - battery[11]
+   + battery[20] >= 1800
+ battery_feasible_11_20: - 244.7504331815235 x[11,20] + battery[11] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_11_22: 3007.08964447024 x[11,22] - battery[11]
+   + battery[22] >= 1800
+ battery_feasible_11_22: - 1207.08964447024 x[11,22] + battery[11] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_11_23: 2543.30378075438 x[11,23] - battery[11]
+   + battery[23] >= 1800
+ battery_feasible_11_23: - 743.3037807543799 x[11,23] + battery[11] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_11_24: 2864.315679503148 x[11,24] - battery[11]
+   + battery[24] >= 1800
+ battery_feasible_11_24: - 1064.315679503148 x[11,24] + battery[11] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_12_0: 2291.433576633198 x[12,0] + battery[0] - battery[12]
+   >= 1800
+ battery_feasible_12_0: - 491.4335766331976 x[12,0] + battery[12] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_12_1: 3349.827419804172 x[12,1] + battery[1] - battery[12]
+   >= 1800
+ battery_feasible_12_1: - 1549.827419804172 x[12,1] + battery[12] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_12_2: 3238.940853405448 x[12,2] + battery[2] - battery[12]
+   >= 1800
+ battery_feasible_12_2: - 1438.940853405448 x[12,2] + battery[12] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_12_3: 2547.141756352822 x[12,3] + battery[3] - battery[12]
+   >= 1800
+ battery_feasible_12_3: - 747.1417563528219 x[12,3] + battery[12] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_12_4: 3466.019305563604 x[12,4] + battery[4] - battery[12]
+   >= 1800
+ battery_feasible_12_4: - 1666.019305563604 x[12,4] + battery[12] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_12_5: 3017.55104869466 x[12,5] + battery[5] - battery[12]
+   >= 1800
+ battery_feasible_12_5: - 1217.55104869466 x[12,5] + battery[12] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_12_6: 3187.908171815354 x[12,6] + battery[6] - battery[12]
+   >= 1800
+ battery_feasible_12_6: - 1387.908171815354 x[12,6] + battery[12] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_12_7: 2230.228114656492 x[12,7] + battery[7] - battery[12]
+   >= 1800
+ battery_feasible_12_7: - 430.2281146564923 x[12,7] + battery[12] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_12_8: 2489.223951219715 x[12,8] + battery[8] - battery[12]
+   >= 1800
+ battery_feasible_12_8: - 689.2239512197146 x[12,8] + battery[12] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_12_9: 2433.143301952459 x[12,9] + battery[9] - battery[12]
+   >= 1800
+ battery_feasible_12_9: - 633.143301952459 x[12,9] + battery[12] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_12_10: 2572.349555238593 x[12,10] + battery[10]
+   - battery[12] >= 1800
+ battery_feasible_12_10: - 772.3495552385928 x[12,10] + battery[12] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_12_11: 2464.626302530442 x[12,11] + battery[11]
+   - battery[12] >= 1800
+ battery_feasible_12_11: - 664.6263025304427 x[12,11] + battery[12] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_12_13: 2874.69584497854 x[12,13] - battery[12]
+   + battery[13] >= 1800
+ battery_feasible_12_13: - 1074.69584497854 x[12,13] + battery[12] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_12_14: 2213.00752479248 x[12,14] - battery[12]
+   + battery[14] >= 1800
+ battery_feasible_12_14: - 413.00752479248 x[12,14] + battery[12] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_12_15: 2372.396418286065 x[12,15] - battery[12]
+   + battery[15] >= 1800
+ battery_feasible_12_15: - 572.3964182860647 x[12,15] + battery[12] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_12_16: 2181.103298696057 x[12,16] - battery[12]
+   + battery[16] >= 1800
+ battery_feasible_12_16: - 381.1032986960567 x[12,16] + battery[12] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_12_17: 2454.878544969958 x[12,17] - battery[12]
+   + battery[17] >= 1800
+ battery_feasible_12_17: - 654.8785449699575 x[12,17] + battery[12] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_12_18: 2321.280211857449 x[12,18] - battery[12]
+   + battery[18] >= 1800
+ battery_feasible_12_18: - 521.2802118574486 x[12,18] + battery[12] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_12_19: 2389.165981298941 x[12,19] - battery[12]
+   + battery[19] >= 1800
+ battery_feasible_12_19: - 589.1659812989409 x[12,19] + battery[12] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_12_20: 2269.372893063282 x[12,20] - battery[12]
+   + battery[20] >= 1800
+ battery_feasible_12_20: - 469.3728930632821 x[12,20] + battery[12] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_12_21: 3017.55104869466 x[12,21] - battery[12]
+   + battery[21] >= 1800
+ battery_feasible_12_21: - 1217.55104869466 x[12,21] + battery[12] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_12_22: 3225.596816075491 x[12,22] - battery[12]
+   + battery[22] >= 1800
+ battery_feasible_12_22: - 1425.596816075491 x[12,22] + battery[12] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_12_23: 3187.908171815354 x[12,23] - battery[12]
+   + battery[23] >= 1800
+ battery_feasible_12_23: - 1387.908171815354 x[12,23] + battery[12] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_12_24: 2333.301050881737 x[12,24] - battery[12]
+   + battery[24] >= 1800
+ battery_feasible_12_24: - 533.3010508817367 x[12,24] + battery[12] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_13_0: 2388.409608269031 x[13,0] + battery[0] - battery[13]
+   >= 1800
+ battery_feasible_13_0: - 588.4096082690307 x[13,0] + battery[13] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_13_1: 2281.981193770275 x[13,1] + battery[1] - battery[13]
+   >= 1800
+ battery_feasible_13_1: - 481.981193770275 x[13,1] + battery[13] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_13_2: 2288.917308700259 x[13,2] + battery[2] - battery[13]
+   >= 1800
+ battery_feasible_13_2: - 488.9173087002588 x[13,2] + battery[13] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_13_3: 3178.799655142667 x[13,3] + battery[3] - battery[13]
+   >= 1800
+ battery_feasible_13_3: - 1378.799655142667 x[13,3] + battery[13] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_13_4: 2396.137328661259 x[13,4] + battery[4] - battery[13]
+   >= 1800
+ battery_feasible_13_4: - 596.1373286612591 x[13,4] + battery[13] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_13_5: 2864.468963550183 x[13,5] + battery[5] - battery[13]
+   >= 1800
+ battery_feasible_13_5: - 1064.468963550183 x[13,5] + battery[13] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_13_6: 2933.934507942982 x[13,6] + battery[6] - battery[13]
+   >= 1800
+ battery_feasible_13_6: - 1133.934507942982 x[13,6] + battery[13] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_13_7: 2518.879861830062 x[13,7] + battery[7] - battery[13]
+   >= 1800
+ battery_feasible_13_7: - 718.8798618300618 x[13,7] + battery[13] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_13_8: 2262.754665075717 x[13,8] + battery[8] - battery[13]
+   >= 1800
+ battery_feasible_13_8: - 462.754665075717 x[13,8] + battery[13] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_13_9: 3180.815892899341 x[13,9] + battery[9] - battery[13]
+   >= 1800
+ battery_feasible_13_9: - 1380.815892899341 x[13,9] + battery[13] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_13_10: 2850.444312557951 x[13,10] + battery[10]
+   - battery[13] >= 1800
+ battery_feasible_13_10: - 1050.444312557951 x[13,10] + battery[13] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_13_11: 2776.386262532259 x[13,11] + battery[11]
+   - battery[13] >= 1800
+ battery_feasible_13_11: - 976.3862625322596 x[13,11] + battery[13] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_13_12: 2874.69584497854 x[13,12] + battery[12]
+   - battery[13] >= 1800
+ battery_feasible_13_12: - 1074.69584497854 x[13,12] + battery[13] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_13_14: 2868.481677167512 x[13,14] - battery[13]
+   + battery[14] >= 1800
+ battery_feasible_13_14: - 1068.481677167512 x[13,14] + battery[13] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_13_15: 2943.205282336815 x[13,15] - battery[13]
+   + battery[15] >= 1800
+ battery_feasible_13_15: - 1143.205282336815 x[13,15] + battery[13] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_13_16: 2914.772589317662 x[13,16] - battery[13]
+   + battery[16] >= 1800
+ battery_feasible_13_16: - 1114.772589317662 x[13,16] + battery[13] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_13_17: 2596.246750291577 x[13,17] - battery[13]
+   + battery[17] >= 1800
+ battery_feasible_13_17: - 796.2467502915772 x[13,17] + battery[13] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_13_18: 2945.847301223793 x[13,18] - battery[13]
+   + battery[18] >= 1800
+ battery_feasible_13_18: - 1145.847301223793 x[13,18] + battery[13] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_13_19: 2357.630398387861 x[13,19] - battery[13]
+   + battery[19] >= 1800
+ battery_feasible_13_19: - 557.6303983878606 x[13,19] + battery[13] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_13_20: 2637.177878501214 x[13,20] - battery[13]
+   + battery[20] >= 1800
+ battery_feasible_13_20: - 837.1778785012139 x[13,20] + battery[13] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_13_21: 2864.468963550183 x[13,21] - battery[13]
+   + battery[21] >= 1800
+ battery_feasible_13_21: - 1064.468963550183 x[13,21] + battery[13] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_13_22: 2171.794147357036 x[13,22] - battery[13]
+   + battery[22] >= 1800
+ battery_feasible_13_22: - 371.7941473570357 x[13,22] + battery[13] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_13_23: 2933.934507942982 x[13,23] - battery[13]
+   + battery[23] >= 1800
+ battery_feasible_13_23: - 1133.934507942982 x[13,23] + battery[13] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_13_24: 2961.711565470315 x[13,24] - battery[13]
+   + battery[24] >= 1800
+ battery_feasible_13_24: - 1161.711565470315 x[13,24] + battery[13] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_14_0: 2280.072068898481 x[14,0] + battery[0] - battery[14]
+   >= 1800
+ battery_feasible_14_0: - 480.0720688984812 x[14,0] + battery[14] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_14_1: 3339.167345826917 x[14,1] + battery[1] - battery[14]
+   >= 1800
+ battery_feasible_14_1: - 1539.167345826917 x[14,1] + battery[14] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_14_2: 3171.528385465591 x[14,2] + battery[2] - battery[14]
+   >= 1800
+ battery_feasible_14_2: - 1371.528385465591 x[14,2] + battery[14] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_14_3: 2156.309592823782 x[14,3] + battery[3] - battery[14]
+   >= 1800
+ battery_feasible_14_3: - 356.3095928237822 x[14,3] + battery[14] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_14_4: 3455.542616440747 x[14,4] + battery[4] - battery[14]
+   >= 1800
+ battery_feasible_14_4: - 1655.542616440747 x[14,4] + battery[14] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_14_5: 2605.084645985718 x[14,5] + battery[5] - battery[14]
+   >= 1800
+ battery_feasible_14_5: - 805.0846459857177 x[14,5] + battery[14] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_14_6: 3379.396011896855 x[14,6] + battery[6] - battery[14]
+   >= 1800
+ battery_feasible_14_6: - 1579.396011896855 x[14,6] + battery[14] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_14_7: 2020.348550748964 x[14,7] + battery[7] - battery[14]
+   >= 1800
+ battery_feasible_14_7: - 220.3485507489639 x[14,7] + battery[14] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_14_8: 2501.828948096798 x[14,8] + battery[8] - battery[14]
+   >= 1800
+ battery_feasible_14_8: - 701.8289480967976 x[14,8] + battery[14] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_14_9: 2113.698847606626 x[14,9] + battery[9] - battery[14]
+   >= 1800
+ battery_feasible_14_9: - 313.6988476066257 x[14,9] + battery[14] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_14_10: 2861.504450659387 x[14,10] + battery[10]
+   - battery[14] >= 1800
+ battery_feasible_14_10: - 1061.504450659387 x[14,10] + battery[14] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_14_11: 2744.027154103314 x[14,11] + battery[11]
+   - battery[14] >= 1800
+ battery_feasible_14_11: - 944.0271541033144 x[14,11] + battery[14] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_14_12: 2213.00752479248 x[14,12] + battery[12]
+   - battery[14] >= 1800
+ battery_feasible_14_12: - 413.00752479248 x[14,12] + battery[14] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_14_13: 2868.481677167512 x[14,13] + battery[13]
+   - battery[14] >= 1800
+ battery_feasible_14_13: - 1068.481677167512 x[14,13] + battery[14] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_14_15: 1959.663832306677 x[14,15] - battery[14]
+   + battery[15] >= 1800
+ battery_feasible_14_15: - 159.6638323066769 x[14,15] + battery[14] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_14_16: 2553.738834576238 x[14,16] - battery[14]
+   + battery[16] >= 1800
+ battery_feasible_14_16: - 753.738834576238 x[14,16] + battery[14] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_14_17: 2659.166146316228 x[14,17] - battery[14]
+   + battery[17] >= 1800
+ battery_feasible_14_17: - 859.1661463162279 x[14,17] + battery[14] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_14_18: 2682.696624767487 x[14,18] - battery[14]
+   + battery[18] >= 1800
+ battery_feasible_14_18: - 882.6966247674867 x[14,18] + battery[14] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_14_19: 2439.849680792133 x[14,19] - battery[14]
+   + battery[19] >= 1800
+ battery_feasible_14_19: - 639.8496807921326 x[14,19] + battery[14] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_14_20: 2502.494862385538 x[14,20] - battery[14]
+   + battery[20] >= 1800
+ battery_feasible_14_20: - 702.4948623855382 x[14,20] + battery[14] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_14_21: 2605.084645985718 x[14,21] - battery[14]
+   + battery[21] >= 1800
+ battery_feasible_14_21: - 805.0846459857177 x[14,21] + battery[14] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_14_22: 3214.256946246222 x[14,22] - battery[14]
+   + battery[22] >= 1800
+ battery_feasible_14_22: - 1414.256946246222 x[14,22] + battery[14] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_14_23: 3379.396011896855 x[14,23] - battery[14]
+   + battery[23] >= 1800
+ battery_feasible_14_23: - 1579.396011896855 x[14,23] + battery[14] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_14_24: 1925.745154748621 x[14,24] - battery[14]
+   + battery[24] >= 1800
+ battery_feasible_14_24: - 125.7451547486206 x[14,24] + battery[14] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_15_0: 2354.795674067785 x[15,0] + battery[0] - battery[15]
+   >= 1800
+ battery_feasible_15_0: - 554.7956740677846 x[15,0] + battery[15] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_15_1: 3413.89095099622 x[15,1] + battery[1] - battery[15]
+   >= 1800
+ battery_feasible_15_1: - 1613.89095099622 x[15,1] + battery[15] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_15_2: 3311.33528531691 x[15,2] + battery[2] - battery[15]
+   >= 1800
+ battery_feasible_15_2: - 1511.33528531691 x[15,2] + battery[15] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_15_3: 2035.70608924416 x[15,3] + battery[3] - battery[15]
+   >= 1800
+ battery_feasible_15_3: - 235.7060892441596 x[15,3] + battery[15] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_15_4: 3530.266221610051 x[15,4] + battery[4] - battery[15]
+   >= 1800
+ battery_feasible_15_4: - 1730.266221610051 x[15,4] + battery[15] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_15_5: 2445.424568487849 x[15,5] + battery[5] - battery[15]
+   >= 1800
+ battery_feasible_15_5: - 645.4245684878487 x[15,5] + battery[15] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_15_6: 3466.193373679759 x[15,6] + battery[6] - battery[15]
+   >= 1800
+ battery_feasible_15_6: - 1666.193373679759 x[15,6] + battery[15] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_15_7: 2087.050433822454 x[15,7] + battery[7] - battery[15]
+   >= 1800
+ battery_feasible_15_7: - 287.0504338224542 x[15,7] + battery[15] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_15_8: 2558.923610434274 x[15,8] + battery[8] - battery[15]
+   >= 1800
+ battery_feasible_15_8: - 758.9236104342743 x[15,8] + battery[15] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_15_9: 2081.049961271201 x[15,9] + battery[9] - battery[15]
+   >= 1800
+ battery_feasible_15_9: - 281.0499612712015 x[15,9] + battery[15] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_15_10: 2986.806233785701 x[15,10] + battery[10]
+   - battery[15] >= 1800
+ battery_feasible_15_10: - 1186.806233785701 x[15,10] + battery[15] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_15_11: 2869.196777441021 x[15,11] + battery[11]
+   - battery[15] >= 1800
+ battery_feasible_15_11: - 1069.196777441021 x[15,11] + battery[15] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_15_12: 2372.396418286065 x[15,12] + battery[12]
+   - battery[15] >= 1800
+ battery_feasible_15_12: - 572.3964182860647 x[15,12] + battery[15] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_15_13: 2943.205282336815 x[15,13] + battery[13]
+   - battery[15] >= 1800
+ battery_feasible_15_13: - 1143.205282336815 x[15,13] + battery[15] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_15_14: 1959.663832306677 x[15,14] + battery[14]
+   - battery[15] >= 1800
+ battery_feasible_15_14: - 159.6638323066769 x[15,14] + battery[15] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_15_16: 2704.137925941136 x[15,16] - battery[15]
+   + battery[16] >= 1800
+ battery_feasible_15_16: - 904.1379259411366 x[15,16] + battery[15] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_15_17: 2766.836428046717 x[15,17] - battery[15]
+   + battery[17] >= 1800
+ battery_feasible_15_17: - 966.8364280467165 x[15,17] + battery[15] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_15_18: 2829.06028957757 x[15,18] - battery[15]
+   + battery[18] >= 1800
+ battery_feasible_15_18: - 1029.06028957757 x[15,18] + battery[15] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_15_19: 2515.571508463091 x[15,19] - battery[15]
+   + battery[19] >= 1800
+ battery_feasible_15_19: - 715.5715084630906 x[15,19] + battery[15] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_15_20: 2624.714890725659 x[15,20] - battery[15]
+   + battery[20] >= 1800
+ battery_feasible_15_20: - 824.714890725659 x[15,20] + battery[15] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_15_21: 2445.424568487849 x[15,21] - battery[15]
+   + battery[21] >= 1800
+ battery_feasible_15_21: - 645.4245684878487 x[15,21] + battery[15] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_15_22: 3288.980551415525 x[15,22] - battery[15]
+   + battery[22] >= 1800
+ battery_feasible_15_22: - 1488.980551415525 x[15,22] + battery[15] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_15_23: 3466.193373679759 x[15,23] - battery[15]
+   + battery[23] >= 1800
+ battery_feasible_15_23: - 1666.193373679759 x[15,23] + battery[15] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_15_24: 1866.462975803989 x[15,24] - battery[15]
+   + battery[24] >= 1800
+ battery_feasible_15_24: - 66.46297580398931 x[15,24] + battery[15] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_16_0: 2366.334703858151 x[16,0] + battery[0] - battery[16]
+   >= 1800
+ battery_feasible_16_0: - 566.3347038581509 x[16,0] + battery[16] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_16_1: 3346.145012749604 x[16,1] + battery[1] - battery[16]
+   >= 1800
+ battery_feasible_16_1: - 1546.145012749604 x[16,1] + battery[16] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_16_2: 3162.719343440835 x[16,2] + battery[2] - battery[16]
+   >= 1800
+ battery_feasible_16_2: - 1362.719343440835 x[16,2] + battery[16] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_16_3: 2906.324308193268 x[16,3] + battery[3] - battery[16]
+   >= 1800
+ battery_feasible_16_3: - 1106.324308193268 x[16,3] + battery[16] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_16_4: 3461.424115824778 x[16,4] + battery[4] - battery[16]
+   >= 1800
+ battery_feasible_16_4: - 1661.424115824778 x[16,4] + battery[16] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_16_5: 3332.233372672076 x[16,5] + battery[5] - battery[16]
+   >= 1800
+ battery_feasible_16_5: - 1532.233372672076 x[16,5] + battery[16] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_16_6: 2888.167335940105 x[16,6] + battery[6] - battery[16]
+   >= 1800
+ battery_feasible_16_6: - 1088.167335940105 x[16,6] + battery[16] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_16_7: 2477.354547838897 x[16,7] + battery[7] - battery[16]
+   >= 1800
+ battery_feasible_16_7: - 677.3545478388968 x[16,7] + battery[16] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_16_8: 2456.405228513151 x[16,8] + battery[8] - battery[16]
+   >= 1800
+ battery_feasible_16_8: - 656.4052285131509 x[16,8] + battery[16] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_16_9: 2809.473699702159 x[16,9] + battery[9] - battery[16]
+   >= 1800
+ battery_feasible_16_9: - 1009.473699702159 x[16,9] + battery[16] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_16_10: 2230.105281048679 x[16,10] + battery[10]
+   - battery[16] >= 1800
+ battery_feasible_16_10: - 430.1052810486793 x[16,10] + battery[16] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_16_11: 2146.080110044095 x[16,11] + battery[11]
+   - battery[16] >= 1800
+ battery_feasible_16_11: - 346.0801100440955 x[16,11] + battery[16] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_16_12: 2181.103298696057 x[16,12] + battery[12]
+   - battery[16] >= 1800
+ battery_feasible_16_12: - 381.1032986960567 x[16,12] + battery[16] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_16_13: 2914.772589317662 x[16,13] + battery[13]
+   - battery[16] >= 1800
+ battery_feasible_16_13: - 1114.772589317662 x[16,13] + battery[16] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_16_14: 2553.738834576238 x[16,14] + battery[14]
+   - battery[16] >= 1800
+ battery_feasible_16_14: - 753.738834576238 x[16,14] + battery[16] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_16_15: 2704.137925941136 x[16,15] + battery[15]
+   - battery[16] >= 1800
+ battery_feasible_16_15: - 904.1379259411366 x[16,15] + battery[16] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_16_17: 2227.77792168367 x[16,17] - battery[16]
+   + battery[17] >= 1800
+ battery_feasible_16_17: - 427.7779216836699 x[16,17] + battery[16] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_16_18: 1940.875687369844 x[16,18] - battery[16]
+   + battery[18] >= 1800
+ battery_feasible_16_18: - 140.8756873698437 x[16,18] + battery[16] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_16_19: 2357.340727214789 x[16,19] - battery[16]
+   + battery[19] >= 1800
+ battery_feasible_16_19: - 557.3407272147889 x[16,19] + battery[16] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_16_20: 2088.699677194366 x[16,20] - battery[16]
+   + battery[20] >= 1800
+ battery_feasible_16_20: - 288.699677194366 x[16,20] + battery[16] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_16_21: 3332.233372672076 x[16,21] - battery[16]
+   + battery[21] >= 1800
+ battery_feasible_16_21: - 1532.233372672076 x[16,21] + battery[16] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_16_22: 3212.162726060095 x[16,22] - battery[16]
+   + battery[22] >= 1800
+ battery_feasible_16_22: - 1412.162726060095 x[16,22] + battery[16] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_16_23: 2888.167335940105 x[16,23] - battery[16]
+   + battery[23] >= 1800
+ battery_feasible_16_23: - 1088.167335940105 x[16,23] + battery[16] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_16_24: 2679.435856929085 x[16,24] - battery[16]
+   + battery[24] >= 1800
+ battery_feasible_16_24: - 879.4358569290853 x[16,24] + battery[16] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_17_0: 2233.392441709925 x[17,0] + battery[0] - battery[17]
+   >= 1800
+ battery_feasible_17_0: - 433.392441709925 x[17,0] + battery[17] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_17_1: 2970.397976794291 x[17,1] + battery[1] - battery[17]
+   >= 1800
+ battery_feasible_17_1: - 1170.397976794291 x[17,1] + battery[17] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_17_2: 2753.818720523606 x[17,2] + battery[2] - battery[17]
+   >= 1800
+ battery_feasible_17_2: - 953.818720523606 x[17,2] + battery[17] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_17_3: 3000.498221142426 x[17,3] + battery[3] - battery[17]
+   >= 1800
+ battery_feasible_17_3: - 1200.498221142426 x[17,3] + battery[17] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_17_4: 3081.964835697476 x[17,4] + battery[4] - battery[17]
+   >= 1800
+ battery_feasible_17_4: - 1281.964835697476 x[17,4] + battery[17] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_17_6: 2538.581787328055 x[17,6] + battery[6] - battery[17]
+   >= 1800
+ battery_feasible_17_6: - 738.5817873280554 x[17,6] + battery[17] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_17_7: 2481.774832278938 x[17,7] + battery[7] - battery[17]
+   >= 1800
+ battery_feasible_17_7: - 681.7748322789387 x[17,7] + battery[17] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_17_8: 2154.568560706891 x[17,8] + battery[8] - battery[17]
+   >= 1800
+ battery_feasible_17_8: - 354.5685607068914 x[17,8] + battery[17] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_17_9: 2967.874600363023 x[17,9] + battery[9] - battery[17]
+   >= 1800
+ battery_feasible_17_9: - 1167.874600363023 x[17,9] + battery[17] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_17_10: 2067.555112102675 x[17,10] + battery[10]
+   - battery[17] >= 1800
+ battery_feasible_17_10: - 267.5551121026746 x[17,10] + battery[17] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_17_11: 1980.141579058569 x[17,11] + battery[11]
+   - battery[17] >= 1800
+ battery_feasible_17_11: - 180.1415790585688 x[17,11] + battery[17] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_17_12: 2454.878544969958 x[17,12] + battery[12]
+   - battery[17] >= 1800
+ battery_feasible_17_12: - 654.8785449699575 x[17,12] + battery[17] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_17_13: 2596.246750291577 x[17,13] + battery[13]
+   - battery[17] >= 1800
+ battery_feasible_17_13: - 796.2467502915772 x[17,13] + battery[17] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_17_14: 2659.166146316228 x[17,14] + battery[14]
+   - battery[17] >= 1800
+ battery_feasible_17_14: - 859.1661463162279 x[17,14] + battery[17] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_17_15: 2766.836428046717 x[17,15] + battery[15]
+   - battery[17] >= 1800
+ battery_feasible_17_15: - 966.8364280467165 x[17,15] + battery[17] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_17_16: 2227.77792168367 x[17,16] + battery[16]
+   - battery[17] >= 1800
+ battery_feasible_17_16: - 427.7779216836699 x[17,16] + battery[17] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_17_18: 2190.585804619799 x[17,18] - battery[17]
+   + battery[18] >= 1800
+ battery_feasible_17_18: - 390.5858046197985 x[17,18] + battery[17] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_17_19: 2104.721431359535 x[17,19] - battery[17]
+   + battery[19] >= 1800
+ battery_feasible_17_19: - 304.7214313595348 x[17,19] + battery[17] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_17_20: 1985.565584696455 x[17,20] - battery[17]
+   + battery[20] >= 1800
+ battery_feasible_17_20: - 185.565584696455 x[17,20] + battery[17] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_17_22: 2834.79975533164 x[17,22] - battery[17]
+   + battery[22] >= 1800
+ battery_feasible_17_22: - 1034.79975533164 x[17,22] + battery[17] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_17_23: 2538.581787328055 x[17,23] - battery[17]
+   + battery[23] >= 1800
+ battery_feasible_17_23: - 738.5817873280554 x[17,23] + battery[17] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_17_24: 2771.857276791606 x[17,24] - battery[17]
+   + battery[24] >= 1800
+ battery_feasible_17_24: - 971.8572767916061 x[17,24] + battery[17] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_18_0: 2438.073361997167 x[18,0] + battery[0] - battery[18]
+   >= 1800
+ battery_feasible_18_0: - 638.0733619971676 x[18,0] + battery[18] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_18_1: 3352.159842068198 x[18,1] + battery[1] - battery[18]
+   >= 1800
+ battery_feasible_18_1: - 1552.159842068198 x[18,1] + battery[18] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_18_2: 3144.322901270226 x[18,2] + battery[2] - battery[18]
+   >= 1800
+ battery_feasible_18_2: - 1344.322901270226 x[18,2] + battery[18] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_18_3: 3037.580676044526 x[18,3] + battery[3] - battery[18]
+   >= 1800
+ battery_feasible_18_3: - 1237.580676044526 x[18,3] + battery[18] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_18_4: 3465.448609173931 x[18,4] + battery[4] - battery[18]
+   >= 1800
+ battery_feasible_18_4: - 1665.448609173931 x[18,4] + battery[18] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_18_5: 3447.24802863832 x[18,5] + battery[5] - battery[18]
+   >= 1800
+ battery_feasible_18_5: - 1647.24802863832 x[18,5] + battery[18] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_18_6: 2779.811331074829 x[18,6] + battery[6] - battery[18]
+   >= 1800
+ battery_feasible_18_6: - 979.8113310748295 x[18,6] + battery[18] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_18_7: 2587.081129215223 x[18,7] + battery[7] - battery[18]
+   >= 1800
+ battery_feasible_18_7: - 787.0811292152229 x[18,7] + battery[18] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_18_8: 2483.193403893089 x[18,8] + battery[8] - battery[18]
+   >= 1800
+ battery_feasible_18_8: - 683.1934038930893 x[18,8] + battery[18] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_18_9: 2946.748023474501 x[18,9] + battery[9] - battery[18]
+   >= 1800
+ battery_feasible_18_9: - 1146.748023474501 x[18,9] + battery[18] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_18_10: 2114.399009906062 x[18,10] + battery[10]
+   - battery[18] >= 1800
+ battery_feasible_18_10: - 314.3990099060621 x[18,10] + battery[18] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_18_11: 2057.518397745301 x[18,11] + battery[11]
+   - battery[18] >= 1800
+ battery_feasible_18_11: - 257.5183977453013 x[18,11] + battery[18] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_18_12: 2321.280211857449 x[18,12] + battery[12]
+   - battery[18] >= 1800
+ battery_feasible_18_12: - 521.2802118574486 x[18,12] + battery[18] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_18_13: 2945.847301223793 x[18,13] + battery[13]
+   - battery[18] >= 1800
+ battery_feasible_18_13: - 1145.847301223793 x[18,13] + battery[18] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_18_14: 2682.696624767487 x[18,14] + battery[14]
+   - battery[18] >= 1800
+ battery_feasible_18_14: - 882.6966247674867 x[18,14] + battery[18] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_18_15: 2829.06028957757 x[18,15] + battery[15]
+   - battery[18] >= 1800
+ battery_feasible_18_15: - 1029.06028957757 x[18,15] + battery[18] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_18_16: 1940.875687369844 x[18,16] + battery[16]
+   - battery[18] >= 1800
+ battery_feasible_18_16: - 140.8756873698437 x[18,16] + battery[18] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_18_17: 2190.585804619799 x[18,17] + battery[17]
+   - battery[18] >= 1800
+ battery_feasible_18_17: - 390.5858046197985 x[18,17] + battery[18] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_18_19: 2393.922173856983 x[18,19] - battery[18]
+   + battery[19] >= 1800
+ battery_feasible_18_19: - 593.9221738569829 x[18,19] + battery[18] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_18_20: 2111.089043922318 x[18,20] - battery[18]
+   + battery[20] >= 1800
+ battery_feasible_18_20: - 311.0890439223178 x[18,20] + battery[18] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_18_21: 3447.24802863832 x[18,21] - battery[18]
+   + battery[21] >= 1800
+ battery_feasible_18_21: - 1647.24802863832 x[18,21] + battery[18] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_18_22: 3216.799842713102 x[18,22] - battery[18]
+   + battery[22] >= 1800
+ battery_feasible_18_22: - 1416.799842713102 x[18,22] + battery[18] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_18_23: 2779.811331074829 x[18,23] - battery[18]
+   + battery[23] >= 1800
+ battery_feasible_18_23: - 979.8113310748295 x[18,23] + battery[18] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_18_24: 2808.355272472096 x[18,24] - battery[18]
+   + battery[24] >= 1800
+ battery_feasible_18_24: - 1008.355272472096 x[18,24] + battery[18] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_19_0: 1961.481450550408 x[19,0] + battery[0] - battery[19]
+   >= 1800
+ battery_feasible_19_0: - 161.4814505504085 x[19,0] + battery[19] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_19_1: 2797.916498639613 x[19,1] + battery[1] - battery[19]
+   >= 1800
+ battery_feasible_19_1: - 997.9164986396127 x[19,1] + battery[19] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_19_2: 2653.232322961224 x[19,2] + battery[2] - battery[19]
+   >= 1800
+ battery_feasible_19_2: - 853.2323229612241 x[19,2] + battery[19] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_19_3: 2750.951162879131 x[19,3] + battery[3] - battery[19]
+   >= 1800
+ battery_feasible_19_3: - 950.9511628791312 x[19,3] + battery[19] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_19_4: 2914.23234756081 x[19,4] + battery[4] - battery[19]
+   >= 1800
+ battery_feasible_19_4: - 1114.23234756081 x[19,4] + battery[19] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_19_6: 2750.878950738446 x[19,6] + battery[6] - battery[19]
+   >= 1800
+ battery_feasible_19_6: - 950.8789507384461 x[19,6] + battery[19] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_19_7: 2231.347083822891 x[19,7] + battery[7] - battery[19]
+   >= 1800
+ battery_feasible_19_7: - 431.3470838228916 x[19,7] + battery[19] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_19_8: 1904.587662487255 x[19,8] + battery[8] - battery[19]
+   >= 1800
+ battery_feasible_19_8: - 104.5876624872554 x[19,8] + battery[19] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_19_9: 2752.912515152715 x[19,9] + battery[9] - battery[19]
+   >= 1800
+ battery_feasible_19_9: - 952.9125151527145 x[19,9] + battery[19] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_19_10: 2370.094230752371 x[19,10] + battery[10]
+   - battery[19] >= 1800
+ battery_feasible_19_10: - 570.0942307523716 x[19,10] + battery[19] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_19_11: 2268.721860653161 x[19,11] + battery[11]
+   - battery[19] >= 1800
+ battery_feasible_19_11: - 468.7218606531608 x[19,11] + battery[19] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_19_12: 2389.165981298941 x[19,12] + battery[12]
+   - battery[19] >= 1800
+ battery_feasible_19_12: - 589.1659812989409 x[19,12] + battery[19] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_19_13: 2357.630398387861 x[19,13] + battery[13]
+   - battery[19] >= 1800
+ battery_feasible_19_13: - 557.6303983878606 x[19,13] + battery[19] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_19_14: 2439.849680792133 x[19,14] + battery[14]
+   - battery[19] >= 1800
+ battery_feasible_19_14: - 639.8496807921326 x[19,14] + battery[19] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_19_15: 2515.571508463091 x[19,15] + battery[15]
+   - battery[19] >= 1800
+ battery_feasible_19_15: - 715.5715084630906 x[19,15] + battery[19] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_19_16: 2357.340727214789 x[19,16] + battery[16]
+   - battery[19] >= 1800
+ battery_feasible_19_16: - 557.3407272147889 x[19,16] + battery[19] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_19_17: 2104.721431359535 x[19,17] + battery[17]
+   - battery[19] >= 1800
+ battery_feasible_19_17: - 304.7214313595348 x[19,17] + battery[19] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_19_18: 2393.922173856983 x[19,18] + battery[18]
+   - battery[19] >= 1800
+ battery_feasible_19_18: - 593.9221738569829 x[19,18] + battery[19] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_19_20: 2082.86643647353 x[19,20] - battery[19]
+   + battery[20] >= 1800
+ battery_feasible_19_20: - 282.8664364735301 x[19,20] + battery[19] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_19_22: 2666.387031337252 x[19,22] - battery[19]
+   + battery[22] >= 1800
+ battery_feasible_19_22: - 866.3870313372518 x[19,22] + battery[19] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_19_23: 2750.878950738446 x[19,23] - battery[19]
+   + battery[23] >= 1800
+ battery_feasible_19_23: - 950.8789507384461 x[19,23] + battery[19] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_19_24: 2534.780318706764 x[19,24] - battery[19]
+   + battery[24] >= 1800
+ battery_feasible_19_24: - 734.7803187067641 x[19,24] + battery[19] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_20_0: 2144.343251479873 x[20,0] + battery[0] - battery[20]
+   >= 1800
+ battery_feasible_20_0: - 344.3432514798729 x[20,0] + battery[20] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_20_1: 3058.474859880835 x[20,1] + battery[1] - battery[20]
+   >= 1800
+ battery_feasible_20_1: - 1258.474859880835 x[20,1] + battery[20] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_20_2: 2875.975502598477 x[20,2] + battery[2] - battery[20]
+   >= 1800
+ battery_feasible_20_2: - 1075.975502598477 x[20,2] + battery[20] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_20_3: 2853.223372698505 x[20,3] + battery[3] - battery[20]
+   >= 1800
+ battery_feasible_20_3: - 1053.223372698505 x[20,3] + battery[20] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_20_4: 3173.466173025321 x[20,4] + battery[4] - battery[20]
+   >= 1800
+ battery_feasible_20_4: - 1373.466173025321 x[20,4] + battery[20] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_20_6: 2721.173478992648 x[20,6] + battery[6] - battery[20]
+   >= 1800
+ battery_feasible_20_6: - 921.173478992648 x[20,6] + battery[20] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_20_7: 2349.38741638813 x[20,7] + battery[7] - battery[20]
+   >= 1800
+ battery_feasible_20_7: - 549.3874163881299 x[20,7] + battery[20] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_20_8: 2174.707012014629 x[20,8] + battery[8] - battery[20]
+   >= 1800
+ battery_feasible_20_8: - 374.7070120146287 x[20,8] + battery[20] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_20_9: 2803.946816544614 x[20,9] + battery[9] - battery[20]
+   >= 1800
+ battery_feasible_20_9: - 1003.946816544614 x[20,9] + battery[20] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_20_10: 2162.191099799905 x[20,10] + battery[10]
+   - battery[20] >= 1800
+ battery_feasible_20_10: - 362.1910997999053 x[20,10] + battery[20] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_20_11: 2044.750433181523 x[20,11] + battery[11]
+   - battery[20] >= 1800
+ battery_feasible_20_11: - 244.7504331815235 x[20,11] + battery[20] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_20_12: 2269.372893063282 x[20,12] + battery[12]
+   - battery[20] >= 1800
+ battery_feasible_20_12: - 469.3728930632821 x[20,12] + battery[20] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_20_13: 2637.177878501214 x[20,13] + battery[13]
+   - battery[20] >= 1800
+ battery_feasible_20_13: - 837.1778785012139 x[20,13] + battery[20] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_20_14: 2502.494862385538 x[20,14] + battery[14]
+   - battery[20] >= 1800
+ battery_feasible_20_14: - 702.4948623855382 x[20,14] + battery[20] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_20_15: 2624.714890725659 x[20,15] + battery[15]
+   - battery[20] >= 1800
+ battery_feasible_20_15: - 824.714890725659 x[20,15] + battery[20] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_20_16: 2088.699677194366 x[20,16] + battery[16]
+   - battery[20] >= 1800
+ battery_feasible_20_16: - 288.699677194366 x[20,16] + battery[20] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_20_17: 1985.565584696455 x[20,17] + battery[17]
+   - battery[20] >= 1800
+ battery_feasible_20_17: - 185.565584696455 x[20,17] + battery[20] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_20_18: 2111.089043922318 x[20,18] + battery[18]
+   - battery[20] >= 1800
+ battery_feasible_20_18: - 311.0890439223178 x[20,18] + battery[20] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_20_19: 2082.86643647353 x[20,19] + battery[19]
+   - battery[20] >= 1800
+ battery_feasible_20_19: - 282.8664364735301 x[20,19] + battery[20] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_20_22: 2924.161489217433 x[20,22] - battery[20]
+   + battery[22] >= 1800
+ battery_feasible_20_22: - 1124.161489217433 x[20,22] + battery[20] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_20_23: 2721.173478992648 x[20,23] - battery[20]
+   + battery[23] >= 1800
+ battery_feasible_20_23: - 921.173478992648 x[20,23] + battery[20] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_20_24: 2621.257402136333 x[20,24] - battery[20]
+   + battery[24] >= 1800
+ battery_feasible_20_24: - 821.2574021363325 x[20,24] + battery[20] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_21_1: 3183.091209703627 x[21,1] + battery[1] - battery[21]
+   >= 1800
+ battery_feasible_21_1: - 1383.091209703627 x[21,1] + battery[21] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_21_2: 3334.132177476949 x[21,2] + battery[2] - battery[21]
+   >= 1800
+ battery_feasible_21_2: - 1534.132177476949 x[21,2] + battery[21] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_21_3: 2333.587892413376 x[21,3] + battery[3] - battery[21]
+   >= 1800
+ battery_feasible_21_3: - 533.5878924133764 x[21,3] + battery[21] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_21_4: 3255.080303728136 x[21,4] + battery[4] - battery[21]
+   >= 1800
+ battery_feasible_21_4: - 1455.080303728136 x[21,4] + battery[21] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_21_5: 1800.01 x[21,5] + battery[5] - battery[21] >= 1800
+ battery_feasible_21_5: - 0.01 x[21,5] + battery[21] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_21_7: 2660.808202758196 x[21,7] + battery[7] - battery[21]
+   >= 1800
+ battery_feasible_21_7: - 860.8082027581962 x[21,7] + battery[21] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_21_9: 2519.266951691586 x[21,9] + battery[9] - battery[21]
+   >= 1800
+ battery_feasible_21_9: - 719.2669516915863 x[21,9] + battery[21] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_21_12: 3017.55104869466 x[21,12] + battery[12]
+   - battery[21] >= 1800
+ battery_feasible_21_12: - 1217.55104869466 x[21,12] + battery[21] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_21_13: 2864.468963550183 x[21,13] + battery[13]
+   - battery[21] >= 1800
+ battery_feasible_21_13: - 1064.468963550183 x[21,13] + battery[21] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_21_14: 2605.084645985718 x[21,14] + battery[14]
+   - battery[21] >= 1800
+ battery_feasible_21_14: - 805.0846459857177 x[21,14] + battery[21] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_21_15: 2445.424568487849 x[21,15] + battery[15]
+   - battery[21] >= 1800
+ battery_feasible_21_15: - 645.4245684878487 x[21,15] + battery[21] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_21_16: 3332.233372672076 x[21,16] + battery[16]
+   - battery[21] >= 1800
+ battery_feasible_21_16: - 1532.233372672076 x[21,16] + battery[21] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_21_18: 3447.24802863832 x[21,18] + battery[18]
+   - battery[21] >= 1800
+ battery_feasible_21_18: - 1647.24802863832 x[21,18] + battery[21] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_21_22: 3145.646083532576 x[21,22] - battery[21]
+   + battery[22] >= 1800
+ battery_feasible_21_22: - 1345.646083532576 x[21,22] + battery[21] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_21_24: 2491.004430245292 x[21,24] - battery[21]
+   + battery[24] >= 1800
+ battery_feasible_21_24: - 691.0044302452916 x[21,24] + battery[21] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_22_0: 2734.18487734774 x[22,0] + battery[0] - battery[22]
+   >= 1800
+ battery_feasible_22_0: - 934.1848773477404 x[22,0] + battery[22] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_22_1: 1935.599734668473 x[22,1] + battery[1] - battery[22]
+   >= 1800
+ battery_feasible_22_1: - 135.599734668473 x[22,1] + battery[22] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_22_2: 2034.584691904039 x[22,2] + battery[2] - battery[22]
+   >= 1800
+ battery_feasible_22_2: - 234.5846919040386 x[22,2] + battery[22] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_22_3: 3237.760976841623 x[22,3] + battery[3] - battery[22]
+   >= 1800
+ battery_feasible_22_3: - 1437.760976841623 x[22,3] + battery[22] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_22_4: 2049.307069205241 x[22,4] + battery[4] - battery[22]
+   >= 1800
+ battery_feasible_22_4: - 249.3070692052408 x[22,4] + battery[22] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_22_5: 3145.646083532576 x[22,5] + battery[5] - battery[22]
+   >= 1800
+ battery_feasible_22_5: - 1345.646083532576 x[22,5] + battery[22] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_22_6: 2929.300542225698 x[22,6] + battery[6] - battery[22]
+   >= 1800
+ battery_feasible_22_6: - 1129.300542225698 x[22,6] + battery[22] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_22_7: 2889.083045567227 x[22,7] + battery[7] - battery[22]
+   >= 1800
+ battery_feasible_22_7: - 1089.083045567227 x[22,7] + battery[22] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_22_8: 2562.323617887357 x[22,8] + battery[8] - battery[22]
+   >= 1800
+ battery_feasible_22_8: - 762.3236178873569 x[22,8] + battery[22] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_22_9: 3526.591161978051 x[22,9] + battery[9] - battery[22]
+   >= 1800
+ battery_feasible_22_9: - 1726.591161978051 x[22,9] + battery[22] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_22_10: 3053.955474544681 x[22,10] + battery[10]
+   - battery[22] >= 1800
+ battery_feasible_22_10: - 1253.955474544681 x[22,10] + battery[22] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_22_11: 3007.08964447024 x[22,11] + battery[11]
+   - battery[22] >= 1800
+ battery_feasible_22_11: - 1207.08964447024 x[22,11] + battery[22] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_22_12: 3225.596816075491 x[22,12] + battery[12]
+   - battery[22] >= 1800
+ battery_feasible_22_12: - 1425.596816075491 x[22,12] + battery[22] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_22_13: 2171.794147357036 x[22,13] + battery[13]
+   - battery[22] >= 1800
+ battery_feasible_22_13: - 371.7941473570357 x[22,13] + battery[22] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_22_14: 3214.256946246222 x[22,14] + battery[14]
+   - battery[22] >= 1800
+ battery_feasible_22_14: - 1414.256946246222 x[22,14] + battery[22] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_22_15: 3288.980551415525 x[22,15] + battery[15]
+   - battery[22] >= 1800
+ battery_feasible_22_15: - 1488.980551415525 x[22,15] + battery[22] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_22_16: 3212.162726060095 x[22,16] + battery[16]
+   - battery[22] >= 1800
+ battery_feasible_22_16: - 1412.162726060095 x[22,16] + battery[22] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_22_17: 2834.79975533164 x[22,17] + battery[17]
+   - battery[22] >= 1800
+ battery_feasible_22_17: - 1034.79975533164 x[22,17] + battery[22] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_22_18: 3216.799842713102 x[22,18] + battery[18]
+   - battery[22] >= 1800
+ battery_feasible_22_18: - 1416.799842713102 x[22,18] + battery[22] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_22_19: 2666.387031337252 x[22,19] + battery[19]
+   - battery[22] >= 1800
+ battery_feasible_22_19: - 866.3870313372518 x[22,19] + battery[22] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_22_20: 2924.161489217433 x[22,20] + battery[20]
+   - battery[22] >= 1800
+ battery_feasible_22_20: - 1124.161489217433 x[22,20] + battery[22] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_22_21: 3145.646083532576 x[22,21] + battery[21]
+   - battery[22] >= 1800
+ battery_feasible_22_21: - 1345.646083532576 x[22,21] + battery[22] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_22_23: 2929.300542225698 x[22,23] - battery[22]
+   + battery[23] >= 1800
+ battery_feasible_22_23: - 1129.300542225698 x[22,23] + battery[22] >= 0
+ battery_max_23: battery[23] <= 1800
+ battery_update_22_24: 3307.486834549024 x[22,24] - battery[22]
+   + battery[24] >= 1800
+ battery_feasible_22_24: - 1507.486834549024 x[22,24] + battery[22] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_23_0: 2911.40334447582 x[23,0] + battery[0] - battery[23]
+   >= 1800
+ battery_feasible_23_0: - 1111.40334447582 x[23,0] + battery[23] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_23_1: 3036.396561954008 x[23,1] + battery[1] - battery[23]
+   >= 1800
+ battery_feasible_23_1: - 1236.396561954008 x[23,1] + battery[23] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_23_2: 2719.886862494118 x[23,2] + battery[2] - battery[23]
+   >= 1800
+ battery_feasible_23_2: - 919.8868624941176 x[23,2] + battery[23] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_23_4: 3109.352993146879 x[23,4] + battery[4] - battery[23]
+   >= 1800
+ battery_feasible_23_4: - 1309.352993146879 x[23,4] + battery[23] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_23_6: 1800.01 x[23,6] + battery[6] - battery[23] >= 1800
+ battery_feasible_23_6: - 0.01 x[23,6] + battery[23] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_23_7: 3180.501676942107 x[23,7] + battery[7] - battery[23]
+   >= 1800
+ battery_feasible_23_7: - 1380.501676942107 x[23,7] + battery[23] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_23_8: 2722.684457341323 x[23,8] + battery[8] - battery[23]
+   >= 1800
+ battery_feasible_23_8: - 922.6844573413231 x[23,8] + battery[23] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_23_10: 2465.4509542166 x[23,10] + battery[10] - battery[23]
+   >= 1800
+ battery_feasible_23_10: - 665.4509542165996 x[23,10] + battery[23] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_23_11: 2543.30378075438 x[23,11] + battery[11]
+   - battery[23] >= 1800
+ battery_feasible_23_11: - 743.3037807543799 x[23,11] + battery[23] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_23_12: 3187.908171815354 x[23,12] + battery[12]
+   - battery[23] >= 1800
+ battery_feasible_23_12: - 1387.908171815354 x[23,12] + battery[23] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_23_13: 2933.934507942982 x[23,13] + battery[13]
+   - battery[23] >= 1800
+ battery_feasible_23_13: - 1133.934507942982 x[23,13] + battery[23] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_23_14: 3379.396011896855 x[23,14] + battery[14]
+   - battery[23] >= 1800
+ battery_feasible_23_14: - 1579.396011896855 x[23,14] + battery[23] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_23_15: 3466.193373679759 x[23,15] + battery[15]
+   - battery[23] >= 1800
+ battery_feasible_23_15: - 1666.193373679759 x[23,15] + battery[23] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_23_16: 2888.167335940105 x[23,16] + battery[16]
+   - battery[23] >= 1800
+ battery_feasible_23_16: - 1088.167335940105 x[23,16] + battery[23] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_23_17: 2538.581787328055 x[23,17] + battery[17]
+   - battery[23] >= 1800
+ battery_feasible_23_17: - 738.5817873280554 x[23,17] + battery[23] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_23_18: 2779.811331074829 x[23,18] + battery[18]
+   - battery[23] >= 1800
+ battery_feasible_23_18: - 979.8113310748295 x[23,18] + battery[23] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_23_19: 2750.878950738446 x[23,19] + battery[19]
+   - battery[23] >= 1800
+ battery_feasible_23_19: - 950.8789507384461 x[23,19] + battery[23] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_23_20: 2721.173478992648 x[23,20] + battery[20]
+   - battery[23] >= 1800
+ battery_feasible_23_20: - 921.173478992648 x[23,20] + battery[23] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_23_22: 2929.300542225698 x[23,22] + battery[22]
+   - battery[23] >= 1800
+ battery_feasible_23_22: - 1129.300542225698 x[23,22] + battery[23] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_23_24: 3482.511528478293 x[23,24] - battery[23]
+   + battery[24] >= 1800
+ battery_feasible_23_24: - 1682.511528478293 x[23,24] + battery[23] >= 0
+ battery_max_24: battery[24] <= 1800
+ battery_update_24_0: 2373.301957201284 x[24,0] + battery[0] - battery[24]
+   >= 1800
+ battery_feasible_24_0: - 573.3019572012843 x[24,0] + battery[24] >= 0
+ battery_max_0: battery[0] <= 1800
+ battery_update_24_1: 3432.39723412972 x[24,1] + battery[1] - battery[24]
+   >= 1800
+ battery_feasible_24_1: - 1632.39723412972 x[24,1] + battery[24] >= 0
+ battery_max_1: battery[1] <= 1800
+ battery_update_24_2: 3216.167694620773 x[24,2] + battery[2] - battery[24]
+   >= 1800
+ battery_feasible_24_2: - 1416.167694620773 x[24,2] + battery[24] >= 0
+ battery_max_2: battery[2] <= 1800
+ battery_update_24_3: 2032.612824530152 x[24,3] + battery[3] - battery[24]
+   >= 1800
+ battery_feasible_24_3: - 232.6128245301521 x[24,3] + battery[24] >= 0
+ battery_max_3: battery[3] <= 1800
+ battery_update_24_4: 3548.77250474355 x[24,4] + battery[4] - battery[24]
+   >= 1800
+ battery_feasible_24_4: - 1748.77250474355 x[24,4] + battery[24] >= 0
+ battery_max_4: battery[4] <= 1800
+ battery_update_24_5: 2491.004430245292 x[24,5] + battery[5] - battery[24]
+   >= 1800
+ battery_feasible_24_5: - 691.0044302452916 x[24,5] + battery[24] >= 0
+ battery_max_5: battery[5] <= 1800
+ battery_update_24_6: 3482.511528478293 x[24,6] + battery[6] - battery[24]
+   >= 1800
+ battery_feasible_24_6: - 1682.511528478293 x[24,6] + battery[24] >= 0
+ battery_max_6: battery[6] <= 1800
+ battery_update_24_7: 2103.557677133287 x[24,7] + battery[7] - battery[24]
+   >= 1800
+ battery_feasible_24_7: - 303.5576771332869 x[24,7] + battery[24] >= 0
+ battery_max_7: battery[7] <= 1800
+ battery_update_24_8: 2585.899887950206 x[24,8] + battery[8] - battery[24]
+   >= 1800
+ battery_feasible_24_8: - 785.8998879502066 x[24,8] + battery[24] >= 0
+ battery_max_8: battery[8] <= 1800
+ battery_update_24_9: 2032.088637809559 x[24,9] + battery[9] - battery[24]
+   >= 1800
+ battery_feasible_24_9: - 232.0886378095591 x[24,9] + battery[24] >= 0
+ battery_max_9: battery[9] <= 1800
+ battery_update_24_10: 2981.960650397411 x[24,10] + battery[10]
+   - battery[24] >= 1800
+ battery_feasible_24_10: - 1181.960650397411 x[24,10] + battery[24] >= 0
+ battery_max_10: battery[10] <= 1800
+ battery_update_24_11: 2864.315679503148 x[24,11] + battery[11]
+   - battery[24] >= 1800
+ battery_feasible_24_11: - 1064.315679503148 x[24,11] + battery[24] >= 0
+ battery_max_11: battery[11] <= 1800
+ battery_update_24_12: 2333.301050881737 x[24,12] + battery[12]
+   - battery[24] >= 1800
+ battery_feasible_24_12: - 533.3010508817367 x[24,12] + battery[24] >= 0
+ battery_max_12: battery[12] <= 1800
+ battery_update_24_13: 2961.711565470315 x[24,13] + battery[13]
+   - battery[24] >= 1800
+ battery_feasible_24_13: - 1161.711565470315 x[24,13] + battery[24] >= 0
+ battery_max_13: battery[13] <= 1800
+ battery_update_24_14: 1925.745154748621 x[24,14] + battery[14]
+   - battery[24] >= 1800
+ battery_feasible_24_14: - 125.7451547486206 x[24,14] + battery[24] >= 0
+ battery_max_14: battery[14] <= 1800
+ battery_update_24_15: 1866.462975803989 x[24,15] + battery[15]
+   - battery[24] >= 1800
+ battery_feasible_24_15: - 66.46297580398931 x[24,15] + battery[24] >= 0
+ battery_max_15: battery[15] <= 1800
+ battery_update_24_16: 2679.435856929085 x[24,16] + battery[16]
+   - battery[24] >= 1800
+ battery_feasible_24_16: - 879.4358569290853 x[24,16] + battery[24] >= 0
+ battery_max_16: battery[16] <= 1800
+ battery_update_24_17: 2771.857276791606 x[24,17] + battery[17]
+   - battery[24] >= 1800
+ battery_feasible_24_17: - 971.8572767916061 x[24,17] + battery[24] >= 0
+ battery_max_17: battery[17] <= 1800
+ battery_update_24_18: 2808.355272472096 x[24,18] + battery[18]
+   - battery[24] >= 1800
+ battery_feasible_24_18: - 1008.355272472096 x[24,18] + battery[24] >= 0
+ battery_max_18: battery[18] <= 1800
+ battery_update_24_19: 2534.780318706764 x[24,19] + battery[19]
+   - battery[24] >= 1800
+ battery_feasible_24_19: - 734.7803187067641 x[24,19] + battery[24] >= 0
+ battery_max_19: battery[19] <= 1800
+ battery_update_24_20: 2621.257402136333 x[24,20] + battery[20]
+   - battery[24] >= 1800
+ battery_feasible_24_20: - 821.2574021363325 x[24,20] + battery[24] >= 0
+ battery_max_20: battery[20] <= 1800
+ battery_update_24_21: 2491.004430245292 x[24,21] + battery[21]
+   - battery[24] >= 1800
+ battery_feasible_24_21: - 691.0044302452916 x[24,21] + battery[24] >= 0
+ battery_max_21: battery[21] <= 1800
+ battery_update_24_22: 3307.486834549024 x[24,22] + battery[22]
+   - battery[24] >= 1800
+ battery_feasible_24_22: - 1507.486834549024 x[24,22] + battery[24] >= 0
+ battery_max_22: battery[22] <= 1800
+ battery_update_24_23: 3482.511528478293 x[24,23] + battery[23]
+   - battery[24] >= 1800
+ battery_feasible_24_23: - 1682.511528478293 x[24,23] + battery[24] >= 0
+ battery_max_23: battery[23] <= 1800
+ station_limited_move_20_22: x[20,22] <= 1
+ station_hop_limit_22: x[20,22] + x[21,22] + x[23,22] + x[24,22] <= 1
+ station_limited_move_20_23: x[20,23] <= 1
+ station_hop_limit_23: x[20,23] + x[22,23] + x[24,23] <= 1
+ station_limited_move_20_24: x[20,24] <= 1
+ station_hop_limit_24: x[20,24] + x[21,24] + x[22,24] + x[23,24] <= 1
+ station_limited_move_21_22: x[21,22] <= 1
+ station_hop_limit_22: x[20,22] + x[21,22] + x[23,22] + x[24,22] <= 1
+ station_limited_move_21_24: x[21,24] <= 1
+ station_hop_limit_24: x[20,24] + x[21,24] + x[22,24] + x[23,24] <= 1
+ station_limited_move_22_20: x[22,20] <= 1
+ station_hop_limit_20: x[22,20] + x[23,20] + x[24,20] <= 1
+ station_limited_move_22_21: x[22,21] <= 1
+ station_hop_limit_21: x[22,21] + x[24,21] <= 1
+ station_limited_move_22_23: x[22,23] <= 1
+ station_hop_limit_23: x[20,23] + x[22,23] + x[24,23] <= 1
+ station_limited_move_22_24: x[22,24] <= 1
+ station_hop_limit_24: x[20,24] + x[21,24] + x[22,24] + x[23,24] <= 1
+ station_limited_move_23_20: x[23,20] <= 1
+ station_hop_limit_20: x[22,20] + x[23,20] + x[24,20] <= 1
+ station_limited_move_23_22: x[23,22] <= 1
+ station_hop_limit_22: x[20,22] + x[21,22] + x[23,22] + x[24,22] <= 1
+ station_limited_move_23_24: x[23,24] <= 1
+ station_hop_limit_24: x[20,24] + x[21,24] + x[22,24] + x[23,24] <= 1
+ station_limited_move_24_20: x[24,20] <= 1
+ station_hop_limit_20: x[22,20] + x[23,20] + x[24,20] <= 1
+ station_limited_move_24_21: x[24,21] <= 1
+ station_hop_limit_21: x[22,21] + x[24,21] <= 1
+ station_limited_move_24_22: x[24,22] <= 1
+ station_hop_limit_22: x[20,22] + x[21,22] + x[23,22] + x[24,22] <= 1
+ station_limited_move_24_23: x[24,23] <= 1
+ station_hop_limit_23: x[20,23] + x[22,23] + x[24,23] <= 1
+ no_backtrack_0_1: x[0,1] + x[1,0] <= 1
+ no_backtrack_0_2: x[0,2] + x[2,0] <= 1
+ no_backtrack_0_3: x[0,3] + x[3,0] <= 1
+ no_backtrack_0_4: x[0,4] + x[4,0] <= 1
+ no_backtrack_0_6: x[0,6] + x[6,0] <= 1
+ no_backtrack_0_7: x[0,7] + x[7,0] <= 1
+ no_backtrack_0_8: x[0,8] + x[8,0] <= 1
+ no_backtrack_0_9: x[0,9] + x[9,0] <= 1
+ no_backtrack_0_10: x[0,10] + x[10,0] <= 1
+ no_backtrack_0_11: x[0,11] + x[11,0] <= 1
+ no_backtrack_0_12: x[0,12] + x[12,0] <= 1
+ no_backtrack_0_13: x[0,13] + x[13,0] <= 1
+ no_backtrack_0_14: x[0,14] + x[14,0] <= 1
+ no_backtrack_0_15: x[0,15] + x[15,0] <= 1
+ no_backtrack_0_16: x[0,16] + x[16,0] <= 1
+ no_backtrack_0_17: x[0,17] + x[17,0] <= 1
+ no_backtrack_0_18: x[0,18] + x[18,0] <= 1
+ no_backtrack_0_19: x[0,19] + x[19,0] <= 1
+ no_backtrack_1_0: x[0,1] + x[1,0] <= 1
+ no_backtrack_1_2: x[1,2] + x[2,1] <= 1
+ no_backtrack_1_3: x[1,3] + x[3,1] <= 1
+ no_backtrack_1_4: x[1,4] + x[4,1] <= 1
+ no_backtrack_1_5: x[1,5] + x[5,1] <= 1
+ no_backtrack_1_6: x[1,6] + x[6,1] <= 1
+ no_backtrack_1_7: x[1,7] + x[7,1] <= 1
+ no_backtrack_1_8: x[1,8] + x[8,1] <= 1
+ no_backtrack_1_10: x[1,10] + x[10,1] <= 1
+ no_backtrack_1_11: x[1,11] + x[11,1] <= 1
+ no_backtrack_1_12: x[1,12] + x[12,1] <= 1
+ no_backtrack_1_13: x[1,13] + x[13,1] <= 1
+ no_backtrack_1_14: x[1,14] + x[14,1] <= 1
+ no_backtrack_1_15: x[1,15] + x[15,1] <= 1
+ no_backtrack_1_16: x[1,16] + x[16,1] <= 1
+ no_backtrack_1_17: x[1,17] + x[17,1] <= 1
+ no_backtrack_1_18: x[1,18] + x[18,1] <= 1
+ no_backtrack_1_19: x[1,19] + x[19,1] <= 1
+ no_backtrack_2_0: x[0,2] + x[2,0] <= 1
+ no_backtrack_2_1: x[1,2] + x[2,1] <= 1
+ no_backtrack_2_3: x[2,3] + x[3,2] <= 1
+ no_backtrack_2_4: x[2,4] + x[4,2] <= 1
+ no_backtrack_2_5: x[2,5] + x[5,2] <= 1
+ no_backtrack_2_6: x[2,6] + x[6,2] <= 1
+ no_backtrack_2_7: x[2,7] + x[7,2] <= 1
+ no_backtrack_2_8: x[2,8] + x[8,2] <= 1
+ no_backtrack_2_9: x[2,9] + x[9,2] <= 1
+ no_backtrack_2_10: x[2,10] + x[10,2] <= 1
+ no_backtrack_2_11: x[2,11] + x[11,2] <= 1
+ no_backtrack_2_12: x[2,12] + x[12,2] <= 1
+ no_backtrack_2_13: x[2,13] + x[13,2] <= 1
+ no_backtrack_2_14: x[2,14] + x[14,2] <= 1
+ no_backtrack_2_15: x[2,15] + x[15,2] <= 1
+ no_backtrack_2_16: x[2,16] + x[16,2] <= 1
+ no_backtrack_2_17: x[2,17] + x[17,2] <= 1
+ no_backtrack_2_18: x[2,18] + x[18,2] <= 1
+ no_backtrack_2_19: x[2,19] + x[19,2] <= 1
+ no_backtrack_3_0: x[0,3] + x[3,0] <= 1
+ no_backtrack_3_1: x[1,3] + x[3,1] <= 1
+ no_backtrack_3_2: x[2,3] + x[3,2] <= 1
+ no_backtrack_3_4: x[3,4] + x[4,3] <= 1
+ no_backtrack_3_5: x[3,5] + x[5,3] <= 1
+ no_backtrack_3_7: x[3,7] + x[7,3] <= 1
+ no_backtrack_3_8: x[3,8] + x[8,3] <= 1
+ no_backtrack_3_9: x[3,9] + x[9,3] <= 1
+ no_backtrack_3_10: x[3,10] + x[10,3] <= 1
+ no_backtrack_3_11: x[3,11] + x[11,3] <= 1
+ no_backtrack_3_12: x[3,12] + x[12,3] <= 1
+ no_backtrack_3_13: x[3,13] + x[13,3] <= 1
+ no_backtrack_3_14: x[3,14] + x[14,3] <= 1
+ no_backtrack_3_15: x[3,15] + x[15,3] <= 1
+ no_backtrack_3_16: x[3,16] + x[16,3] <= 1
+ no_backtrack_3_17: x[3,17] + x[17,3] <= 1
+ no_backtrack_3_18: x[3,18] + x[18,3] <= 1
+ no_backtrack_3_19: x[3,19] + x[19,3] <= 1
+ no_backtrack_4_0: x[0,4] + x[4,0] <= 1
+ no_backtrack_4_1: x[1,4] + x[4,1] <= 1
+ no_backtrack_4_2: x[2,4] + x[4,2] <= 1
+ no_backtrack_4_3: x[3,4] + x[4,3] <= 1
+ no_backtrack_4_5: x[4,5] + x[5,4] <= 1
+ no_backtrack_4_6: x[4,6] + x[6,4] <= 1
+ no_backtrack_4_7: x[4,7] + x[7,4] <= 1
+ no_backtrack_4_8: x[4,8] + x[8,4] <= 1
+ no_backtrack_4_10: x[4,10] + x[10,4] <= 1
+ no_backtrack_4_11: x[4,11] + x[11,4] <= 1
+ no_backtrack_4_12: x[4,12] + x[12,4] <= 1
+ no_backtrack_4_13: x[4,13] + x[13,4] <= 1
+ no_backtrack_4_14: x[4,14] + x[14,4] <= 1
+ no_backtrack_4_15: x[4,15] + x[15,4] <= 1
+ no_backtrack_4_16: x[4,16] + x[16,4] <= 1
+ no_backtrack_4_17: x[4,17] + x[17,4] <= 1
+ no_backtrack_4_18: x[4,18] + x[18,4] <= 1
+ no_backtrack_4_19: x[4,19] + x[19,4] <= 1
+ no_backtrack_5_1: x[1,5] + x[5,1] <= 1
+ no_backtrack_5_2: x[2,5] + x[5,2] <= 1
+ no_backtrack_5_3: x[3,5] + x[5,3] <= 1
+ no_backtrack_5_4: x[4,5] + x[5,4] <= 1
+ no_backtrack_5_7: x[5,7] + x[7,5] <= 1
+ no_backtrack_5_9: x[5,9] + x[9,5] <= 1
+ no_backtrack_5_12: x[5,12] + x[12,5] <= 1
+ no_backtrack_5_13: x[5,13] + x[13,5] <= 1
+ no_backtrack_5_14: x[5,14] + x[14,5] <= 1
+ no_backtrack_5_15: x[5,15] + x[15,5] <= 1
+ no_backtrack_5_16: x[5,16] + x[16,5] <= 1
+ no_backtrack_5_18: x[5,18] + x[18,5] <= 1
+ no_backtrack_6_0: x[0,6] + x[6,0] <= 1
+ no_backtrack_6_1: x[1,6] + x[6,1] <= 1
+ no_backtrack_6_2: x[2,6] + x[6,2] <= 1
+ no_backtrack_6_4: x[4,6] + x[6,4] <= 1
+ no_backtrack_6_7: x[6,7] + x[7,6] <= 1
+ no_backtrack_6_8: x[6,8] + x[8,6] <= 1
+ no_backtrack_6_10: x[6,10] + x[10,6] <= 1
+ no_backtrack_6_11: x[6,11] + x[11,6] <= 1
+ no_backtrack_6_12: x[6,12] + x[12,6] <= 1
+ no_backtrack_6_13: x[6,13] + x[13,6] <= 1
+ no_backtrack_6_14: x[6,14] + x[14,6] <= 1
+ no_backtrack_6_15: x[6,15] + x[15,6] <= 1
+ no_backtrack_6_16: x[6,16] + x[16,6] <= 1
+ no_backtrack_6_17: x[6,17] + x[17,6] <= 1
+ no_backtrack_6_18: x[6,18] + x[18,6] <= 1
+ no_backtrack_6_19: x[6,19] + x[19,6] <= 1
+ no_backtrack_7_0: x[0,7] + x[7,0] <= 1
+ no_backtrack_7_1: x[1,7] + x[7,1] <= 1
+ no_backtrack_7_2: x[2,7] + x[7,2] <= 1
+ no_backtrack_7_3: x[3,7] + x[7,3] <= 1
+ no_backtrack_7_4: x[4,7] + x[7,4] <= 1
+ no_backtrack_7_5: x[5,7] + x[7,5] <= 1
+ no_backtrack_7_6: x[6,7] + x[7,6] <= 1
+ no_backtrack_7_8: x[7,8] + x[8,7] <= 1
+ no_backtrack_7_9: x[7,9] + x[9,7] <= 1
+ no_backtrack_7_10: x[7,10] + x[10,7] <= 1
+ no_backtrack_7_11: x[7,11] + x[11,7] <= 1
+ no_backtrack_7_12: x[7,12] + x[12,7] <= 1
+ no_backtrack_7_13: x[7,13] + x[13,7] <= 1
+ no_backtrack_7_14: x[7,14] + x[14,7] <= 1
+ no_backtrack_7_15: x[7,15] + x[15,7] <= 1
+ no_backtrack_7_16: x[7,16] + x[16,7] <= 1
+ no_backtrack_7_17: x[7,17] + x[17,7] <= 1
+ no_backtrack_7_18: x[7,18] + x[18,7] <= 1
+ no_backtrack_7_19: x[7,19] + x[19,7] <= 1
+ no_backtrack_8_0: x[0,8] + x[8,0] <= 1
+ no_backtrack_8_1: x[1,8] + x[8,1] <= 1
+ no_backtrack_8_2: x[2,8] + x[8,2] <= 1
+ no_backtrack_8_3: x[3,8] + x[8,3] <= 1
+ no_backtrack_8_4: x[4,8] + x[8,4] <= 1
+ no_backtrack_8_6: x[6,8] + x[8,6] <= 1
+ no_backtrack_8_7: x[7,8] + x[8,7] <= 1
+ no_backtrack_8_9: x[8,9] + x[9,8] <= 1
+ no_backtrack_8_10: x[8,10] + x[10,8] <= 1
+ no_backtrack_8_11: x[8,11] + x[11,8] <= 1
+ no_backtrack_8_12: x[8,12] + x[12,8] <= 1
+ no_backtrack_8_13: x[8,13] + x[13,8] <= 1
+ no_backtrack_8_14: x[8,14] + x[14,8] <= 1
+ no_backtrack_8_15: x[8,15] + x[15,8] <= 1
+ no_backtrack_8_16: x[8,16] + x[16,8] <= 1
+ no_backtrack_8_17: x[8,17] + x[17,8] <= 1
+ no_backtrack_8_18: x[8,18] + x[18,8] <= 1
+ no_backtrack_8_19: x[8,19] + x[19,8] <= 1
+ no_backtrack_9_0: x[0,9] + x[9,0] <= 1
+ no_backtrack_9_2: x[2,9] + x[9,2] <= 1
+ no_backtrack_9_3: x[3,9] + x[9,3] <= 1
+ no_backtrack_9_5: x[5,9] + x[9,5] <= 1
+ no_backtrack_9_7: x[7,9] + x[9,7] <= 1
+ no_backtrack_9_8: x[8,9] + x[9,8] <= 1
+ no_backtrack_9_10: x[9,10] + x[10,9] <= 1
+ no_backtrack_9_11: x[9,11] + x[11,9] <= 1
+ no_backtrack_9_12: x[9,12] + x[12,9] <= 1
+ no_backtrack_9_13: x[9,13] + x[13,9] <= 1
+ no_backtrack_9_14: x[9,14] + x[14,9] <= 1
+ no_backtrack_9_15: x[9,15] + x[15,9] <= 1
+ no_backtrack_9_16: x[9,16] + x[16,9] <= 1
+ no_backtrack_9_17: x[9,17] + x[17,9] <= 1
+ no_backtrack_9_18: x[9,18] + x[18,9] <= 1
+ no_backtrack_9_19: x[9,19] + x[19,9] <= 1
+ no_backtrack_10_0: x[0,10] + x[10,0] <= 1
+ no_backtrack_10_1: x[1,10] + x[10,1] <= 1
+ no_backtrack_10_2: x[2,10] + x[10,2] <= 1
+ no_backtrack_10_3: x[3,10] + x[10,3] <= 1
+ no_backtrack_10_4: x[4,10] + x[10,4] <= 1
+ no_backtrack_10_6: x[6,10] + x[10,6] <= 1
+ no_backtrack_10_7: x[7,10] + x[10,7] <= 1
+ no_backtrack_10_8: x[8,10] + x[10,8] <= 1
+ no_backtrack_10_9: x[9,10] + x[10,9] <= 1
+ no_backtrack_10_11: x[10,11] + x[11,10] <= 1
+ no_backtrack_10_12: x[10,12] + x[12,10] <= 1
+ no_backtrack_10_13: x[10,13] + x[13,10] <= 1
+ no_backtrack_10_14: x[10,14] + x[14,10] <= 1
+ no_backtrack_10_15: x[10,15] + x[15,10] <= 1
+ no_backtrack_10_16: x[10,16] + x[16,10] <= 1
+ no_backtrack_10_17: x[10,17] + x[17,10] <= 1
+ no_backtrack_10_18: x[10,18] + x[18,10] <= 1
+ no_backtrack_10_19: x[10,19] + x[19,10] <= 1
+ no_backtrack_11_0: x[0,11] + x[11,0] <= 1
+ no_backtrack_11_1: x[1,11] + x[11,1] <= 1
+ no_backtrack_11_2: x[2,11] + x[11,2] <= 1
+ no_backtrack_11_3: x[3,11] + x[11,3] <= 1
+ no_backtrack_11_4: x[4,11] + x[11,4] <= 1
+ no_backtrack_11_6: x[6,11] + x[11,6] <= 1
+ no_backtrack_11_7: x[7,11] + x[11,7] <= 1
+ no_backtrack_11_8: x[8,11] + x[11,8] <= 1
+ no_backtrack_11_9: x[9,11] + x[11,9] <= 1
+ no_backtrack_11_10: x[10,11] + x[11,10] <= 1
+ no_backtrack_11_12: x[11,12] + x[12,11] <= 1
+ no_backtrack_11_13: x[11,13] + x[13,11] <= 1
+ no_backtrack_11_14: x[11,14] + x[14,11] <= 1
+ no_backtrack_11_15: x[11,15] + x[15,11] <= 1
+ no_backtrack_11_16: x[11,16] + x[16,11] <= 1
+ no_backtrack_11_17: x[11,17] + x[17,11] <= 1
+ no_backtrack_11_18: x[11,18] + x[18,11] <= 1
+ no_backtrack_11_19: x[11,19] + x[19,11] <= 1
+ no_backtrack_12_0: x[0,12] + x[12,0] <= 1
+ no_backtrack_12_1: x[1,12] + x[12,1] <= 1
+ no_backtrack_12_2: x[2,12] + x[12,2] <= 1
+ no_backtrack_12_3: x[3,12] + x[12,3] <= 1
+ no_backtrack_12_4: x[4,12] + x[12,4] <= 1
+ no_backtrack_12_5: x[5,12] + x[12,5] <= 1
+ no_backtrack_12_6: x[6,12] + x[12,6] <= 1
+ no_backtrack_12_7: x[7,12] + x[12,7] <= 1
+ no_backtrack_12_8: x[8,12] + x[12,8] <= 1
+ no_backtrack_12_9: x[9,12] + x[12,9] <= 1
+ no_backtrack_12_10: x[10,12] + x[12,10] <= 1
+ no_backtrack_12_11: x[11,12] + x[12,11] <= 1
+ no_backtrack_12_13: x[12,13] + x[13,12] <= 1
+ no_backtrack_12_14: x[12,14] + x[14,12] <= 1
+ no_backtrack_12_15: x[12,15] + x[15,12] <= 1
+ no_backtrack_12_16: x[12,16] + x[16,12] <= 1
+ no_backtrack_12_17: x[12,17] + x[17,12] <= 1
+ no_backtrack_12_18: x[12,18] + x[18,12] <= 1
+ no_backtrack_12_19: x[12,19] + x[19,12] <= 1
+ no_backtrack_13_0: x[0,13] + x[13,0] <= 1
+ no_backtrack_13_1: x[1,13] + x[13,1] <= 1
+ no_backtrack_13_2: x[2,13] + x[13,2] <= 1
+ no_backtrack_13_3: x[3,13] + x[13,3] <= 1
+ no_backtrack_13_4: x[4,13] + x[13,4] <= 1
+ no_backtrack_13_5: x[5,13] + x[13,5] <= 1
+ no_backtrack_13_6: x[6,13] + x[13,6] <= 1
+ no_backtrack_13_7: x[7,13] + x[13,7] <= 1
+ no_backtrack_13_8: x[8,13] + x[13,8] <= 1
+ no_backtrack_13_9: x[9,13] + x[13,9] <= 1
+ no_backtrack_13_10: x[10,13] + x[13,10] <= 1
+ no_backtrack_13_11: x[11,13] + x[13,11] <= 1
+ no_backtrack_13_12: x[12,13] + x[13,12] <= 1
+ no_backtrack_13_14: x[13,14] + x[14,13] <= 1
+ no_backtrack_13_15: x[13,15] + x[15,13] <= 1
+ no_backtrack_13_16: x[13,16] + x[16,13] <= 1
+ no_backtrack_13_17: x[13,17] + x[17,13] <= 1
+ no_backtrack_13_18: x[13,18] + x[18,13] <= 1
+ no_backtrack_13_19: x[13,19] + x[19,13] <= 1
+ no_backtrack_14_0: x[0,14] + x[14,0] <= 1
+ no_backtrack_14_1: x[1,14] + x[14,1] <= 1
+ no_backtrack_14_2: x[2,14] + x[14,2] <= 1
+ no_backtrack_14_3: x[3,14] + x[14,3] <= 1
+ no_backtrack_14_4: x[4,14] + x[14,4] <= 1
+ no_backtrack_14_5: x[5,14] + x[14,5] <= 1
+ no_backtrack_14_6: x[6,14] + x[14,6] <= 1
+ no_backtrack_14_7: x[7,14] + x[14,7] <= 1
+ no_backtrack_14_8: x[8,14] + x[14,8] <= 1
+ no_backtrack_14_9: x[9,14] + x[14,9] <= 1
+ no_backtrack_14_10: x[10,14] + x[14,10] <= 1
+ no_backtrack_14_11: x[11,14] + x[14,11] <= 1
+ no_backtrack_14_12: x[12,14] + x[14,12] <= 1
+ no_backtrack_14_13: x[13,14] + x[14,13] <= 1
+ no_backtrack_14_15: x[14,15] + x[15,14] <= 1
+ no_backtrack_14_16: x[14,16] + x[16,14] <= 1
+ no_backtrack_14_17: x[14,17] + x[17,14] <= 1
+ no_backtrack_14_18: x[14,18] + x[18,14] <= 1
+ no_backtrack_14_19: x[14,19] + x[19,14] <= 1
+ no_backtrack_15_0: x[0,15] + x[15,0] <= 1
+ no_backtrack_15_1: x[1,15] + x[15,1] <= 1
+ no_backtrack_15_2: x[2,15] + x[15,2] <= 1
+ no_backtrack_15_3: x[3,15] + x[15,3] <= 1
+ no_backtrack_15_4: x[4,15] + x[15,4] <= 1
+ no_backtrack_15_5: x[5,15] + x[15,5] <= 1
+ no_backtrack_15_6: x[6,15] + x[15,6] <= 1
+ no_backtrack_15_7: x[7,15] + x[15,7] <= 1
+ no_backtrack_15_8: x[8,15] + x[15,8] <= 1
+ no_backtrack_15_9: x[9,15] + x[15,9] <= 1
+ no_backtrack_15_10: x[10,15] + x[15,10] <= 1
+ no_backtrack_15_11: x[11,15] + x[15,11] <= 1
+ no_backtrack_15_12: x[12,15] + x[15,12] <= 1
+ no_backtrack_15_13: x[13,15] + x[15,13] <= 1
+ no_backtrack_15_14: x[14,15] + x[15,14] <= 1
+ no_backtrack_15_16: x[15,16] + x[16,15] <= 1
+ no_backtrack_15_17: x[15,17] + x[17,15] <= 1
+ no_backtrack_15_18: x[15,18] + x[18,15] <= 1
+ no_backtrack_15_19: x[15,19] + x[19,15] <= 1
+ no_backtrack_16_0: x[0,16] + x[16,0] <= 1
+ no_backtrack_16_1: x[1,16] + x[16,1] <= 1
+ no_backtrack_16_2: x[2,16] + x[16,2] <= 1
+ no_backtrack_16_3: x[3,16] + x[16,3] <= 1
+ no_backtrack_16_4: x[4,16] + x[16,4] <= 1
+ no_backtrack_16_5: x[5,16] + x[16,5] <= 1
+ no_backtrack_16_6: x[6,16] + x[16,6] <= 1
+ no_backtrack_16_7: x[7,16] + x[16,7] <= 1
+ no_backtrack_16_8: x[8,16] + x[16,8] <= 1
+ no_backtrack_16_9: x[9,16] + x[16,9] <= 1
+ no_backtrack_16_10: x[10,16] + x[16,10] <= 1
+ no_backtrack_16_11: x[11,16] + x[16,11] <= 1
+ no_backtrack_16_12: x[12,16] + x[16,12] <= 1
+ no_backtrack_16_13: x[13,16] + x[16,13] <= 1
+ no_backtrack_16_14: x[14,16] + x[16,14] <= 1
+ no_backtrack_16_15: x[15,16] + x[16,15] <= 1
+ no_backtrack_16_17: x[16,17] + x[17,16] <= 1
+ no_backtrack_16_18: x[16,18] + x[18,16] <= 1
+ no_backtrack_16_19: x[16,19] + x[19,16] <= 1
+ no_backtrack_17_0: x[0,17] + x[17,0] <= 1
+ no_backtrack_17_1: x[1,17] + x[17,1] <= 1
+ no_backtrack_17_2: x[2,17] + x[17,2] <= 1
+ no_backtrack_17_3: x[3,17] + x[17,3] <= 1
+ no_backtrack_17_4: x[4,17] + x[17,4] <= 1
+ no_backtrack_17_6: x[6,17] + x[17,6] <= 1
+ no_backtrack_17_7: x[7,17] + x[17,7] <= 1
+ no_backtrack_17_8: x[8,17] + x[17,8] <= 1
+ no_backtrack_17_9: x[9,17] + x[17,9] <= 1
+ no_backtrack_17_10: x[10,17] + x[17,10] <= 1
+ no_backtrack_17_11: x[11,17] + x[17,11] <= 1
+ no_backtrack_17_12: x[12,17] + x[17,12] <= 1
+ no_backtrack_17_13: x[13,17] + x[17,13] <= 1
+ no_backtrack_17_14: x[14,17] + x[17,14] <= 1
+ no_backtrack_17_15: x[15,17] + x[17,15] <= 1
+ no_backtrack_17_16: x[16,17] + x[17,16] <= 1
+ no_backtrack_17_18: x[17,18] + x[18,17] <= 1
+ no_backtrack_17_19: x[17,19] + x[19,17] <= 1
+ no_backtrack_18_0: x[0,18] + x[18,0] <= 1
+ no_backtrack_18_1: x[1,18] + x[18,1] <= 1
+ no_backtrack_18_2: x[2,18] + x[18,2] <= 1
+ no_backtrack_18_3: x[3,18] + x[18,3] <= 1
+ no_backtrack_18_4: x[4,18] + x[18,4] <= 1
+ no_backtrack_18_5: x[5,18] + x[18,5] <= 1
+ no_backtrack_18_6: x[6,18] + x[18,6] <= 1
+ no_backtrack_18_7: x[7,18] + x[18,7] <= 1
+ no_backtrack_18_8: x[8,18] + x[18,8] <= 1
+ no_backtrack_18_9: x[9,18] + x[18,9] <= 1
+ no_backtrack_18_10: x[10,18] + x[18,10] <= 1
+ no_backtrack_18_11: x[11,18] + x[18,11] <= 1
+ no_backtrack_18_12: x[12,18] + x[18,12] <= 1
+ no_backtrack_18_13: x[13,18] + x[18,13] <= 1
+ no_backtrack_18_14: x[14,18] + x[18,14] <= 1
+ no_backtrack_18_15: x[15,18] + x[18,15] <= 1
+ no_backtrack_18_16: x[16,18] + x[18,16] <= 1
+ no_backtrack_18_17: x[17,18] + x[18,17] <= 1
+ no_backtrack_18_19: x[18,19] + x[19,18] <= 1
+ no_backtrack_19_0: x[0,19] + x[19,0] <= 1
+ no_backtrack_19_1: x[1,19] + x[19,1] <= 1
+ no_backtrack_19_2: x[2,19] + x[19,2] <= 1
+ no_backtrack_19_3: x[3,19] + x[19,3] <= 1
+ no_backtrack_19_4: x[4,19] + x[19,4] <= 1
+ no_backtrack_19_6: x[6,19] + x[19,6] <= 1
+ no_backtrack_19_7: x[7,19] + x[19,7] <= 1
+ no_backtrack_19_8: x[8,19] + x[19,8] <= 1
+ no_backtrack_19_9: x[9,19] + x[19,9] <= 1
+ no_backtrack_19_10: x[10,19] + x[19,10] <= 1
+ no_backtrack_19_11: x[11,19] + x[19,11] <= 1
+ no_backtrack_19_12: x[12,19] + x[19,12] <= 1
+ no_backtrack_19_13: x[13,19] + x[19,13] <= 1
+ no_backtrack_19_14: x[14,19] + x[19,14] <= 1
+ no_backtrack_19_15: x[15,19] + x[19,15] <= 1
+ no_backtrack_19_16: x[16,19] + x[19,16] <= 1
+ no_backtrack_19_17: x[17,19] + x[19,17] <= 1
+ no_backtrack_19_18: x[18,19] + x[19,18] <= 1
+ symmetry_break_20: x[0,20] + x[1,20] - x[1,21] + x[2,20] - x[2,21]
+   + x[3,20] - x[3,21] + x[4,20] - x[4,21] - x[5,21] + x[6,20] + x[7,20]
+   - x[7,21] + x[8,20] + x[9,20] - x[9,21] + x[10,20] + x[11,20] + x[12,20]
+   - x[12,21] + x[13,20] - x[13,21] + x[14,20] - x[14,21] + x[15,20]
+   - x[15,21] + x[16,20] - x[16,21] + x[17,20] + x[18,20] - x[18,21]
+   + x[19,20] + x[22,20] - x[22,21] + x[23,20] + x[24,20] - x[24,21] >= 0
+ symmetry_break_21: - x[0,22] + x[1,21] - x[1,22] + x[2,21] - x[2,22]
+   + x[3,21] - x[3,22] + x[4,21] - x[4,22] + x[5,21] - x[5,22] - x[6,22]
+   + x[7,21] - x[7,22] - x[8,22] + x[9,21] - x[9,22] - x[10,22] - x[11,22]
+   + x[12,21] - x[12,22] + x[13,21] - x[13,22] + x[14,21] - x[14,22]
+   + x[15,21] - x[15,22] + x[16,21] - x[16,22] - x[17,22] + x[18,21]
+   - x[18,22] - x[19,22] - x[20,22] - x[21,22] + x[22,21] - x[23,22]
+   + x[24,21] - x[24,22] >= 0
+ symmetry_break_22: x[0,22] - x[0,23] + x[1,22] - x[1,23] + x[2,22]
+   - x[2,23] + x[3,22] + x[4,22] - x[4,23] + x[5,22] + x[6,22] - x[6,23]
+   + x[7,22] - x[7,23] + x[8,22] - x[8,23] + x[9,22] + x[10,22] - x[10,23]
+   + x[11,22] - x[11,23] + x[12,22] - x[12,23] + x[13,22] - x[13,23]
+   + x[14,22] - x[14,23] + x[15,22] - x[15,23] + x[16,22] - x[16,23]
+   + x[17,22] - x[17,23] + x[18,22] - x[18,23] + x[19,22] - x[19,23]
+   + x[20,22] - x[20,23] + x[21,22] - x[22,23] + x[23,22] + x[24,22]
+   - x[24,23] >= 0
+ symmetry_break_23: x[0,23] - x[0,24] + x[1,23] - x[1,24] + x[2,23]
+   - x[2,24] - x[3,24] + x[4,23] - x[4,24] - x[5,24] + x[6,23] - x[6,24]
+   + x[7,23] - x[7,24] + x[8,23] - x[8,24] - x[9,24] + x[10,23] - x[10,24]
+   + x[11,23] - x[11,24] + x[12,23] - x[12,24] + x[13,23] - x[13,24]
+   + x[14,23] - x[14,24] + x[15,23] - x[15,24] + x[16,23] - x[16,24]
+   + x[17,23] - x[17,24] + x[18,23] - x[18,24] + x[19,23] - x[19,24]
+   + x[20,23] - x[20,24] - x[21,24] + x[22,23] - x[22,24] - x[23,24]
+   + x[24,23] >= 0
+ start_at_station: x[20,0] + x[20,1] + x[20,2] + x[20,3] + x[20,4]
+   + x[20,6] + x[20,7] + x[20,8] + x[20,9] + x[20,10] + x[20,11] + x[20,12]
+   + x[20,13] + x[20,14] + x[20,15] + x[20,16] + x[20,17] + x[20,18]
+   + x[20,19] + x[20,22] + x[20,23] + x[20,24] = 1
 Bounds
  battery[0] <= 1800
  battery[1] <= 1800
@@ -1455,6 +3475,36 @@ Bounds
  battery[17] <= 1800
  battery[18] <= 1800
  battery[19] <= 1800
+ battery[20] <= 1800
+ battery[21] <= 1800
+ battery[22] <= 1800
+ battery[23] <= 1800
+ battery[24] <= 1800
+ order[0] <= 24
+ order[1] <= 24
+ order[2] <= 24
+ order[3] <= 24
+ order[4] <= 24
+ order[5] <= 24
+ order[6] <= 24
+ order[7] <= 24
+ order[8] <= 24
+ order[9] <= 24
+ order[10] <= 24
+ order[11] <= 24
+ order[12] <= 24
+ order[13] <= 24
+ order[14] <= 24
+ order[15] <= 24
+ order[16] <= 24
+ order[17] <= 24
+ order[18] <= 24
+ order[19] <= 24
+ order[20] <= 24
+ order[21] <= 24
+ order[22] <= 24
+ order[23] <= 24
+ order[24] <= 24
 Binaries
  x[0,1] x[0,2] x[0,3] x[0,4] x[0,6] x[0,7] x[0,8] x[0,9] x[0,10] x[0,11]
  x[0,12] x[0,13] x[0,14] x[0,15] x[0,16] x[0,17] x[0,18] x[0,19] x[0,20]
