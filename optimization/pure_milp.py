@@ -20,77 +20,86 @@ class PureMILPSolver:
     def solve(self):
         model = gp.Model("Pure_DRP")
         model.setParam('TimeLimit', 300)
-
         num_nodes = self.num_customers + self.num_stations
 
-        # Define valid travel arcs (skip unnecessary ones)
-        valid_arcs = [(i, j) for i in range(num_nodes) for j in range(num_nodes) 
-                      if i != j and self.distances[i, j] < self.battery_capacity and not (i >= self.num_customers and j >= self.num_customers)]
+        # Allow arcs only from a customer to a station if not both nodes are stations.
+        valid_arcs = [(i, j) for i in range(num_nodes) for j in range(num_nodes)
+                    if i != j and self.distances[i, j] < self.battery_capacity
+                    and  (i < self.num_customers or j < self.num_customers)]
 
-        # Decision Variables
-        x = model.addVars(valid_arcs, vtype=GRB.BINARY, name="x")  # Route selection
-        b = model.addVars(num_nodes, lb=0, ub=self.battery_capacity, vtype=GRB.CONTINUOUS, name="battery")  # Battery level at nodes
-        #u = model.addVars(num_nodes, vtype=GRB.CONTINUOUS, lb=0, ub=num_nodes - 1, name="order")  # Ordering variables
+        # Decision variables: route selection and battery levels.
+        x = model.addVars(valid_arcs, vtype=GRB.BINARY, name="x")
+        b = model.addVars(num_nodes, lb=0, ub=self.battery_capacity, vtype=GRB.CONTINUOUS, name="battery")
 
-        # Set battery full at initial position
-        model.addConstr(b[0] == self.battery_capacity, name="initial_battery")
+        # Identify stations (indices num_customers to num_nodes-1)
+        stations = list(range(self.num_customers, num_nodes))
+        # Choose a start and an end station (ensure they are distinct)
+        start_station = int(np.random.choice(stations))
+        stations_end = stations.copy()
+        stations_end.remove(start_station)
+        end_station = int(np.random.choice(stations_end))
+        #print(f"Start station: {start_station}, End station: {end_station}")
+        
+        # For the starting station, fix battery to full.
+        model.addConstr(b[start_station] == self.battery_capacity, name="start_battery")
+        # For intermediate stations (and optionally the end station) we require full battery if visited.
+        for s in range(self.num_customers, num_nodes):
+            if s != start_station:  # You might also relax this for the end station if desired.
+                model.addConstr(b[s] == self.battery_capacity, name=f"station_battery_{s}")
 
-        # Objective: Minimize total travel time
-        model.setObjective(
-            gp.quicksum(self.distances[i, j] * x[i, j] for i, j in valid_arcs),
-            GRB.MINIMIZE
-        )
+        # ----- Flow / Visit constraints -----
+        # For the start station: out_arcs - in_arcs = 1
+        """
+        model.addConstr(
+            gp.quicksum(x[start_station, j] for j in range(num_nodes) if (start_station, j) in valid_arcs) -
+            gp.quicksum(x[i, start_station] for i in range(num_nodes) if (i, start_station) in valid_arcs)
+            == 1, name="net_flow_start")
 
-        # 1. Each customer must be visited exactly once
-        for j in range(self.num_customers):  
-            model.addConstr(
-                gp.quicksum(x[i, j] for i in range(num_nodes) if (i, j) in valid_arcs) == 1,
-                f"visit_{j}_in"
-            )
-            model.addConstr(
-                gp.quicksum(x[j, k] for k in range(num_nodes) if (j, k) in valid_arcs) == 1,
-                f"visit_{j}_out"
-            )
 
-        # 2. Flow conservation: Ensure balanced in/out flows
-        for s in range(self.num_customers, num_nodes):  # Charging stations
-            model.addConstr(
-                gp.quicksum(x[i, s] for i in range(num_nodes) if (i, s) in valid_arcs) >= 
-                gp.quicksum(x[s, j] for j in range(num_nodes) if (s, j) in valid_arcs) - 1,
-                f"flow_station_{s}"
-            )
+        # For the end station: in_arcs - out_arcs = 1
+        model.addConstr(
+            gp.quicksum(x[i, end_station] for i in range(num_nodes) if (i, end_station) in valid_arcs) -
+            gp.quicksum(x[end_station, j] for j in range(num_nodes) if (end_station, j) in valid_arcs)
+            == 1, name="net_flow_end")
+        """
 
-        # 3. Battery constraints: Prevent depletion and ensure correct recharging
+
+        # For customers (nodes 0 to num_customers-1):
+        # Each customer must be visited exactly once: one incoming and one outgoing arc.
+        for j in range(self.num_customers):
+            model.addConstr(gp.quicksum(x[i, j] for i in range(num_nodes) if (i, j) in valid_arcs) == 1,
+                            name=f"cust_{j}_in")
+            model.addConstr(gp.quicksum(x[j, k] for k in range(num_nodes) if (j, k) in valid_arcs) == 1,
+                            name=f"cust_{j}_out")
+
+        # For any intermediate station (other than start and end), enforce flow conservation if used.
+        for s in range(self.num_customers, num_nodes):
+            if s != start_station and s != end_station:
+                model.addConstr(gp.quicksum(x[i, s] for i in range(num_nodes) if (i, s) in valid_arcs) -
+                                gp.quicksum(x[s, j] for j in range(num_nodes) if (s, j) in valid_arcs) == 0,
+                                name=f"flow_station_{s}")
+
+        # ----- Battery constraints -----
         for i, j in valid_arcs:
-            model.addConstr(
-                b[i] - self.distances[i, j] * x[i, j]>=0,
-                f"battery_feasible_{i}_{j}"
-            )
-            model.addConstr(
-                b[j] <= b[i] - self.distances[i, j] * x[i, j] + self.battery_capacity * (1 - x[i, j]),
-                f"battery_update_{i}_{j}"
-            )
-        # 4. Ensure battery resets at stations
-        for s in range(self.num_customers, num_nodes):  # Charging stations
-            for j in range(num_nodes):
-                if (s, j) in valid_arcs:
-                    model.addConstr(
-                        b[j] == self.battery_capacity * gp.quicksum(x[s, j] for j in range(num_nodes) if (s, j) in valid_arcs),
-                name=f"station_recharge_{s}_{j}"
-                    )
-
-        # 5. Prevent backtracking (i → j → i)
-        for i, j in valid_arcs:
-            if (j, i) in valid_arcs:
-                model.addConstr(
-                    x[i, j] + x[j, i] == 1,
-                    f"no_backtrack_{i}_{j}"
-                )
+            # Ensure sufficient battery to travel arc (i,j)
+            model.addConstr(b[i] - self.distances[i, j]*x[i, j] >= 0,
+                            name=f"battery_feasible_{i}_{j}")
+            if j < self.num_customers:
+                # Battery update if arc (i,j) is used (big-M formulation)
+                model.addConstr(b[j] <= b[i] - self.distances[i, j]*x[i, j] +
+                                self.battery_capacity*(1 - x[i, j]),
+                                name=f"battery_update_{i}_{j}")
+                
 
 
-        # 6. Subtour elimination
+
+        # Objective: minimize total travel time.
+        model.setObjective(gp.quicksum(self.distances[i, j]*x[i, j] for i, j in valid_arcs),
+                        GRB.MINIMIZE)
+
+        # ----- Lazy subtour elimination constraints (same as before) -----
         model._x = x
-        model.Params.lazyConstraints = 1  # Enable lazy constraints
+        model.Params.lazyConstraints = 1
         model.optimize(self.subtour_elimination)
 
         if model.status == GRB.INFEASIBLE:
@@ -103,66 +112,50 @@ class PureMILPSolver:
             return None, None
 
         if model.status == GRB.OPTIMAL:
-            active_arcs = [(i, j) for i, j in valid_arcs if x[i, j].X > 0.5]
-            
+            active_arcs = [(i, j) for (i, j) in valid_arcs if x[i, j].X > 0.5]
             return model.objVal, active_arcs
         else:
             print(f"Solver did not find an optimal solution! Status: {model.status}")
             return None, None
 
-
-
-
-    @staticmethod
-    def find_subtours(selected_arcs):
-        """Detects subtours in the solution"""
-        nodes = set(i for i, _ in selected_arcs) | set(j for _, j in selected_arcs)
+    def find_subtours(self, selected_arcs):
+        """Return a list of subtours, each as an ordered list of nodes."""
+        n = self.num_customers + self.num_stations
+        visited = [False] * n
         subtours = []
-        unvisited = nodes.copy()
-
-        while unvisited:
-            current = unvisited.pop()
-            tour = {current}
-            while True:
-                for i, j in selected_arcs:
-                    if i == current and j in unvisited:
-                        current = j
-                        tour.add(j)
-                        unvisited.remove(j)
+        for i in range(n):
+            if not visited[i]:
+                current_tour = []
+                j = i
+                while not visited[j]:
+                    visited[j] = True
+                    current_tour.append(j)
+                    successors = [k for (p, k) in selected_arcs if p == j]
+                    if successors:
+                        j = successors[0]
+                    else:
                         break
-                else:
-                    break
-            if len(tour) > 1:
-                subtours.append(tour)
-
+                subtours.append(current_tour)
         return subtours
 
     def subtour_elimination(self, model, where):
-        """Lazy constraints to eliminate subtours and ensure a single connected path"""
+        """Lazy constraint callback using standard subtour elimination:
+        For any subtour S (with |S| < total nodes), enforce:
+            ∑₍i,j∈S₎ x[i,j] ≤ |S| – 1
+        """
         if where == GRB.Callback.MIPSOL:
             vals = model.cbGetSolution(model._x)
             selected = [(i, j) for (i, j) in model._x.keys() if vals[i, j] > 0.5]
-            
-            # Find subtours
-            subtours = self.find_subtours(selected)
-            
-            for tour in subtours:
-                # Only add constraint if tour doesn't include all nodes
-                if len(tour) < self.num_customers + self.num_stations:
-                    # Add subtour elimination constraint
+            total_nodes = self.num_customers + self.num_stations
+            for tour in self.find_subtours(selected):
+                if len(tour) < total_nodes:
                     model.cbLazy(
-                        gp.quicksum(model._x[i, j] 
-                                   for i in tour 
-                                   for j in tour 
-                                   if (i, j) in model._x) <= len(tour) - 1  + (1 - model._x[tour[0], tour[-1]])
+                        gp.quicksum(model._x[i, j] for i in tour for j in tour if (i, j) in model._x)
+                        <= len(tour) - 1
                     )
-            #Ensure that all customers are visited 
-            model.cbLazy(
-                gp.quicksum(model._x[i, j] for i, j in model._x.keys()) == self.num_customers + self.num_stations - 1
-            )
 
     def visualize_solution(self, arcs, cost):
-        """Visualize solution with stations and customers in circular layout"""
+        """Visualize solution with customers and stations retaining their original indexes."""
         def get_circular_positions(n, radius, center=(0.5, 0.5)):
             angles = np.linspace(0, 2*np.pi, n, endpoint=False)
             positions = np.zeros((n, 2))
@@ -170,37 +163,36 @@ class PureMILPSolver:
             positions[:, 1] = center[1] + radius * np.sin(angles)
             return positions
 
-        # Calculate node positions
-        station_pos = get_circular_positions(self.num_stations, 0.3)
+        # Compute positions: customers first then stations.
         customer_pos = get_circular_positions(self.num_customers, 0.7)
-        positions = np.vstack([station_pos, customer_pos])
-
+        station_pos = get_circular_positions(self.num_stations, 0.3)
+        positions = np.vstack([customer_pos, station_pos])
+        
         # Setup plot
         plt.figure(figsize=(12, 8))
         ax = plt.gca()
         ax.set_facecolor('aliceblue')
 
-        # Plot stations (red squares)
-        plt.scatter(positions[:self.num_stations,0], positions[:self.num_stations,1],
-                   c='red', s=200, marker='s', label='Stations')
+        # Plot customers (blue circles). Customers have indices 0 to self.num_customers-1.
+        plt.scatter(positions[:self.num_customers, 0], positions[:self.num_customers, 1],
+                    c='blue', s=100, label='Customers')
+        # Plot stations (red squares). Stations start at index self.num_customers.
+        plt.scatter(positions[self.num_customers:, 0], positions[self.num_customers:, 1],
+                    c='red', s=200, marker='s', label='Stations')
 
-        # Plot customers (blue circles)
-        plt.scatter(positions[self.num_stations:,0], positions[self.num_stations:,1],
-                   c='blue', s=100, label='Customers')
-
-        # Add labels
-        for i in range(self.num_stations):
-            plt.annotate(f'S{i}', positions[i], xytext=(5,5), textcoords='offset points')
+        # Add labels: annotate customers and stations using their original indices.
         for i in range(self.num_customers):
-            plt.annotate(f'C{i}', positions[i+self.num_stations], xytext=(5,5), 
-                        textcoords='offset points')
+            plt.annotate(f'{i}', positions[i], xytext=(5, 5), textcoords='offset points')
+        for i in range(self.num_stations):
+            # Station index in positions is i + self.num_customers.
+            plt.annotate(f'{i + self.num_customers}', positions[i + self.num_customers], xytext=(5, 5), textcoords='offset points')
 
         # Plot routes with arrows
-        for idx, (i,j) in enumerate(arcs):
-            plt.arrow(positions[i,0], positions[i,1],
-                     positions[j,0]-positions[i,0], positions[j,1]-positions[i,1],
-                     head_width=0.02, color=plt.cm.rainbow(idx/len(arcs)),
-                     length_includes_head=True, alpha=0.6)
+        for idx, (i, j) in enumerate(arcs):
+            plt.arrow(positions[i, 0], positions[i, 1],
+                    positions[j, 0] - positions[i, 0], positions[j, 1] - positions[i, 1],
+                    head_width=0.02, color=plt.cm.rainbow(idx / len(arcs)),
+                    length_includes_head=True, alpha=0.6)
 
         plt.title(f'DRP Solution\nTotal Cost: {cost:.1f} seconds')
         plt.legend()
@@ -208,6 +200,7 @@ class PureMILPSolver:
         plt.axis('equal')
         plt.tight_layout()
         plt.show()
+
 
     def get_ordered_path(self, arcs):
         """Convert unordered arcs into a proper sequence"""

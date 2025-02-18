@@ -3,23 +3,80 @@
 Minimize
  
 Subject To
- visit_18_in: x[0,18] + x[1,18] + x[2,18] + x[3,18] + x[4,18] + x[5,18]
-   + x[6,18] + x[7,18] + x[8,18] + x[9,18] + x[10,18] + x[11,18] + x[12,18]
-   + x[13,18] + x[14,18] + x[15,18] + x[16,18] + x[17,18] + x[19,18]
-   + x[20,18] + x[21,18] + x[22,18] + x[23,18] + x[24,18] = 1
- visit_18_out: x[18,0] + x[18,1] + x[18,2] + x[18,3] + x[18,4] + x[18,5]
-   + x[18,6] + x[18,7] + x[18,8] + x[18,9] + x[18,10] + x[18,11] + x[18,12]
-   + x[18,13] + x[18,14] + x[18,15] + x[18,16] + x[18,17] + x[18,19]
-   + x[18,20] + x[18,21] + x[18,22] + x[18,23] + x[18,24] = 1
- no_backtrack_1_18: x[1,18] + x[18,1] = 1
- no_backtrack_18_9: x[9,18] + x[18,9] = 1
- no_backtrack_21_18: x[18,21] + x[21,18] = 1
+ station_battery_24: battery[24] = 1800
+ net_flow_end: x[0,24] + x[1,24] + x[2,24] + x[3,24] + x[4,24] + x[5,24]
+   + x[6,24] + x[7,24] + x[8,24] + x[9,24] + x[10,24] + x[11,24] + x[12,24]
+   + x[13,24] + x[14,24] + x[15,24] + x[16,24] + x[17,24] + x[18,24]
+   + x[19,24] - x[24,0] - x[24,1] - x[24,2] - x[24,3] - x[24,4] - x[24,5]
+   - x[24,6] - x[24,7] - x[24,8] - x[24,9] - x[24,10] - x[24,11] - x[24,12]
+   - x[24,13] - x[24,14] - x[24,15] - x[24,16] - x[24,17] - x[24,18]
+   - x[24,19] = 1
+ battery_update_0_24: 2373.301957201284 x[0,24] - battery[0] + battery[24]
+   <= 1800
+ battery_update_1_24: 3432.39723412972 x[1,24] - battery[1] + battery[24]
+   <= 1800
+ battery_update_2_24: 3216.167694620773 x[2,24] - battery[2] + battery[24]
+   <= 1800
+ battery_update_3_24: 2032.612824530152 x[3,24] - battery[3] + battery[24]
+   <= 1800
+ battery_update_4_24: 3548.77250474355 x[4,24] - battery[4] + battery[24]
+   <= 1800
+ battery_update_5_24: 2491.004430245292 x[5,24] - battery[5] + battery[24]
+   <= 1800
+ battery_update_6_24: 3482.511528478293 x[6,24] - battery[6] + battery[24]
+   <= 1800
+ battery_update_7_24: 2103.557677133287 x[7,24] - battery[7] + battery[24]
+   <= 1800
+ battery_update_8_24: 2585.899887950206 x[8,24] - battery[8] + battery[24]
+   <= 1800
+ battery_update_9_24: 2032.088637809559 x[9,24] - battery[9] + battery[24]
+   <= 1800
+ battery_update_10_24: 2981.960650397411 x[10,24] - battery[10]
+   + battery[24] <= 1800
+ battery_update_11_24: 2864.315679503148 x[11,24] - battery[11]
+   + battery[24] <= 1800
+ battery_update_12_24: 2333.301050881737 x[12,24] - battery[12]
+   + battery[24] <= 1800
+ battery_update_13_24: 2961.711565470315 x[13,24] - battery[13]
+   + battery[24] <= 1800
+ battery_update_14_24: 1925.745154748621 x[14,24] - battery[14]
+   + battery[24] <= 1800
+ battery_update_15_24: 1866.462975803989 x[15,24] - battery[15]
+   + battery[24] <= 1800
+ battery_update_16_24: 2679.435856929085 x[16,24] - battery[16]
+   + battery[24] <= 1800
+ battery_update_17_24: 2771.857276791606 x[17,24] - battery[17]
+   + battery[24] <= 1800
+ battery_update_18_24: 2808.355272472096 x[18,24] - battery[18]
+   + battery[24] <= 1800
+ battery_update_19_24: 2534.780318706764 x[19,24] - battery[19]
+   + battery[24] <= 1800
 Bounds
+ -infinity <= battery[0] <= 1800
+ -infinity <= battery[1] <= 1800
+ -infinity <= battery[2] <= 1800
+ -infinity <= battery[3] <= 1800
+ -infinity <= battery[4] <= 1800
+ -infinity <= battery[5] <= 1800
+ -infinity <= battery[6] <= 1800
+ -infinity <= battery[7] <= 1800
+ -infinity <= battery[8] <= 1800
+ -infinity <= battery[9] <= 1800
+ -infinity <= battery[10] <= 1800
+ -infinity <= battery[11] <= 1800
+ -infinity <= battery[12] <= 1800
+ -infinity <= battery[13] <= 1800
+ -infinity <= battery[14] <= 1800
+ -infinity <= battery[15] <= 1800
+ -infinity <= battery[16] <= 1800
+ -infinity <= battery[17] <= 1800
+ -infinity <= battery[18] <= 1800
+ -infinity <= battery[19] <= 1800
+ battery[24] free
 Binaries
- x[0,18] x[1,18] x[2,18] x[3,18] x[4,18] x[5,18] x[6,18] x[7,18] x[8,18]
- x[9,18] x[10,18] x[11,18] x[12,18] x[13,18] x[14,18] x[15,18] x[16,18]
- x[17,18] x[18,0] x[18,1] x[18,2] x[18,3] x[18,4] x[18,5] x[18,6] x[18,7]
- x[18,8] x[18,9] x[18,10] x[18,11] x[18,12] x[18,13] x[18,14] x[18,15]
- x[18,16] x[18,17] x[18,19] x[18,20] x[18,21] x[18,22] x[18,23] x[18,24]
- x[19,18] x[20,18] x[21,18] x[22,18] x[23,18] x[24,18]
+ x[0,24] x[1,24] x[2,24] x[3,24] x[4,24] x[5,24] x[6,24] x[7,24] x[8,24]
+ x[9,24] x[10,24] x[11,24] x[12,24] x[13,24] x[14,24] x[15,24] x[16,24]
+ x[17,24] x[18,24] x[19,24] x[24,0] x[24,1] x[24,2] x[24,3] x[24,4] x[24,5]
+ x[24,6] x[24,7] x[24,8] x[24,9] x[24,10] x[24,11] x[24,12] x[24,13]
+ x[24,14] x[24,15] x[24,16] x[24,17] x[24,18] x[24,19]
 End
