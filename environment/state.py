@@ -22,7 +22,7 @@ class State:
         self.current_node = current_node
         self.battery_level = drp.battery_capacity
         # Initialize encoding using DRP parameters
-        self.encoding = np.ones(drp.num_nodes + drp.num_stations, dtype=int)
+        self.encoding = np.ones(drp.num_customers + drp.num_stations, dtype=int)
         
     def is_terminal(self) -> bool:
         """Check if all nodes have been visited"""
@@ -32,16 +32,16 @@ class State:
         """Convert state encoding index to distance matrix index"""
         if state_idx < self.drp.num_stations:
             # Convert station index 0-4 to 20-24
-            return state_idx + self.drp.num_nodes
+            return state_idx + self.drp.num_customers
         else:
             # Convert node index 5-24 to 0-19
             return state_idx - self.drp.num_stations
 
     def _to_state_index(self, matrix_idx: int) -> int:
         """Convert distance matrix index to state encoding index"""
-        if matrix_idx >= self.drp.num_nodes:
+        if matrix_idx >= self.drp.num_customers:
             # Convert station index 20-24 to 0-4
-            return matrix_idx - self.drp.num_nodes
+            return matrix_idx - self.drp.num_customers
         else:
             # Convert node index 0-19 to 5-24
             return matrix_idx + self.drp.num_stations

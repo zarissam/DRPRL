@@ -17,7 +17,7 @@ class Action:
         valid_actions = []
         
         # Add valid move actions to unvisited nodes
-        for node in range(state.drp.num_stations, state.drp.num_nodes + state.drp.num_stations):
+        for node in range(state.drp.num_stations, state.drp.num_customers + state.drp.num_stations):
             if state.encoding[node] == 1:  # Node is unvisited
                 travel_time = state.drp.get_travel_time(
                     state.instance, 

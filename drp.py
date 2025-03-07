@@ -14,7 +14,7 @@ class DRP:
         """
         self.excel_path = excel_path
         self.battery_capacity = battery_capacity
-        self.num_nodes = 20  # Fixed number of customer nodes
+        self.num_customers = 20  # Fixed number of customer nodes
         self.num_stations = 5  # Fixed number of charging stations
         self.distance_matrices = {}
         
@@ -43,7 +43,7 @@ class DRP:
             if travel_time > current_battery:
                 return False
             current_battery -= travel_time
-            if route[i+1] >= self.num_nodes:  # Charging stations are last 5 nodes
+            if route[i+1] >= self.num_customers:  # Charging stations are last 5 nodes
                 current_battery = self.battery_capacity
         return True
 

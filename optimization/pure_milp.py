@@ -38,7 +38,7 @@ class PureMILPSolver:
         stations_end = stations.copy()
         stations_end.remove(start_station)
         end_station = int(np.random.choice(stations_end))
-        #print(f"Start station: {start_station}, End station: {end_station}")
+        print(f"Start station: {start_station}, End station: {end_station}")
         
         # For the starting station, fix battery to full.
         model.addConstr(b[start_station] == self.battery_capacity, name="start_battery")

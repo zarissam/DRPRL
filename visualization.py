@@ -21,7 +21,7 @@ def visualize_solution(route, state, cost):
     )
     
     customer_positions = get_circular_positions(
-        state.drp.num_nodes,
+        state.drp.num_customers,
         radius=0.7,  # Outer circle for customers
         start_angle=np.pi/2
     )
